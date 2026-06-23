@@ -1742,7 +1742,7 @@ function renderDashboard(){
     h+='<div class="teams" style="text-align:right">'+flag(r.home)+' <span style="'+(w==='home'?'font-weight:700':'opacity:.55')+'">'+hn+'</span></div>';
     h+='<div class="score-big">'+r.hg+'-'+r.ag+'</div>';
     h+='<div class="teams"><span style="'+(w==='away'?'font-weight:700':'opacity:.55')+'">'+an+'</span> '+flag(r.away)+'</div>';
-    h+='<span style="font-family:'Courier New',monospace;font-size:.6rem;color:var(--muted);margin-left:.3rem">'+(r.hg+r.ag)+'g</span>';
+    h+='<span class="mono" style="font-size:.6rem;color:var(--muted);margin-left:.3rem">'+(r.hg+r.ag)+'g</span>';
     h+='</div>';
   });
   h+='</div></div>';
@@ -1770,7 +1770,7 @@ function renderDashboard(){
     h+='<div class="perf-bar-wrap"><span class="perf-label">'+flag(p.code)+' '+tn.split(' ')[0]+'</span>';
     h+='<div class="perf-bar-track"><div class="perf-bar-fill pos" style="width:'+bw+'%"></div></div>';
     h+='<span class="perf-delta pos">+'+p.delta+'%</span>';
-    h+='<span style="font-family:'Courier New',monospace;font-size:.65rem;color:var(--muted);margin-left:.3rem">'+p.pre+'&#8594;'+p.live+'%</span>';
+    h+='<span style="font-size:.65rem;color:var(--muted);margin-left:.3rem">'+p.pre+'&#8594;'+p.live+'%</span>';
     h+='</div>';
   });
   h+='</div></div>';
@@ -1781,7 +1781,7 @@ function renderDashboard(){
     h+='<div class="perf-bar-wrap"><span class="perf-label">'+flag(p.code)+' '+tn.split(' ')[0]+'</span>';
     h+='<div class="perf-bar-track"><div class="perf-bar-fill neg" style="width:'+bw+'%"></div></div>';
     h+='<span class="perf-delta neg">'+p.delta+'%</span>';
-    h+='<span style="font-family:'Courier New',monospace;font-size:.65rem;color:var(--muted);margin-left:.3rem">'+p.pre+'&#8594;'+p.live+'%</span>';
+    h+='<span style="font-size:.65rem;color:var(--muted);margin-left:.3rem">'+p.pre+'&#8594;'+p.live+'%</span>';
     h+='</div>';
   });
   h+='</div></div>';
