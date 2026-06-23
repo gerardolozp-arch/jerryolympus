@@ -269,46 +269,12 @@ nav{background:var(--pitch);border-bottom:2px solid var(--gold);position:sticky;
   .rtable th:nth-child(n+8),.rtable td:nth-child(n+8){display:none}
 }
 
-/* PRONÓSTICOS DEL DÍA */
-.pred-day-header{background:var(--pitch);border-radius:var(--r);padding:1.2rem 1.5rem;margin-bottom:1.5rem;display:flex;justify-content:space-between;align-items:center;border-left:5px solid var(--gold)}
-.pred-day-title{font-size:1.1rem;font-weight:700;color:#fff}
-.pred-day-date{font-family:'Courier New',monospace;font-size:.8rem;color:var(--gold-lt)}
-.pred-day-sub{font-family:Arial,sans-serif;font-size:.72rem;color:rgba(255,255,255,.55);margin-top:.2rem}
-.pred-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1.2rem}
-.pred-card{background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden;border:1px solid var(--border)}
-.pred-card-header{background:var(--pitch);padding:.5rem 1rem;display:flex;justify-content:space-between;align-items:center}
-.pred-stage{font-family:Arial,sans-serif;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-lt)}
-.pred-time{font-family:'Courier New',monospace;font-size:.72rem;color:rgba(255,255,255,.7)}
-.pred-matchup{padding:1rem 1rem .6rem;display:flex;align-items:center;justify-content:space-between;gap:.5rem}
-.pred-team{flex:1;text-align:center}
-.pred-team-flag{font-size:2rem;line-height:1.2;display:block;margin-bottom:.3rem}
-.pred-team-name{font-weight:700;font-size:.88rem}
-.pred-scoreline{font-size:2.2rem;font-weight:700;font-family:'Courier New',monospace;color:var(--pitch);text-align:center;padding:0 .5rem}
-.pred-probs{display:grid;grid-template-columns:1fr 1fr 1fr;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.pred-prob{text-align:center;padding:.6rem .3rem}
-.pred-prob-val{font-size:1.15rem;font-weight:700;font-family:Arial,sans-serif}
-.pred-prob-label{font-family:Arial,sans-serif;font-size:.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-top:.1rem}
-.pred-prob.home .pred-prob-val{color:var(--grass)}
-.pred-prob.away .pred-prob-val{color:var(--red)}
-.pred-prob-bar{height:4px;display:flex}
-.pred-prob-bar-h{background:var(--grass)}
-.pred-prob-bar-d{background:var(--gold)}
-.pred-prob-bar-a{background:var(--red)}
-.pred-xg{display:flex;justify-content:space-between;padding:.5rem 1rem;background:var(--bg);font-family:'Courier New',monospace;font-size:.72rem;color:var(--muted)}
-.pred-xg strong{color:var(--ink)}
-.pred-analysis{padding:.75rem 1rem;font-family:Arial,sans-serif;font-size:.78rem;color:#333;line-height:1.6;border-top:1px dashed var(--border)}
-.pred-analysis strong{color:var(--pitch)}
-.pred-model-tag{padding:.35rem 1rem;background:rgba(201,168,76,.08);font-family:Arial,sans-serif;font-size:.65rem;color:#7a5c00;text-align:center;border-top:1px solid var(--gold-lt)}
-.pred-empty{text-align:center;padding:4rem 2rem;color:var(--muted);font-family:Arial,sans-serif;font-size:.9rem}
-.pred-empty .pred-empty-icon{font-size:3rem;margin-bottom:1rem;display:block}
-
 /* ── TOURNAMENT DASHBOARD ─────────────────────────────────────── */
 .dash-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.2rem;margin-bottom:1.5rem}
 .dash-grid.wide{grid-template-columns:repeat(auto-fill,minmax(460px,1fr))}
 .dash-card{background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}
 .dash-card-hdr{background:var(--pitch);color:#fff;padding:.65rem 1rem;display:flex;align-items:center;gap:.55rem;border-bottom:2px solid var(--gold)}
-.dash-card-hdr .dch-icon{font-size:1rem}
-.dash-card-hdr .dch-title{font-family:Arial,sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-lt)}
+.dch-icon{font-size:1rem}.dch-title{font-family:Arial,sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-lt)}
 .dash-card-body{padding:1rem}
 .dash-stat-row{display:flex;align-items:center;gap:.6rem;padding:.45rem 0;border-bottom:1px solid var(--border)}
 .dash-stat-row:last-child{border-bottom:none}
@@ -319,33 +285,25 @@ nav{background:var(--pitch);border-bottom:2px solid var(--gold);position:sticky;
 .dash-val{font-family:'Courier New',monospace;font-size:.9rem;font-weight:700;color:var(--pitch);flex-shrink:0}
 .dash-bar-wrap{width:80px;flex-shrink:0}
 .dash-bar{height:5px;border-radius:3px;background:linear-gradient(90deg,var(--gold),var(--grass));min-width:2px}
-.dash-bar.red{background:linear-gradient(90deg,var(--red),#ff8080)}
 .dash-bar.blue{background:linear-gradient(90deg,var(--blue),#5588cc)}
 .kpi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:.8rem;margin-bottom:1.5rem}
 .kpi{background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);padding:1rem;text-align:center;border-top:3px solid var(--border)}
-.kpi.k-gold{border-top-color:var(--gold)}
-.kpi.k-green{border-top-color:var(--grass)}
-.kpi.k-red{border-top-color:var(--red)}
-.kpi.k-blue{border-top-color:var(--blue)}
+.kpi.k-gold{border-top-color:var(--gold)}.kpi.k-green{border-top-color:var(--grass)}.kpi.k-red{border-top-color:var(--red)}.kpi.k-blue{border-top-color:var(--blue)}
 .kpi-val{font-size:2rem;font-weight:700;font-family:'Courier New',monospace;color:var(--pitch);line-height:1}
 .kpi-label{font-family:Arial,sans-serif;font-size:.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-top:.35rem}
 .acc-row{display:flex;align-items:center;gap:.6rem;padding:.45rem 0;border-bottom:1px solid var(--border);font-size:.82rem}
 .acc-row:last-child{border-bottom:none}
 .acc-result{font-family:'Courier New',monospace;font-size:.82rem;font-weight:700;width:42px;text-align:center;flex-shrink:0}
 .acc-badge{padding:.12rem .4rem;border-radius:3px;font-family:Arial,sans-serif;font-size:.62rem;font-weight:700;flex-shrink:0}
-.acc-badge.hit{background:#d1fae5;color:#065f46}
-.acc-badge.miss{background:#fee2e2;color:#991b1b}
-.acc-badge.upset{background:#fef3c7;color:#92400e}
+.acc-badge.hit{background:#d1fae5;color:#065f46}.acc-badge.miss{background:#fee2e2;color:#991b1b}.acc-badge.upset{background:#fef3c7;color:#92400e}
 .perf-bar-wrap{display:flex;align-items:center;gap:.5rem;padding:.4rem 0;border-bottom:1px solid var(--border)}
 .perf-bar-wrap:last-child{border-bottom:none}
 .perf-label{font-size:.82rem;font-weight:600;width:90px;flex-shrink:0}
-.perf-bar-track{flex:1;background:var(--border);border-radius:3px;height:6px;position:relative}
+.perf-bar-track{flex:1;background:var(--border);border-radius:3px;height:6px;position:relative;overflow:hidden}
 .perf-bar-fill{height:6px;border-radius:3px;position:absolute;top:0}
-.perf-bar-fill.pos{background:var(--grass);left:50%}
-.perf-bar-fill.neg{background:var(--red);right:50%}
+.perf-bar-fill.pos{background:var(--grass);left:50%}.perf-bar-fill.neg{background:var(--red);right:50%}
 .perf-delta{font-family:'Courier New',monospace;font-size:.75rem;font-weight:700;width:52px;text-align:right;flex-shrink:0}
-.perf-delta.pos{color:var(--grass)}
-.perf-delta.neg{color:var(--red)}
+.perf-delta.pos{color:var(--grass)}.perf-delta.neg{color:var(--red)}
 .match-result-card{display:flex;align-items:center;justify-content:space-between;padding:.5rem .75rem;border-bottom:1px solid var(--border);font-size:.82rem;gap:.4rem}
 .match-result-card:last-child{border-bottom:none}
 .match-result-card .teams{flex:1;font-weight:600}
@@ -353,12 +311,10 @@ nav{background:var(--pitch);border-bottom:2px solid var(--gold);position:sticky;
 .acc-pct-ring{display:flex;align-items:center;justify-content:center;gap:1.5rem;padding:1rem 0}
 .ring-stat{text-align:center}
 .ring-num{font-size:2.2rem;font-weight:700;font-family:'Courier New',monospace;line-height:1}
-.ring-num.green{color:var(--grass)}
-.ring-num.red{color:var(--red)}
-.ring-num.gold{color:#c9a84c}
+.ring-num.green{color:var(--grass)}.ring-num.red{color:var(--red)}
 .ring-lbl{font-family:Arial,sans-serif;font-size:.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-top:.2rem}
 .acc-progress{width:100%;height:10px;background:var(--border);border-radius:5px;overflow:hidden;margin:.75rem 0}
-.acc-progress-fill{height:10px;background:linear-gradient(90deg,var(--grass),#5cb85c);border-radius:5px;transition:width .4s}
+.acc-progress-fill{height:10px;background:linear-gradient(90deg,var(--grass),#5cb85c);border-radius:5px}
 @media(max-width:640px){.dash-grid,.dash-grid.wide{grid-template-columns:1fr}.kpi-grid{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
@@ -381,7 +337,6 @@ nav{background:var(--pitch);border-bottom:2px solid var(--gold);position:sticky;
 
 <nav><div class="container"><div class="nav-inner">
   <button class="nb" onclick="show('dashboard',this)">&#128202; Tournament Dashboard</button>
-  <button class="nb" onclick="show('pronosticos',this)">&#127942; Today's Predictions</button>
   <button class="nb active" onclick="show('rankings',this)">Pre-Tournament Rankings</button>
   <button class="nb" onclick="show('scores',this)">Model Scores</button>
   <button class="nb" onclick="show('groups',this)">Groups</button>
@@ -393,20 +348,6 @@ nav{background:var(--pitch);border-bottom:2px solid var(--gold);position:sticky;
   <button class="nb" onclick="show('about',this)">About &amp; Glossary</button>
 </div></div></nav>
 
-
-
-<div id="sec-dashboard" class="sec"><div class="container">
-  <div class="sec-title">Tournament Dashboard <span class="phase-badge" id="dash-phase-badge">Group Stage</span></div>
-  <div id="dashboard-content">
-    <p class="sans" style="color:var(--muted);text-align:center;padding:3rem;font-size:.85rem">Loading dashboard...</p>
-  </div>
-</div></div>
-
-<div id="sec-pronosticos" class="sec"><div class="container">
-  <div id="pred-day-container">
-    <p class="pred-loading">Cargando pronósticos...</p>
-  </div>
-</div></div>
 
 <div id="sec-live" class="sec"><div class="container">
   <div class="sec-title">Live Predictions <span class="phase-badge" id="phase-badge">Pre-Tournament</span></div>
@@ -429,6 +370,13 @@ nav{background:var(--pitch);border-bottom:2px solid var(--gold);position:sticky;
       Tournament begins <strong>June 11, 2026</strong>.<br>
       Live predictions will appear here automatically once matches start.
     </p>
+  </div>
+</div></div>
+
+<div id="sec-dashboard" class="sec"><div class="container">
+  <div class="sec-title">Tournament Dashboard <span class="phase-badge" id="dash-phase-badge">Group Stage</span></div>
+  <div id="dashboard-content">
+    <p class="sans" style="color:var(--muted);text-align:center;padding:3rem;font-size:.85rem">Loading dashboard...</p>
   </div>
 </div></div>
 
@@ -1215,7 +1163,7 @@ for(var i=0;i<lranked.length;i++){
   renderLineups();
   renderPlayerStats();
   renderLiveBracket();
-  renderPredictions();
+  renderDashboard();
 }
 
 
@@ -1581,147 +1529,110 @@ function renderLiveBracket(){
 }
 
 
-
 // ── TOURNAMENT DASHBOARD ─────────────────────────────────────────
 function renderDashboard(){
   var container = document.getElementById('dashboard-content');
   if(!container) return;
-  if(!LIVE || !LIVE.live){ container.innerHTML='<p style="text-align:center;padding:3rem;color:var(--muted);font-family:Arial,sans-serif">Loading...</p>'; return; }
+  if(!LIVE||!LIVE.live){container.innerHTML='<p style="text-align:center;padding:3rem;color:var(--muted);font-family:Arial,sans-serif">Loading...</p>';return;}
+  var live=LIVE.live, teams=LIVE.teams||D.teams;
+  var results=(live.results||[]).filter(function(r){return !r.live;});
+  var players=live.player_stats||[], tgoals=live.tournament_goals||{};
+  var lranked=live.live_ranked||[], preranked=LIVE.ranked||[];
+  var phase=live.phase||'GROUP_STAGE';
+  var phaseLabels={'PRE_TOURNAMENT':'Pre-Tournament','GROUP_STAGE':'Group Stage','ROUND_OF_32':'Round of 32','QUARTER_FINALS':'Quarter-Finals','SEMI_FINALS':'Semi-Finals','FINAL':'Final'};
+  var badge=document.getElementById('dash-phase-badge');
+  if(badge) badge.textContent=phaseLabels[phase]||phase;
 
-  var live = LIVE.live;
-  var teams = LIVE.teams || D.teams;
-  var results = (live.results||[]).filter(function(r){return !r.live;});
-  var players = live.player_stats||[];
-  var tgoals  = live.tournament_goals||{};
-  var lranked = live.live_ranked||[];
-  var preranked = LIVE.ranked||[];
-  var phase = live.phase||'GROUP_STAGE';
-  var phaseLabels = {'PRE_TOURNAMENT':'Pre-Tournament','GROUP_STAGE':'Group Stage','ROUND_OF_32':'Round of 32','QUARTER_FINALS':'Quarter-Finals','SEMI_FINALS':'Semi-Finals','FINAL':'Final'};
-  var badge = document.getElementById('dash-phase-badge');
-  if(badge) badge.textContent = phaseLabels[phase]||phase;
-
-  // ── BUILD TEAM STATS FROM RESULTS ────────────────────────────
-  var ts = {};
+  // Team stats
+  var ts={};
   results.forEach(function(r){
-    [r.home,r.away].forEach(function(c){ if(!ts[c]) ts[c]={gf:0,ga:0,played:0,wins:0,draws:0,losses:0,xgf:0,xga:0}; });
-    ts[r.home].gf+=r.hg; ts[r.home].ga+=r.ag; ts[r.home].played++;
-    ts[r.away].gf+=r.ag; ts[r.away].ga+=r.hg; ts[r.away].played++;
+    [r.home,r.away].forEach(function(c){if(!ts[c])ts[c]={gf:0,ga:0,played:0,wins:0,draws:0,losses:0};});
+    ts[r.home].gf+=r.hg;ts[r.home].ga+=r.ag;ts[r.home].played++;
+    ts[r.away].gf+=r.ag;ts[r.away].ga+=r.hg;ts[r.away].played++;
     if(r.hg>r.ag){ts[r.home].wins++;ts[r.away].losses++;}
     else if(r.hg===r.ag){ts[r.home].draws++;ts[r.away].draws++;}
     else{ts[r.home].losses++;ts[r.away].wins++;}
-    if(r.prediction){
-      ts[r.home].xgf+=r.prediction.exp_home; ts[r.home].xga+=r.prediction.exp_away;
-      ts[r.away].xgf+=r.prediction.exp_away; ts[r.away].xga+=r.prediction.exp_home;
-    }
   });
 
-  // ── KPI TOTALS ────────────────────────────────────────────────
-  var totalGoals = results.reduce(function(s,r){return s+r.hg+r.ag;},0);
-  var avgGoals   = results.length ? (totalGoals/results.length).toFixed(2) : 0;
-  var totalMatches = results.length;
+  // KPIs
+  var totalGoals=results.reduce(function(s,r){return s+r.hg+r.ag;},0);
+  var avgGoals=results.length?(totalGoals/results.length).toFixed(2):0;
 
-  // ── MODEL ACCURACY ────────────────────────────────────────────
-  var correct=0, upsets=[], modelResults=[];
+  // Model accuracy
+  var correct=0,upsets=[],modelResults=[];
   results.forEach(function(r){
-    var p=r.prediction; if(!p) return;
-    var actual = r.hg>r.ag?'home':r.ag>r.hg?'away':'draw';
-    var maxP = Math.max(p.home_win,p.draw,p.away_win);
-    var predicted = p.home_win===maxP?'home':p.away_win===maxP?'away':'draw';
-    var hit = actual===predicted;
-    if(hit) correct++;
-    var htName=(teams[r.home]||D.teams[r.home]||{name:r.home}).name;
-    var atName=(teams[r.away]||D.teams[r.away]||{name:r.away}).name;
-    var isUpset = !hit && ((actual==='away'&&p.home_win>50)||(actual==='home'&&p.away_win>50)||(actual!=='draw'&&p.draw>40));
-    modelResults.push({home:r.home,away:r.away,hg:r.hg,ag:r.ag,hit:hit,isUpset:isUpset,predicted:predicted,actual:actual,pred:p,htName:htName,atName:atName,stage:r.stage,date:r.date});
+    var p=r.prediction;if(!p)return;
+    var actual=r.hg>r.ag?'home':r.ag>r.hg?'away':'draw';
+    var maxP=Math.max(p.home_win,p.draw,p.away_win);
+    var predicted=p.home_win===maxP?'home':p.away_win===maxP?'away':'draw';
+    var hit=actual===predicted;
+    if(hit)correct++;
+    var hn=(teams[r.home]||D.teams[r.home]||{name:r.home}).name;
+    var an=(teams[r.away]||D.teams[r.away]||{name:r.away}).name;
+    var isUpset=!hit&&((actual==='away'&&p.home_win>50)||(actual==='home'&&p.away_win>50));
+    modelResults.push({home:r.home,away:r.away,hg:r.hg,ag:r.ag,hit:hit,isUpset:isUpset,hn:hn,an:an});
     if(isUpset){
-      var favPct = actual==='away'?p.home_win:p.away_win;
-      upsets.push({home:r.home,away:r.away,hg:r.hg,ag:r.ag,htName:htName,atName:atName,favPct:favPct,winner:actual==='home'?htName:atName,loser:actual==='home'?atName:htName});
+      var favPct=actual==='away'?p.home_win:p.away_win;
+      var winner=actual==='home'?hn:an, loser=actual==='home'?an:hn;
+      upsets.push({home:r.home,away:r.away,hg:r.hg,ag:r.ag,winner:winner,loser:loser,favPct:favPct});
     }
   });
   upsets.sort(function(a,b){return b.favPct-a.favPct;});
-  var accPct = totalMatches ? Math.round(correct/totalMatches*100) : 0;
+  var accPct=results.length?Math.round(correct/results.length*100):0;
 
-  // ── TOP SCORERS (merge tournament_goals + player_stats) ───────
+  // Top scorers
   var playerMap={};
-  players.forEach(function(p){ playerMap[String(p.id)]=p; });
+  players.forEach(function(p){playerMap[String(p.id)]=p;});
   var scorers=[];
   Object.keys(tgoals).forEach(function(pid){
-    var g=tgoals[pid]; if(!g) return;
-    var p=playerMap[pid]||{name:'Player #'+pid,team_code:null};
+    var g=tgoals[pid];if(!g)return;
+    var p=playerMap[pid]||{name:'Player #'+pid,team_code:null,assists:0};
     scorers.push({name:p.name,team:p.team_code,goals:g,assists:p.assists||0,rating:p.rating||null});
   });
-  // Also pick up goals from player_stats for players not in tgoals
-  players.forEach(function(p){
-    if(p.goals>0 && !tgoals[String(p.id)]){
-      scorers.push({name:p.name,team:p.team_code,goals:p.goals,assists:p.assists||0,rating:p.rating||null});
-    }
-  });
+  players.forEach(function(p){if(p.goals>0&&!tgoals[String(p.id)])scorers.push({name:p.name,team:p.team_code,goals:p.goals,assists:p.assists||0,rating:p.rating||null});});
   scorers.sort(function(a,b){return b.goals-a.goals||b.assists-a.assists;});
-  // deduplicate by name
-  var seenNames={}, uniqueScorers=[];
-  scorers.forEach(function(s){ if(!seenNames[s.name]){seenNames[s.name]=true;uniqueScorers.push(s);} });
-  scorers=uniqueScorers.slice(0,10);
+  var seenN={},uScorers=[];scorers.forEach(function(s){if(!seenN[s.name]){seenN[s.name]=true;uScorers.push(s);}});
+  scorers=uScorers.slice(0,10);
 
-  // ── TOP ASSISTS ───────────────────────────────────────────────
-  var assisters = players.filter(function(p){return p.assists>0;});
+  // Assists
+  var assisters=players.filter(function(p){return p.assists>0;});
   assisters.sort(function(a,b){return b.assists-a.assists||b.goals-a.goals;});
   assisters=assisters.slice(0,8);
 
-  // ── TOP RATED ─────────────────────────────────────────────────
-  var rated = players.filter(function(p){return p.rating&&p.rating>0&&p.appearances>=1;});
-  rated.sort(function(a,b){return b.rating-a.rating;});
-  rated=rated.slice(0,8);
+  // Top rated
+  var rated=players.filter(function(p){return p.rating&&p.rating>0&&p.appearances>=1;});
+  rated.sort(function(a,b){return b.rating-a.rating;});rated=rated.slice(0,8);
 
-  // ── BEST ATTACK / DEFENCE ─────────────────────────────────────
-  var teamArr = Object.keys(ts).map(function(c){return Object.assign({code:c},ts[c]);});
-  var byGF = teamArr.slice().sort(function(a,b){return b.gf-a.gf||a.ga-b.ga;}).slice(0,8);
-  var byGA = teamArr.filter(function(t){return t.played>0;}).slice().sort(function(a,b){return a.ga-b.ga||b.gf-a.gf;}).slice(0,8);
+  // Attack / defence
+  var teamArr=Object.keys(ts).map(function(c){return Object.assign({code:c},ts[c]);});
+  var byGF=teamArr.slice().sort(function(a,b){return b.gf-a.gf||a.ga-b.ga;}).slice(0,8);
+  var byGA=teamArr.filter(function(t){return t.played>0;}).slice().sort(function(a,b){return a.ga-b.ga||b.gf-a.gf;}).slice(0,8);
 
-  // ── BIGGEST GAMES ─────────────────────────────────────────────
-  var bigGames = results.slice().sort(function(a,b){return (b.hg+b.ag)-(a.hg+a.ag);}).slice(0,6);
+  // Biggest games
+  var bigGames=results.slice().sort(function(a,b){return(b.hg+b.ag)-(a.hg+a.ag);}).slice(0,6);
 
-  // ── OVER/UNDERPERFORMERS ──────────────────────────────────────
-  var preMap={};
-  preranked.forEach(function(r){preMap[r.code]=r.win;});
+  // Over/underperformers
+  var preMap={};preranked.forEach(function(r){preMap[r.code]=r.win;});
   var perfArr=[];
-  lranked.forEach(function(lr){
-    var pre=preMap[lr.code]||0;
-    var delta=parseFloat((lr.win-pre).toFixed(1));
-    perfArr.push({code:lr.code,live:lr.win,pre:pre,delta:delta});
-  });
+  lranked.forEach(function(lr){var pre=preMap[lr.code]||0;perfArr.push({code:lr.code,live:lr.win,pre:pre,delta:parseFloat((lr.win-pre).toFixed(1))});});
   perfArr.sort(function(a,b){return b.delta-a.delta;});
-  var overPerf  = perfArr.filter(function(p){return p.delta>0;}).slice(0,6);
-  var underPerf = perfArr.filter(function(p){return p.delta<0;}).slice(-6).reverse();
+  var overPerf=perfArr.filter(function(p){return p.delta>0;}).slice(0,6);
+  var underPerf=perfArr.filter(function(p){return p.delta<0;}).slice(-6).reverse();
 
-  // ── CARDS ─────────────────────────────────────────────────────
-  var yellows={}, reds={};
-  players.forEach(function(p){
-    var c=p.team_code||'??';
-    yellows[c]=(yellows[c]||0)+(p.yellow_cards||0);
-    reds[c]=(reds[c]||0)+(p.red_cards||0);
-  });
+  // Cards
+  var yellows={},reds={};
+  players.forEach(function(p){var c=p.team_code||'??';yellows[c]=(yellows[c]||0)+(p.yellow_cards||0);reds[c]=(reds[c]||0)+(p.red_cards||0);});
   var yellowArr=Object.keys(yellows).map(function(c){return{code:c,y:yellows[c],r:reds[c]||0};}).filter(function(x){return x.y>0;});
-  yellowArr.sort(function(a,b){return b.y-a.y||b.r-a.r;});
-  yellowArr=yellowArr.slice(0,8);
-
-  // ── RECENT FORM (last 3 results per team) ────────────────────
-  var teamForm={};
-  results.forEach(function(r){
-    ['home','away'].forEach(function(side){
-      var c=r[side], gf=side==='home'?r.hg:r.ag, ga=side==='home'?r.ag:r.hg;
-      if(!teamForm[c]) teamForm[c]=[];
-      teamForm[c].push(gf>ga?'W':gf===ga?'D':'L');
-    });
-  });
+  yellowArr.sort(function(a,b){return b.y-a.y;});yellowArr=yellowArr.slice(0,8);
 
   // ── BUILD HTML ────────────────────────────────────────────────
   var h='';
 
-  // KPI row
+  // KPIs
   h+='<div class="kpi-grid">';
   h+='<div class="kpi k-gold"><div class="kpi-val">'+totalGoals+'</div><div class="kpi-label">Total Goals</div></div>';
   h+='<div class="kpi k-green"><div class="kpi-val">'+avgGoals+'</div><div class="kpi-label">Goals / Match</div></div>';
-  h+='<div class="kpi k-blue"><div class="kpi-val">'+totalMatches+'</div><div class="kpi-label">Matches Played</div></div>';
+  h+='<div class="kpi k-blue"><div class="kpi-val">'+results.length+'</div><div class="kpi-label">Matches Played</div></div>';
   h+='<div class="kpi k-red"><div class="kpi-val">'+accPct+'%</div><div class="kpi-label">Model Accuracy</div></div>';
   h+='<div class="kpi k-gold"><div class="kpi-val">'+(scorers[0]?scorers[0].goals:'-')+'</div><div class="kpi-label">Top Scorer Goals</div></div>';
   h+='<div class="kpi k-green"><div class="kpi-val">'+upsets.length+'</div><div class="kpi-label">Upsets</div></div>';
@@ -1729,2747 +1640,158 @@ function renderDashboard(){
 
   h+='<div class="dash-grid wide">';
 
-  // ── MODEL ACCURACY CARD ───────────────────────────────────────
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">🎯</span><span class="dch-title">Model Accuracy</span></div>';
-  h+='<div class="dash-card-body">';
+  // Model Accuracy
+  h+='<div class="dash-card"><div class="dash-card-hdr"><span class="dch-icon">&#127919;</span><span class="dch-title">Model Accuracy</span></div><div class="dash-card-body">';
   h+='<div class="acc-pct-ring">';
   h+='<div class="ring-stat"><div class="ring-num green">'+correct+'</div><div class="ring-lbl">Correct</div></div>';
   h+='<div class="ring-stat"><div class="ring-num" style="font-size:2.8rem;color:var(--pitch)">'+accPct+'%</div><div class="ring-lbl">Accuracy</div></div>';
-  h+='<div class="ring-stat"><div class="ring-num red">'+(totalMatches-correct)+'</div><div class="ring-lbl">Wrong</div></div>';
+  h+='<div class="ring-stat"><div class="ring-num red">'+(results.length-correct)+'</div><div class="ring-lbl">Wrong</div></div>';
   h+='</div>';
   h+='<div class="acc-progress"><div class="acc-progress-fill" style="width:'+accPct+'%"></div></div>';
   h+='<div style="font-family:Arial,sans-serif;font-size:.74rem;color:var(--muted);margin-bottom:.75rem">Last 8 results:</div>';
-  var last8 = modelResults.slice(-8).reverse();
-  last8.forEach(function(r){
-    var badgeCls = r.hit?'hit':r.isUpset?'upset':'miss';
-    var badgeTxt = r.hit?'✓ Correct':r.isUpset?'⚡ Upset':'✗ Wrong';
-    h+='<div class="acc-row">';
-    h+='<span style="font-size:.95rem">'+flag(r.home)+flag(r.away)+'</span>';
-    h+='<span class="acc-result">'+r.hg+'–'+r.ag+'</span>';
-    h+='<span style="flex:1;font-size:.78rem;color:var(--muted)">'+r.htName.split(' ')[0]+' vs '+r.atName.split(' ')[0]+'</span>';
-    h+='<span class="acc-badge '+badgeCls+'">'+badgeTxt+'</span>';
-    h+='</div>';
+  modelResults.slice(-8).reverse().forEach(function(r){
+    var cls=r.hit?'hit':r.isUpset?'upset':'miss';
+    var txt=r.hit?'&#10003; Correct':r.isUpset?'&#9889; Upset':'&#10007; Wrong';
+    h+='<div class="acc-row"><span style="font-size:.95rem">'+flag(r.home)+flag(r.away)+'</span>';
+    h+='<span class="acc-result">'+r.hg+'-'+r.ag+'</span>';
+    h+='<span style="flex:1;font-size:.78rem;color:var(--muted)">'+r.hn.split(' ')[0]+' vs '+r.an.split(' ')[0]+'</span>';
+    h+='<span class="acc-badge '+cls+'">'+txt+'</span></div>';
   });
   h+='</div></div>';
 
-  // ── BIGGEST UPSETS ────────────────────────────────────────────
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">⚡</span><span class="dch-title">Biggest Upsets</span></div>';
-  h+='<div class="dash-card-body">';
-  if(!upsets.length){
-    h+='<p style="color:var(--muted);font-family:Arial,sans-serif;font-size:.82rem;text-align:center;padding:1.5rem">No major upsets yet</p>';
-  } else {
-    upsets.slice(0,6).forEach(function(u,i){
-      h+='<div class="dash-stat-row">';
-      h+='<span class="dash-rank '+(i===0?'gold':'')+'">'+flag(u.home)+flag(u.away)+'</span>';
-      h+='<span class="dash-name">'+u.winner+' def. '+u.loser+'<small>Score: '+u.hg+'–'+u.ag+' · Model had '+u.loser+' at '+u.favPct.toFixed(0)+'% fav.</small></span>';
-      h+='<span class="acc-badge upset">⚡ Upset</span>';
-      h+='</div>';
-    });
-  }
+  // Biggest Upsets
+  h+='<div class="dash-card"><div class="dash-card-hdr"><span class="dch-icon">&#9889;</span><span class="dch-title">Biggest Upsets</span></div><div class="dash-card-body">';
+  if(!upsets.length){h+='<p style="color:var(--muted);font-family:Arial,sans-serif;font-size:.82rem;text-align:center;padding:1.5rem">No major upsets yet</p>';}
+  else{upsets.slice(0,6).forEach(function(u,i){
+    h+='<div class="dash-stat-row"><span class="dash-rank">'+flag(u.home)+flag(u.away)+'</span>';
+    h+='<span class="dash-name">'+u.winner+' def. '+u.loser+'<small>'+u.hg+'-'+u.ag+' &middot; Model had '+u.loser+' at '+u.favPct.toFixed(0)+'% fav</small></span>';
+    h+='<span class="acc-badge upset">&#9889; Upset</span></div>';
+  });}
   h+='</div></div>';
-
-  h+='</div>'; // end wide grid
+  h+='</div>';
 
   h+='<div class="dash-grid">';
 
-  // ── TOP SCORERS ───────────────────────────────────────────────
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">⚽</span><span class="dch-title">Top Scorers</span></div>';
-  h+='<div class="dash-card-body">';
-  var maxG = scorers[0]?scorers[0].goals:1;
+  // Top Scorers
+  h+='<div class="dash-card"><div class="dash-card-hdr"><span class="dch-icon">&#9917;</span><span class="dch-title">Top Scorers</span></div><div class="dash-card-body">';
+  var maxG=scorers[0]?scorers[0].goals:1;
   scorers.forEach(function(p,i){
-    var tname = p.team?(teams[p.team]||D.teams[p.team]||{name:p.team}).name:'';
-    h+='<div class="dash-stat-row">';
-    h+='<span class="dash-rank '+(i===0?'gold':'')+'">'+flag(p.team)+'</span>';
-    h+='<span class="dash-name">'+p.name+'<small>'+tname+(p.assists?' · '+p.assists+' ast':'')+'</small></span>';
+    var tn=p.team?(teams[p.team]||D.teams[p.team]||{name:p.team}).name:'';
+    h+='<div class="dash-stat-row"><span class="dash-rank '+(i===0?'gold':'')+'">'+flag(p.team)+'</span>';
+    h+='<span class="dash-name">'+p.name+'<small>'+tn+(p.assists?' &middot; '+p.assists+' ast':'')+'</small></span>';
     h+='<div class="dash-bar-wrap"><div class="dash-bar" style="width:'+Math.round(p.goals/maxG*100)+'%"></div></div>';
-    h+='<span class="dash-val">'+p.goals+'</span>';
-    h+='</div>';
+    h+='<span class="dash-val">'+p.goals+'</span></div>';
   });
   h+='</div></div>';
 
-  // ── TOP ASSISTS ───────────────────────────────────────────────
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">🎁</span><span class="dch-title">Top Assists</span></div>';
-  h+='<div class="dash-card-body">';
-  var maxA = assisters[0]?assisters[0].assists:1;
-  assisters.forEach(function(p,i){
-    var tname = p.team_code?(teams[p.team_code]||D.teams[p.team_code]||{name:p.team_code}).name:'';
-    h+='<div class="dash-stat-row">';
-    h+='<span class="dash-rank '+(i===0?'gold':'')+'">'+flag(p.team_code)+'</span>';
-    h+='<span class="dash-name">'+p.name+'<small>'+tname+(p.goals?' · '+p.goals+' goals':'')+'</small></span>';
+  // Top Assists
+  h+='<div class="dash-card"><div class="dash-card-hdr"><span class="dch-icon">&#127381;</span><span class="dch-title">Top Assists</span></div><div class="dash-card-body">';
+  if(!assisters.length){h+='<p style="color:var(--muted);font-family:Arial,sans-serif;font-size:.82rem;padding:1rem">Assist data loading...</p>';}
+  else{var maxA=assisters[0].assists;assisters.forEach(function(p,i){
+    var tn=p.team_code?(teams[p.team_code]||D.teams[p.team_code]||{name:p.team_code}).name:'';
+    h+='<div class="dash-stat-row"><span class="dash-rank '+(i===0?'gold':'')+'">'+flag(p.team_code)+'</span>';
+    h+='<span class="dash-name">'+p.name+'<small>'+tn+(p.goals?' &middot; '+p.goals+' goals':'')+'</small></span>';
     h+='<div class="dash-bar-wrap"><div class="dash-bar blue" style="width:'+Math.round(p.assists/maxA*100)+'%"></div></div>';
-    h+='<span class="dash-val">'+p.assists+'</span>';
-    h+='</div>';
-  });
-  if(!assisters.length) h+='<p style="color:var(--muted);font-family:Arial,sans-serif;font-size:.82rem;padding:1rem">Assist data loading...</p>';
+    h+='<span class="dash-val">'+p.assists+'</span></div>';
+  });}
   h+='</div></div>';
 
-  // ── TOP RATED ─────────────────────────────────────────────────
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">⭐</span><span class="dch-title">Top Rated Players</span></div>';
-  h+='<div class="dash-card-body">';
-  rated.forEach(function(p,i){
-    var tname = p.team_code?(teams[p.team_code]||D.teams[p.team_code]||{name:p.team_code}).name:'';
-    var rCls = p.rating>=8?'rating-high':p.rating>=7?'rating-mid':'rating-low';
-    h+='<div class="dash-stat-row">';
-    h+='<span class="dash-rank '+(i===0?'gold':'')+'">'+flag(p.team_code)+'</span>';
-    h+='<span class="dash-name">'+p.name+'<small>'+tname+' · '+p.appearances+' app'+( p.goals?' · '+p.goals+'⚽':'' )+'</small></span>';
-    h+='<span class="rating-badge '+rCls+'">'+p.rating.toFixed(1)+'</span>';
-    h+='</div>';
-  });
-  if(!rated.length) h+='<p style="color:var(--muted);font-family:Arial,sans-serif;font-size:.82rem;padding:1rem">Rating data loading...</p>';
+  // Top Rated
+  h+='<div class="dash-card"><div class="dash-card-hdr"><span class="dch-icon">&#11088;</span><span class="dch-title">Top Rated Players</span></div><div class="dash-card-body">';
+  if(!rated.length){h+='<p style="color:var(--muted);font-family:Arial,sans-serif;font-size:.82rem;padding:1rem">Rating data loading...</p>';}
+  else{rated.forEach(function(p,i){
+    var tn=p.team_code?(teams[p.team_code]||D.teams[p.team_code]||{name:p.team_code}).name:'';
+    var rc=p.rating>=8?'rating-high':p.rating>=7?'rating-mid':'rating-low';
+    h+='<div class="dash-stat-row"><span class="dash-rank '+(i===0?'gold':'')+'">'+flag(p.team_code)+'</span>';
+    h+='<span class="dash-name">'+p.name+'<small>'+tn+' &middot; '+p.appearances+' app'+(p.goals?' &middot; '+p.goals+' goals':'')+'</small></span>';
+    h+='<span class="rating-badge '+rc+'">'+p.rating.toFixed(1)+'</span></div>';
+  });}
   h+='</div></div>';
 
-  // ── BEST ATTACK ───────────────────────────────────────────────
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">🔥</span><span class="dch-title">Best Attack</span></div>';
-  h+='<div class="dash-card-body">';
-  var maxGF = byGF[0]?byGF[0].gf:1;
+  // Best Attack
+  h+='<div class="dash-card"><div class="dash-card-hdr"><span class="dch-icon">&#128293;</span><span class="dch-title">Best Attack</span></div><div class="dash-card-body">';
+  var maxGF=byGF[0]?byGF[0].gf:1;
   byGF.forEach(function(t,i){
-    var tname=(teams[t.code]||D.teams[t.code]||{name:t.code}).name;
-    h+='<div class="dash-stat-row">';
-    h+='<span class="dash-rank '+(i===0?'gold':'')+'">'+flag(t.code)+'</span>';
-    h+='<span class="dash-name">'+tname+'<small>'+t.played+' played · '+t.wins+'W '+t.draws+'D '+t.losses+'L</small></span>';
+    var tn=(teams[t.code]||D.teams[t.code]||{name:t.code}).name;
+    h+='<div class="dash-stat-row"><span class="dash-rank '+(i===0?'gold':'')+'">'+flag(t.code)+'</span>';
+    h+='<span class="dash-name">'+tn+'<small>'+t.played+' played &middot; '+t.wins+'W '+t.draws+'D '+t.losses+'L</small></span>';
     h+='<div class="dash-bar-wrap"><div class="dash-bar" style="width:'+Math.round(t.gf/maxGF*100)+'%"></div></div>';
-    h+='<span class="dash-val">'+t.gf+'</span>';
-    h+='</div>';
+    h+='<span class="dash-val">'+t.gf+'</span></div>';
   });
   h+='</div></div>';
 
-  // ── BEST DEFENCE ─────────────────────────────────────────────
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">🛡️</span><span class="dch-title">Best Defence</span></div>';
-  h+='<div class="dash-card-body">';
-  var maxGA2 = Math.max.apply(null,byGA.map(function(t){return t.ga;}))||1;
+  // Best Defence
+  h+='<div class="dash-card"><div class="dash-card-hdr"><span class="dch-icon">&#128737;</span><span class="dch-title">Best Defence</span></div><div class="dash-card-body">';
+  var maxGA=Math.max.apply(null,byGA.map(function(t){return t.ga;}))||1;
   byGA.forEach(function(t,i){
-    var tname=(teams[t.code]||D.teams[t.code]||{name:t.code}).name;
-    var barW = Math.round((1-t.ga/maxGA2)*100);
-    h+='<div class="dash-stat-row">';
-    h+='<span class="dash-rank '+(i===0?'gold':'')+'">'+flag(t.code)+'</span>';
-    h+='<span class="dash-name">'+tname+'<small>'+t.played+' played · '+t.gf+' scored</small></span>';
-    h+='<div class="dash-bar-wrap"><div class="dash-bar" style="width:'+barW+'%"></div></div>';
-    h+='<span class="dash-val">'+t.ga+'</span>';
-    h+='</div>';
+    var tn=(teams[t.code]||D.teams[t.code]||{name:t.code}).name;
+    h+='<div class="dash-stat-row"><span class="dash-rank '+(i===0?'gold':'')+'">'+flag(t.code)+'</span>';
+    h+='<span class="dash-name">'+tn+'<small>'+t.played+' played &middot; '+t.gf+' scored</small></span>';
+    h+='<div class="dash-bar-wrap"><div class="dash-bar" style="width:'+Math.round((1-t.ga/maxGA)*100)+'%"></div></div>';
+    h+='<span class="dash-val">'+t.ga+'</span></div>';
   });
   h+='</div></div>';
 
-  // ── BIGGEST GAMES ─────────────────────────────────────────────
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">🎆</span><span class="dch-title">Highest Scoring Matches</span></div>';
-  h+='<div class="dash-card-body">';
+  // Biggest Games
+  h+='<div class="dash-card"><div class="dash-card-hdr"><span class="dch-icon">&#127878;</span><span class="dch-title">Highest Scoring Matches</span></div><div class="dash-card-body">';
   bigGames.forEach(function(r){
     var hn=(teams[r.home]||D.teams[r.home]||{name:r.home}).name;
     var an=(teams[r.away]||D.teams[r.away]||{name:r.away}).name;
-    var winner = r.hg>r.ag?'home':r.ag>r.hg?'away':'draw';
+    var w=r.hg>r.ag?'home':r.ag>r.hg?'away':'draw';
     h+='<div class="match-result-card">';
-    h+='<div class="teams" style="text-align:right;flex:1">'+flag(r.home)+' <span style="'+(winner==='home'?'font-weight:700':'opacity:.6')+'">'+hn+'</span></div>';
-    h+='<div class="score-big">'+r.hg+'–'+r.ag+'</div>';
-    h+='<div class="teams" style="flex:1"><span style="'+(winner==='away'?'font-weight:700':'opacity:.6')+'">'+an+'</span> '+flag(r.away)+'</div>';
-    h+='<span style="font-family:\'Courier New\',monospace;font-size:.62rem;color:var(--muted);white-space:nowrap;margin-left:.4rem">'+( r.hg+r.ag)+' gls</span>';
+    h+='<div class="teams" style="text-align:right">'+flag(r.home)+' <span style="'+(w==='home'?'font-weight:700':'opacity:.55')+'">'+hn+'</span></div>';
+    h+='<div class="score-big">'+r.hg+'-'+r.ag+'</div>';
+    h+='<div class="teams"><span style="'+(w==='away'?'font-weight:700':'opacity:.55')+'">'+an+'</span> '+flag(r.away)+'</div>';
+    h+='<span style="font-family:'Courier New',monospace;font-size:.6rem;color:var(--muted);margin-left:.3rem">'+(r.hg+r.ag)+'g</span>';
     h+='</div>';
   });
   h+='</div></div>';
 
-  // ── YELLOW CARDS ─────────────────────────────────────────────
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">🟨</span><span class="dch-title">Disciplinary — Teams</span></div>';
-  h+='<div class="dash-card-body">';
-  var maxY = yellowArr[0]?yellowArr[0].y:1;
-  yellowArr.forEach(function(t,i){
-    var tname=(teams[t.code]||D.teams[t.code]||{name:t.code}).name;
-    h+='<div class="dash-stat-row">';
-    h+='<span class="dash-rank">'+flag(t.code)+'</span>';
-    h+='<span class="dash-name">'+tname+'<small>'+(t.r?t.r+' red card'+(t.r>1?'s':''):'No red cards')+'</small></span>';
+  // Disciplinary
+  h+='<div class="dash-card"><div class="dash-card-hdr"><span class="dch-icon">&#129000;</span><span class="dch-title">Disciplinary &mdash; Teams</span></div><div class="dash-card-body">';
+  if(!yellowArr.length){h+='<p style="color:var(--muted);font-family:Arial,sans-serif;font-size:.82rem;padding:1rem">Card data loading...</p>';}
+  else{var maxY=yellowArr[0].y;yellowArr.forEach(function(t,i){
+    var tn=(teams[t.code]||D.teams[t.code]||{name:t.code}).name;
+    h+='<div class="dash-stat-row"><span class="dash-rank">'+flag(t.code)+'</span>';
+    h+='<span class="dash-name">'+tn+'<small>'+(t.r?t.r+' red card'+(t.r>1?'s':''):'No red cards')+'</small></span>';
     h+='<div class="dash-bar-wrap"><div class="dash-bar" style="background:linear-gradient(90deg,#c9a84c,#f0c040);width:'+Math.round(t.y/maxY*100)+'%"></div></div>';
-    h+='<span class="dash-val" style="color:#c9a84c">'+t.y+'</span>';
-    h+='</div>';
-  });
-  if(!yellowArr.length) h+='<p style="color:var(--muted);font-family:Arial,sans-serif;font-size:.82rem;padding:1rem">Card data loading...</p>';
+    h+='<span class="dash-val" style="color:#b8960a">'+t.y+'</span></div>';
+  });}
   h+='</div></div>';
 
-  h+='</div>'; // end main dash-grid
-
-  // ── OVER/UNDERPERFORMERS FULL WIDTH ──────────────────────────
-  h+='<div class="dash-grid wide" style="margin-top:0">';
-
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">📈</span><span class="dch-title">Overperformers vs Pre-Tournament Prediction</span></div>';
-  h+='<div class="dash-card-body">';
-  overPerf.forEach(function(p){
-    var tname=(teams[p.code]||D.teams[p.code]||{name:p.code}).name;
-    var barW=Math.min(Math.round(Math.abs(p.delta)/3*100),100);
-    h+='<div class="perf-bar-wrap">';
-    h+='<span class="perf-label">'+flag(p.code)+' '+tname.split(' ')[0]+'</span>';
-    h+='<div class="perf-bar-track"><div class="perf-bar-fill pos" style="width:'+barW+'%"></div></div>';
-    h+='<span class="perf-delta pos">+'+p.delta+'%</span>';
-    h+='<span style="font-family:\'Courier New\',monospace;font-size:.68rem;color:var(--muted);margin-left:.4rem">'+p.pre+'%→'+p.live+'%</span>';
-    h+='</div>';
-  });
-  h+='</div></div>';
-
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">📉</span><span class="dch-title">Underperformers vs Pre-Tournament Prediction</span></div>';
-  h+='<div class="dash-card-body">';
-  underPerf.forEach(function(p){
-    var tname=(teams[p.code]||D.teams[p.code]||{name:p.code}).name;
-    var barW=Math.min(Math.round(Math.abs(p.delta)/3*100),100);
-    h+='<div class="perf-bar-wrap">';
-    h+='<span class="perf-label">'+flag(p.code)+' '+tname.split(' ')[0]+'</span>';
-    h+='<div class="perf-bar-track"><div class="perf-bar-fill neg" style="width:'+barW+'%"></div></div>';
-    h+='<span class="perf-delta neg">'+p.delta+'%</span>';
-    h+='<span style="font-family:\'Courier New\',monospace;font-size:.68rem;color:var(--muted);margin-left:.4rem">'+p.pre+'%→'+p.live+'%</span>';
-    h+='</div>';
-  });
-  h+='</div></div>';
-
-  h+='</div>'; // end wide grid
-
-  // Footer timestamp
-  var upd='';
-  try{
-    var meta=LIVE.meta||{};
-    if(meta.last_updated) upd=new Date(meta.last_updated.replace('Z','').replace('+00:00','')+'+00:00').toLocaleString('en-US',{timeZone:'America/Chicago',month:'short',day:'numeric',hour:'numeric',minute:'2-digit',hour12:true})+' CT';
-  }catch(e){}
-  if(upd) h+='<p class="update-time" style="text-align:right;margin-top:.5rem">Last updated: '+upd+'</p>';
-
-  container.innerHTML = h;
-}
-
-// ── PRONÓSTICOS DEL DÍA ──────────────────────────────────────────
-function getTodayMatches(){
-  // Gets today's matches from olympus_live.json (already loaded as LIVE)
-  if(!LIVE || !LIVE.live) return [];
-
-  var now = new Date();
-  // Today in CT (UTC-5 during summer)
-  var ct = new Date(now.getTime() - 5*60*60*1000);
-  var todayStr = ct.toISOString().slice(0,10); // "2026-06-22"
-
-  var all = [];
-
-  // Add matches from results (finished today) and remaining (upcoming today)
-  var sources = (LIVE.live.results||[]).concat(LIVE.live.remaining||[]);
-
-  // Also add live_now matches
-  if(LIVE.live.live_now){
-    for(var i=0;i<LIVE.live.live_now.length;i++){
-      var ln = LIVE.live.live_now[i];
-      all.push({home:ln.home, away:ln.away, date:ln.date||'', stage:ln.stage||'', status:'LIVE', hg:ln.hg, ag:ln.ag});
-    }
-  }
-
-  for(var i=0;i<sources.length;i++){
-    var m = sources[i];
-    if(!m.date) continue;
-    // Normalize date string to extract date part
-    var dStr = m.date.trim().replace(' ','T');
-    if(dStr.length===16) dStr += ':00Z';
-    else if(!dStr.endsWith('Z') && !dStr.includes('+')) dStr += 'Z';
-    try {
-      var d = new Date(dStr);
-      var mCt = new Date(d.getTime() - 5*60*60*1000);
-      var mDate = mCt.toISOString().slice(0,10);
-      if(mDate === todayStr){
-        var status = m.live ? 'LIVE' : (m.hg!==undefined && !m.live ? 'FT' : 'UPCOMING');
-        all.push({home:m.home, away:m.away, date:m.date, stage:m.stage||'', status:status, hg:m.hg, ag:m.ag});
-      }
-    } catch(e){}
-  }
-
-  // Deduplicate by home+away
-  var seen = {}, result = [];
-  for(var i=0;i<all.length;i++){
-    var key = all[i].home + '_' + all[i].away;
-    if(!seen[key]){ seen[key]=true; result.push(all[i]); }
-  }
-  return result;
-}
-
-
-  renderLiveBracket();
-  renderPredictions();
-}
-
-
-
-
-
-// ── PLAYER STATS TAB ─────────────────────────────────────────────
-var _currentStatSort = 'goals';
-var _currentTeamFilter = 'ALL';
-
-var STAT_CATEGORIES = [
-  {key:'goals',      label:'Top Scorers',    col:'Goals'},
-  {key:'assists',    label:'Top Assists',    col:'Assists'},
-  {key:'goals_assists', label:'Goals + Assists', col:'G+A'},
-  {key:'yellow_cards', label:'Yellow Cards', col:'Yellows'},
-  {key:'red_cards',  label:'Red Cards',      col:'Reds'},
-  {key:'shots_on',   label:'Shots on Target',col:'Shots'},
-  {key:'key_passes', label:'Key Passes',     col:'Key Pass'},
-  {key:'rating',     label:'Top Rated',      col:'Rating'},
-  {key:'dribbles',   label:'Dribbles',       col:'Dribbles'},
-];
-
-function renderPlayerStats(){
-  if(!LIVE || !LIVE.live) return;
-
-  // Copy player_stats — do not mutate the cached array
-  var players = (LIVE.live.player_stats || []).map(function(p){ return Object.assign({},p); });
-  var tgoals  = LIVE.live.tournament_goals || {};
-
-  // Build name/team lookup from match events (for players missing from /players API)
-  var eventInfo = {};
-  (LIVE.live.lineups || []).forEach(function(m){
-    (m.events || []).forEach(function(ev){
-      if(ev.player_id && ev.detail !== 'Own Goal')
-        eventInfo[String(ev.player_id)] = { name: ev.player_name, team_name: ev.team_name };
-    });
-  });
-
-  // Patch existing players: trust tournament_goals over stale API count
-  var existingIds = {};
-  players.forEach(function(p){
-    existingIds[String(p.id)] = p;
-    var eg = tgoals[String(p.id)];
-    if(eg !== undefined && eg > (p.goals||0)) p.goals = eg;
-  });
-
-  // Add scorers missing entirely from /players API (live match players)
-  Object.keys(tgoals).forEach(function(pid){
-    if(!existingIds[pid] && tgoals[pid] > 0){
-      var info = eventInfo[pid] || {};
-      var teamCode = null;
-      if(info.team_name) Object.keys(D.teams).forEach(function(c){
-        if(D.teams[c].name === info.team_name) teamCode = c;
-      });
-      players.push({ id:pid, name:info.name||('Player #'+pid), nationality:'', photo:'',
-        team_name:info.team_name||'', team_code:teamCode, appearances:1, minutes:0, rating:null,
-        goals:tgoals[pid], assists:0, yellow_cards:0, red_cards:0,
-        shots_total:0, shots_on:0, key_passes:0, pass_accuracy:0, dribbles:0 });
-    }
-  });
-
-  var content = document.getElementById('playerstats-content');
-  if(!content) return;
-
-  if(!players.length){
-    content.innerHTML='<p class="no-stats">Player stats will appear here once matches start.</p>';
-    return;
-  }
-
-  // Build team list for filter
-  var teams = ['ALL'];
-  var seen = {};
-  for(var i=0;i<players.length;i++){
-    var tc = players[i].team_code;
-    if(tc && !seen[tc]){ teams.push(tc); seen[tc]=true; }
-  }
-  teams.sort();
-
-  var html = '';
-
-  // Filters
-  html += '<div class="stats-filters">';
-  for(var ci=0;ci<STAT_CATEGORIES.length;ci++){
-    var cat = STAT_CATEGORIES[ci];
-    html += '<button class="stat-filter-btn'+(cat.key===_currentStatSort?' active':'')+'" onclick="setSortStat(\'' + cat.key + '\')">' + cat.label + '</button>';
-  }
-  html += '</div>';
-
-  // Team filter
-  html += '<div class="stats-filters" style="margin-bottom:1rem">';
-  html += '<span class="sans" style="font-size:.75rem;color:var(--muted);margin-right:.3rem">Filter by team:</span>';
-  html += '<select class="team-filter" onchange="setTeamFilter(this.value)">';
-  for(var ti=0;ti<teams.length;ti++){
-    var tc2 = teams[ti];
-    var tn2 = tc2==='ALL'?'All Teams':(D.teams[tc2]?D.teams[tc2].name:tc2);
-    html += '<option value="'+tc2+'"'+(tc2===_currentTeamFilter?' selected':'')+'>'+tn2+'</option>';
-  }
-  html += '</select>';
-  html += '</div>';
-
-  // Filter and sort
-  var filtered = players.filter(function(p){
-    return _currentTeamFilter === 'ALL' || p.team_code === _currentTeamFilter;
-  });
-
-  var sortKey = _currentStatSort;
-  filtered.sort(function(a,b){
-    var av = sortKey==='goals_assists' ? (a.goals+a.assists) : (a[sortKey]||0);
-    var bv = sortKey==='goals_assists' ? (b.goals+b.assists) : (b[sortKey]||0);
-    if(bv !== av) return bv - av;
-    return (b.goals||0) - (a.goals||0);
-  });
-
-  // Show top 30
-  var shown = filtered.slice(0, 30);
-  var currentCat = STAT_CATEGORIES.find(function(c){return c.key===sortKey;}) || STAT_CATEGORIES[0];
-
-  html += '<div style="overflow-x:auto"><table class="stats-table"><thead><tr>';
-  html += '<th>#</th><th>Player</th><th>Team</th>';
-  html += '<th>'+currentCat.col+'</th>';
-  html += '<th>Goals</th><th>Assists</th><th>G+A</th>';
-  html += '<th>Shots</th><th>Key Pass</th>';
-  html += '<th><span class="ycard"></span></th><th><span class="rcard"></span></th>';
-  html += '<th>Mins</th><th>Rating</th>';
-  html += '</tr></thead><tbody>';
-
-  for(var i=0;i<shown.length;i++){
-    var p = shown[i];
-    var mainVal = sortKey==='goals_assists' ? (p.goals+p.assists) : (p[sortKey]||0);
-    var ratingClass = !p.rating?'':p.rating>=8?'rating-high':p.rating>=7?'rating-mid':'rating-low';
-    var teamName = p.team_code && D.teams[p.team_code] ? D.teams[p.team_code].name : p.team_name;
-
-    html += '<tr class="'+(i<3?'top3':'')+'"><td>'+(i+1)+'</td>';
-    html += '<td><strong>'+p.name+'</strong></td>';
-    html += '<td class="sans" style="font-size:.75rem">'+flag(p.team_code)+' '+teamName+'</td>';
-    html += '<td class="stat-val stat-highlight">'+mainVal+'</td>';
-    html += '<td class="stat-val">'+(p.goals||0)+'</td>';
-    html += '<td class="stat-val">'+(p.assists||0)+'</td>';
-    html += '<td class="stat-val">'+(p.goals+p.assists)+'</td>';
-    html += '<td class="stat-val">'+(p.shots_on||0)+'</td>';
-    html += '<td class="stat-val">'+(p.key_passes||0)+'</td>';
-    html += '<td class="stat-val">'+(p.yellow_cards?'<span class="ycard"></span>'+p.yellow_cards:'0')+'</td>';
-    html += '<td class="stat-val">'+(p.red_cards?'<span class="rcard"></span>'+p.red_cards:'0')+'</td>';
-    html += '<td class="stat-val" style="color:var(--muted)">'+(p.minutes||0)+"'</td>";
-    html += '<td>'+(p.rating?'<span class="rating-badge '+ratingClass+'">'+p.rating+'</span>':'-')+'</td>';
-    html += '</tr>';
-  }
-
-  html += '</tbody></table></div>';
-  if(filtered.length > 30) html += '<p class="sans" style="font-size:.75rem;color:var(--muted);margin-top:.75rem;text-align:center">Showing top 30 of '+filtered.length+' players</p>';
-
-  content.innerHTML = html;
-}
-
-function setSortStat(key){
-  _currentStatSort = key;
-  renderPlayerStats();
-}
-
-function setTeamFilter(val){
-  _currentTeamFilter = val;
-  renderPlayerStats();
-}
-
-// ── LINEUPS TAB ───────────────────────────────────────────────────
-function renderLineups(){
-  if(!LIVE || !LIVE.live) return;
-  var live = LIVE.live;
-  var lineups = live.lineups || [];
-  var tgoals  = live.tournament_goals || {};
-  var content = document.getElementById('lineups-content');
-  if(!content) return;
-
-  if(!lineups.length){
-    content.innerHTML='<p class="sans" style="color:var(--muted);font-size:.85rem;text-align:center;padding:3rem 0">Lineups will appear here once matches start.</p>';
-    return;
-  }
-
-  // Sort: live first, then most recent
-  var sorted = lineups.slice().sort(function(a,b){
-    if(a.live && !b.live) return -1;
-    if(!a.live && b.live) return 1;
-    return b.date > a.date ? 1 : -1;
-  });
-
-  var html = '';
-
-  // Live match pitch at top (if any)
-  var liveMatch = sorted.find(function(l){ return l.live; });
-  if(liveMatch){
-    html += '<div class="sec-title" style="font-size:1.1rem;margin-bottom:1rem">&#9679; Live Lineup</div>';
-    html += buildPitch(liveMatch, tgoals);
-  }
-
-  // Past lineups as clickable cards
-  var past = sorted.filter(function(l){ return !l.live; });
-  if(past.length){
-    html += '<div class="sec-title" style="font-size:1.1rem;margin-top:2rem;margin-bottom:1rem">Past Lineups</div>';
-    html += '<div class="lineup-grid">';
-    for(var i=0;i<past.length;i++){
-      var m = past[i];
-      var hn = D.teams[m.home] ? D.teams[m.home].name : m.home;
-      var an = D.teams[m.away] ? D.teams[m.away].name : m.away;
-      html += '<div class="lineup-card" onclick="openLineup('+i+')">';
-      html += '<div class="lc-teams">'+flag(m.home)+' '+hn+'</div>';
-      html += '<div class="lc-score">'+m.hg+' &ndash; '+m.ag+'</div>';
-      html += '<div class="lc-teams">'+flag(m.away)+' '+an+'</div>';
-      html += '<div class="lc-date">'+m.date+'</div>';
-      if(m.lineups && m.lineups.length) html += '<div class="lc-badge">&#10003; Lineup available</div>';
-      html += '</div>';
-    }
-    html += '</div>';
-  }
-
-  content.innerHTML = html;
-
-  // Store past for modal
-  window._pastLineups = past;
-  window._tgoals = tgoals;
-}
-
-function buildPitch(match, tgoals){
-  if(!match.lineups || match.lineups.length < 2) return '<p style="color:var(--muted);text-align:center;padding:2rem">Lineup not yet available</p>';
-
-  var home_lu = match.lineups[0];
-  var away_lu = match.lineups[1];
-  var hn = D.teams[match.home] ? D.teams[match.home].name : match.home;
-  var an = D.teams[match.away] ? D.teams[match.away].name : match.away;
-
-  var html = '<div class="pitch-wrap">';
-
-  // Header
-  html += '<div class="pitch-header">';
-  html += '<div class="team-name">'+flag(match.home)+' '+hn+'<span class="formation">'+home_lu.formation+'</span></div>';
-  html += '<div class="pitch-score">'+match.hg+' &ndash; '+match.ag+'</div>';
-  html += '<div class="team-name" style="flex-direction:row-reverse">'+an+' '+flag(match.away)+'<span class="formation">'+away_lu.formation+'</span></div>';
-  html += '</div>';
-
-  html += '<div class="pitch-inner">';
-
-  // Home team (top half)
-  html += buildTeamOnPitch(home_lu, tgoals, true);
-
-  // Centre divider
-  html += '<div class="pitch-divider"></div>';
-
-  // Away team (bottom half)
-  html += buildTeamOnPitch(away_lu, tgoals, false);
-
-  html += '</div></div>';
-  return html;
-}
-
-function buildTeamOnPitch(lineup, tgoals, isHome){
-  var players = lineup.players || [];
-  if(!players.length) return '';
-
-  // Group by grid row (first number before colon)
-  var rows = {};
-  for(var i=0;i<players.length;i++){
-    var p = players[i];
-    var row = p.grid ? p.grid.split(':')[0] : (p.pos === 'G' ? '1' : '2');
-    if(!rows[row]) rows[row] = [];
-    rows[row].push(p);
-  }
-
-  // Home(top half): GK row=1 at top -> ascending. Away(bottom): GK row=1 at bottom -> descending.
-  var rowKeys = Object.keys(rows).map(Number).sort(function(a,b){ return isHome ? a-b : b-a; });
-
-  var html = '<div style="margin:'+(isHome?'0 0 1rem':'1rem 0 0')+'">';
-  for(var ri=0;ri<rowKeys.length;ri++){
-    var rowPlayers = rows[rowKeys[ri]];
-    html += '<div class="pitch-row">';
-    for(var pi=0;pi<rowPlayers.length;pi++){
-      var p = rowPlayers[pi];
-      var goals = tgoals[String(p.id)] || 0;
-      var isGK = p.pos === 'G';
-      var shortName = p.name ? p.name.split(' ').pop() : '?';
-      html += '<div class="pitch-player'+(isGK?' gk':'')+'">';
-      html += '<span class="pname" title="'+p.name+'">'+shortName+'</span>';
-      if(goals > 0) html += '<span class="pgoals">&#9917;'.repeat(goals)+'</span>';
-      html += '</div>';
-    }
-    html += '</div>';
-  }
-  html += '</div>';
-  return html;
-}
-
-function openLineup(idx){
-  var match = window._pastLineups[idx];
-  var tgoals = window._tgoals || {};
-  var modal = document.getElementById('lineup-modal');
-  var mc    = document.getElementById('modal-content');
-  var hn = D.teams[match.home] ? D.teams[match.home].name : match.home;
-  var an = D.teams[match.away] ? D.teams[match.away].name : match.away;
-  mc.innerHTML = '<h3 style="margin-bottom:1rem;font-size:1.1rem">'+flag(match.home)+' '+hn+' '+match.hg+' &ndash; '+match.ag+' '+an+' '+flag(match.away)+'</h3>' + buildPitch(match, tgoals);
-  modal.className = 'modal-overlay open';
-  document.body.style.overflow = 'hidden';
-}
-
-function closeModal(){
-  document.getElementById('lineup-modal').className = 'modal-overlay';
-  document.body.style.overflow = '';
-}
-
-// ── LIVE BRACKET TAB ─────────────────────────────────────────────
-function renderLiveBracket(){
-  if(!LIVE || !LIVE.live || !LIVE.live.live_bracket) return;
-  var lb = LIVE.live.live_bracket;
-  var phase = (LIVE.live && LIVE.live.phase) || 'GROUP_STAGE';
-  var badge = document.getElementById('lb-phase-badge');
-  var phaseLabels = {
-    'PRE_TOURNAMENT':'Pre-Tournament','GROUP_STAGE':'Group Stage',
-    'ROUND_OF_32':'Round of 32','QUARTER_FINALS':'Quarter-Finals',
-    'SEMI_FINALS':'Semi-Finals','FINAL':'Final'
-  };
-  if(badge) badge.textContent = phaseLabels[phase]||phase;
-  var content = document.getElementById('livebracket-content');
-  if(!content) return;
-  function bcard(matchObj, isFinal){
-    if(!matchObj) return '<div class="bm"><div class="bmr"><span class="bmr-name">TBD</span></div><div class="bmr"><span class="bmr-name">TBD</span></div></div>';
-    var h=matchObj.home, a=matchObj.away, w=matchObj.winner;
-    var hCode=h?h.code:null, aCode=a?a.code:null, wCode=w?w.code:null;
-    var out='<div class="bm'+(isFinal?' isfin':'')+'">';
-    if(isFinal) out+='<div class="fin-banner">&#9733; Live Predicted Final</div>';
-    out+='<div class="bmr'+(wCode===hCode?' won':wCode&&wCode!==aCode?' lost':'')+'">';
-    out+='<span class="bmr-flag">'+(hCode?flag(hCode):'?')+'</span>';
-    out+='<span class="bmr-name">'+(hCode?(D.teams[hCode]?D.teams[hCode].name:hCode):'TBD')+'</span>';
-    out+='<span class="bmr-sc" style="color:var(--muted);font-size:.62rem">'+(h&&h.pct?h.pct+'%':'')+'</span>';
-    out+='</div>';
-    out+='<div class="bmr'+(wCode===aCode?' won':wCode&&wCode!==hCode?' lost':'')+'">';
-    out+='<span class="bmr-flag">'+(aCode?flag(aCode):'?')+'</span>';
-    out+='<span class="bmr-name">'+(aCode?(D.teams[aCode]?D.teams[aCode].name:aCode):'TBD')+'</span>';
-    out+='<span class="bmr-sc" style="color:var(--muted);font-size:.62rem">'+(a&&a.pct?a.pct+'%':'')+'</span>';
-    out+='</div>';
-    if(w){ var wName=D.teams[wCode]?D.teams[wCode].name:wCode; out+='<div class="bmf'+(isFinal?' iswinner':'')+'">'+flag(wCode)+' '+wName+' '+w.pct+'%</div>'; }
-    out+='</div>';
-    return out;
-  }
-  var html='<div class="bk-wrap"><table class="bk-table"><thead><tr>';
-  html+='<th class="bkth">R32</th><th class="bkth">R16</th><th class="bkth">QF</th><th class="bkth">SF</th>';
-  html+='<th class="bkth fin">Final</th>';
-  html+='<th class="bkth">SF</th><th class="bkth">QF</th><th class="bkth">R16</th><th class="bkth">R32</th>';
-  html+='</tr></thead><tbody>';
-  var r32=lb.r32||[], r16=lb.r16||[], qf=lb.qf||[], sf=lb.sf||[], fin=lb.final||{};
-  for(var row=0;row<8;row++){
-    html+='<tr>';
-    html+='<td style="vertical-align:middle;padding:2px">'+bcard(r32[row],false)+'</td>';
-    if(row%2===0) html+='<td rowspan="2" style="vertical-align:middle;padding:2px">'+bcard(r16[Math.floor(row/2)],false)+'</td>';
-    if(row%4===0) html+='<td rowspan="4" style="vertical-align:middle;padding:2px">'+bcard(qf[Math.floor(row/4)],false)+'</td>';
-    if(row===0)   html+='<td rowspan="8" style="vertical-align:middle;padding:2px">'+bcard(sf[0],false)+'</td>';
-    if(row===0)   html+='<td rowspan="8" style="vertical-align:middle;padding:2px">'+bcard(fin,true)+'</td>';
-    if(row===0)   html+='<td rowspan="8" style="vertical-align:middle;padding:2px">'+bcard(sf[1],false)+'</td>';
-    if(row%4===0) html+='<td rowspan="4" style="vertical-align:middle;padding:2px">'+bcard(qf[2+Math.floor(row/4)],false)+'</td>';
-    if(row%2===0) html+='<td rowspan="2" style="vertical-align:middle;padding:2px">'+bcard(r16[4+Math.floor(row/2)],false)+'</td>';
-    html+='<td style="vertical-align:middle;padding:2px">'+bcard(r32[8+row],false)+'</td>';
-    html+='</tr>';
-  }
-  html+='</tbody></table></div>';
-  html+='<p class="sans" style="font-size:.75rem;color:var(--muted);margin-top:1rem;text-align:center">Based on 10,000 simulations · Updates after every match · % = probability of appearing in that slot</p>';
-  content.innerHTML=html;
-}
-
-
-
-// ── TOURNAMENT DASHBOARD ─────────────────────────────────────────
-function renderDashboard(){
-  var container = document.getElementById('dashboard-content');
-  if(!container) return;
-  if(!LIVE || !LIVE.live){ container.innerHTML='<p style="text-align:center;padding:3rem;color:var(--muted);font-family:Arial,sans-serif">Loading...</p>'; return; }
-
-  var live = LIVE.live;
-  var teams = LIVE.teams || D.teams;
-  var results = (live.results||[]).filter(function(r){return !r.live;});
-  var players = live.player_stats||[];
-  var tgoals  = live.tournament_goals||{};
-  var lranked = live.live_ranked||[];
-  var preranked = LIVE.ranked||[];
-  var phase = live.phase||'GROUP_STAGE';
-  var phaseLabels = {'PRE_TOURNAMENT':'Pre-Tournament','GROUP_STAGE':'Group Stage','ROUND_OF_32':'Round of 32','QUARTER_FINALS':'Quarter-Finals','SEMI_FINALS':'Semi-Finals','FINAL':'Final'};
-  var badge = document.getElementById('dash-phase-badge');
-  if(badge) badge.textContent = phaseLabels[phase]||phase;
-
-  // ── BUILD TEAM STATS FROM RESULTS ────────────────────────────
-  var ts = {};
-  results.forEach(function(r){
-    [r.home,r.away].forEach(function(c){ if(!ts[c]) ts[c]={gf:0,ga:0,played:0,wins:0,draws:0,losses:0,xgf:0,xga:0}; });
-    ts[r.home].gf+=r.hg; ts[r.home].ga+=r.ag; ts[r.home].played++;
-    ts[r.away].gf+=r.ag; ts[r.away].ga+=r.hg; ts[r.away].played++;
-    if(r.hg>r.ag){ts[r.home].wins++;ts[r.away].losses++;}
-    else if(r.hg===r.ag){ts[r.home].draws++;ts[r.away].draws++;}
-    else{ts[r.home].losses++;ts[r.away].wins++;}
-    if(r.prediction){
-      ts[r.home].xgf+=r.prediction.exp_home; ts[r.home].xga+=r.prediction.exp_away;
-      ts[r.away].xgf+=r.prediction.exp_away; ts[r.away].xga+=r.prediction.exp_home;
-    }
-  });
-
-  // ── KPI TOTALS ────────────────────────────────────────────────
-  var totalGoals = results.reduce(function(s,r){return s+r.hg+r.ag;},0);
-  var avgGoals   = results.length ? (totalGoals/results.length).toFixed(2) : 0;
-  var totalMatches = results.length;
-
-  // ── MODEL ACCURACY ────────────────────────────────────────────
-  var correct=0, upsets=[], modelResults=[];
-  results.forEach(function(r){
-    var p=r.prediction; if(!p) return;
-    var actual = r.hg>r.ag?'home':r.ag>r.hg?'away':'draw';
-    var maxP = Math.max(p.home_win,p.draw,p.away_win);
-    var predicted = p.home_win===maxP?'home':p.away_win===maxP?'away':'draw';
-    var hit = actual===predicted;
-    if(hit) correct++;
-    var htName=(teams[r.home]||D.teams[r.home]||{name:r.home}).name;
-    var atName=(teams[r.away]||D.teams[r.away]||{name:r.away}).name;
-    var isUpset = !hit && ((actual==='away'&&p.home_win>50)||(actual==='home'&&p.away_win>50)||(actual!=='draw'&&p.draw>40));
-    modelResults.push({home:r.home,away:r.away,hg:r.hg,ag:r.ag,hit:hit,isUpset:isUpset,predicted:predicted,actual:actual,pred:p,htName:htName,atName:atName,stage:r.stage,date:r.date});
-    if(isUpset){
-      var favPct = actual==='away'?p.home_win:p.away_win;
-      upsets.push({home:r.home,away:r.away,hg:r.hg,ag:r.ag,htName:htName,atName:atName,favPct:favPct,winner:actual==='home'?htName:atName,loser:actual==='home'?atName:htName});
-    }
-  });
-  upsets.sort(function(a,b){return b.favPct-a.favPct;});
-  var accPct = totalMatches ? Math.round(correct/totalMatches*100) : 0;
-
-  // ── TOP SCORERS (merge tournament_goals + player_stats) ───────
-  var playerMap={};
-  players.forEach(function(p){ playerMap[String(p.id)]=p; });
-  var scorers=[];
-  Object.keys(tgoals).forEach(function(pid){
-    var g=tgoals[pid]; if(!g) return;
-    var p=playerMap[pid]||{name:'Player #'+pid,team_code:null};
-    scorers.push({name:p.name,team:p.team_code,goals:g,assists:p.assists||0,rating:p.rating||null});
-  });
-  // Also pick up goals from player_stats for players not in tgoals
-  players.forEach(function(p){
-    if(p.goals>0 && !tgoals[String(p.id)]){
-      scorers.push({name:p.name,team:p.team_code,goals:p.goals,assists:p.assists||0,rating:p.rating||null});
-    }
-  });
-  scorers.sort(function(a,b){return b.goals-a.goals||b.assists-a.assists;});
-  // deduplicate by name
-  var seenNames={}, uniqueScorers=[];
-  scorers.forEach(function(s){ if(!seenNames[s.name]){seenNames[s.name]=true;uniqueScorers.push(s);} });
-  scorers=uniqueScorers.slice(0,10);
-
-  // ── TOP ASSISTS ───────────────────────────────────────────────
-  var assisters = players.filter(function(p){return p.assists>0;});
-  assisters.sort(function(a,b){return b.assists-a.assists||b.goals-a.goals;});
-  assisters=assisters.slice(0,8);
-
-  // ── TOP RATED ─────────────────────────────────────────────────
-  var rated = players.filter(function(p){return p.rating&&p.rating>0&&p.appearances>=1;});
-  rated.sort(function(a,b){return b.rating-a.rating;});
-  rated=rated.slice(0,8);
-
-  // ── BEST ATTACK / DEFENCE ─────────────────────────────────────
-  var teamArr = Object.keys(ts).map(function(c){return Object.assign({code:c},ts[c]);});
-  var byGF = teamArr.slice().sort(function(a,b){return b.gf-a.gf||a.ga-b.ga;}).slice(0,8);
-  var byGA = teamArr.filter(function(t){return t.played>0;}).slice().sort(function(a,b){return a.ga-b.ga||b.gf-a.gf;}).slice(0,8);
-
-  // ── BIGGEST GAMES ─────────────────────────────────────────────
-  var bigGames = results.slice().sort(function(a,b){return (b.hg+b.ag)-(a.hg+a.ag);}).slice(0,6);
-
-  // ── OVER/UNDERPERFORMERS ──────────────────────────────────────
-  var preMap={};
-  preranked.forEach(function(r){preMap[r.code]=r.win;});
-  var perfArr=[];
-  lranked.forEach(function(lr){
-    var pre=preMap[lr.code]||0;
-    var delta=parseFloat((lr.win-pre).toFixed(1));
-    perfArr.push({code:lr.code,live:lr.win,pre:pre,delta:delta});
-  });
-  perfArr.sort(function(a,b){return b.delta-a.delta;});
-  var overPerf  = perfArr.filter(function(p){return p.delta>0;}).slice(0,6);
-  var underPerf = perfArr.filter(function(p){return p.delta<0;}).slice(-6).reverse();
-
-  // ── CARDS ─────────────────────────────────────────────────────
-  var yellows={}, reds={};
-  players.forEach(function(p){
-    var c=p.team_code||'??';
-    yellows[c]=(yellows[c]||0)+(p.yellow_cards||0);
-    reds[c]=(reds[c]||0)+(p.red_cards||0);
-  });
-  var yellowArr=Object.keys(yellows).map(function(c){return{code:c,y:yellows[c],r:reds[c]||0};}).filter(function(x){return x.y>0;});
-  yellowArr.sort(function(a,b){return b.y-a.y||b.r-a.r;});
-  yellowArr=yellowArr.slice(0,8);
-
-  // ── RECENT FORM (last 3 results per team) ────────────────────
-  var teamForm={};
-  results.forEach(function(r){
-    ['home','away'].forEach(function(side){
-      var c=r[side], gf=side==='home'?r.hg:r.ag, ga=side==='home'?r.ag:r.hg;
-      if(!teamForm[c]) teamForm[c]=[];
-      teamForm[c].push(gf>ga?'W':gf===ga?'D':'L');
-    });
-  });
-
-  // ── BUILD HTML ────────────────────────────────────────────────
-  var h='';
-
-  // KPI row
-  h+='<div class="kpi-grid">';
-  h+='<div class="kpi k-gold"><div class="kpi-val">'+totalGoals+'</div><div class="kpi-label">Total Goals</div></div>';
-  h+='<div class="kpi k-green"><div class="kpi-val">'+avgGoals+'</div><div class="kpi-label">Goals / Match</div></div>';
-  h+='<div class="kpi k-blue"><div class="kpi-val">'+totalMatches+'</div><div class="kpi-label">Matches Played</div></div>';
-  h+='<div class="kpi k-red"><div class="kpi-val">'+accPct+'%</div><div class="kpi-label">Model Accuracy</div></div>';
-  h+='<div class="kpi k-gold"><div class="kpi-val">'+(scorers[0]?scorers[0].goals:'-')+'</div><div class="kpi-label">Top Scorer Goals</div></div>';
-  h+='<div class="kpi k-green"><div class="kpi-val">'+upsets.length+'</div><div class="kpi-label">Upsets</div></div>';
   h+='</div>';
 
+  // Over/Underperformers
   h+='<div class="dash-grid wide">';
-
-  // ── MODEL ACCURACY CARD ───────────────────────────────────────
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">🎯</span><span class="dch-title">Model Accuracy</span></div>';
-  h+='<div class="dash-card-body">';
-  h+='<div class="acc-pct-ring">';
-  h+='<div class="ring-stat"><div class="ring-num green">'+correct+'</div><div class="ring-lbl">Correct</div></div>';
-  h+='<div class="ring-stat"><div class="ring-num" style="font-size:2.8rem;color:var(--pitch)">'+accPct+'%</div><div class="ring-lbl">Accuracy</div></div>';
-  h+='<div class="ring-stat"><div class="ring-num red">'+(totalMatches-correct)+'</div><div class="ring-lbl">Wrong</div></div>';
-  h+='</div>';
-  h+='<div class="acc-progress"><div class="acc-progress-fill" style="width:'+accPct+'%"></div></div>';
-  h+='<div style="font-family:Arial,sans-serif;font-size:.74rem;color:var(--muted);margin-bottom:.75rem">Last 8 results:</div>';
-  var last8 = modelResults.slice(-8).reverse();
-  last8.forEach(function(r){
-    var badgeCls = r.hit?'hit':r.isUpset?'upset':'miss';
-    var badgeTxt = r.hit?'✓ Correct':r.isUpset?'⚡ Upset':'✗ Wrong';
-    h+='<div class="acc-row">';
-    h+='<span style="font-size:.95rem">'+flag(r.home)+flag(r.away)+'</span>';
-    h+='<span class="acc-result">'+r.hg+'–'+r.ag+'</span>';
-    h+='<span style="flex:1;font-size:.78rem;color:var(--muted)">'+r.htName.split(' ')[0]+' vs '+r.atName.split(' ')[0]+'</span>';
-    h+='<span class="acc-badge '+badgeCls+'">'+badgeTxt+'</span>';
-    h+='</div>';
-  });
-  h+='</div></div>';
-
-  // ── BIGGEST UPSETS ────────────────────────────────────────────
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">⚡</span><span class="dch-title">Biggest Upsets</span></div>';
-  h+='<div class="dash-card-body">';
-  if(!upsets.length){
-    h+='<p style="color:var(--muted);font-family:Arial,sans-serif;font-size:.82rem;text-align:center;padding:1.5rem">No major upsets yet</p>';
-  } else {
-    upsets.slice(0,6).forEach(function(u,i){
-      h+='<div class="dash-stat-row">';
-      h+='<span class="dash-rank '+(i===0?'gold':'')+'">'+flag(u.home)+flag(u.away)+'</span>';
-      h+='<span class="dash-name">'+u.winner+' def. '+u.loser+'<small>Score: '+u.hg+'–'+u.ag+' · Model had '+u.loser+' at '+u.favPct.toFixed(0)+'% fav.</small></span>';
-      h+='<span class="acc-badge upset">⚡ Upset</span>';
-      h+='</div>';
-    });
-  }
-  h+='</div></div>';
-
-  h+='</div>'; // end wide grid
-
-  h+='<div class="dash-grid">';
-
-  // ── TOP SCORERS ───────────────────────────────────────────────
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">⚽</span><span class="dch-title">Top Scorers</span></div>';
-  h+='<div class="dash-card-body">';
-  var maxG = scorers[0]?scorers[0].goals:1;
-  scorers.forEach(function(p,i){
-    var tname = p.team?(teams[p.team]||D.teams[p.team]||{name:p.team}).name:'';
-    h+='<div class="dash-stat-row">';
-    h+='<span class="dash-rank '+(i===0?'gold':'')+'">'+flag(p.team)+'</span>';
-    h+='<span class="dash-name">'+p.name+'<small>'+tname+(p.assists?' · '+p.assists+' ast':'')+'</small></span>';
-    h+='<div class="dash-bar-wrap"><div class="dash-bar" style="width:'+Math.round(p.goals/maxG*100)+'%"></div></div>';
-    h+='<span class="dash-val">'+p.goals+'</span>';
-    h+='</div>';
-  });
-  h+='</div></div>';
-
-  // ── TOP ASSISTS ───────────────────────────────────────────────
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">🎁</span><span class="dch-title">Top Assists</span></div>';
-  h+='<div class="dash-card-body">';
-  var maxA = assisters[0]?assisters[0].assists:1;
-  assisters.forEach(function(p,i){
-    var tname = p.team_code?(teams[p.team_code]||D.teams[p.team_code]||{name:p.team_code}).name:'';
-    h+='<div class="dash-stat-row">';
-    h+='<span class="dash-rank '+(i===0?'gold':'')+'">'+flag(p.team_code)+'</span>';
-    h+='<span class="dash-name">'+p.name+'<small>'+tname+(p.goals?' · '+p.goals+' goals':'')+'</small></span>';
-    h+='<div class="dash-bar-wrap"><div class="dash-bar blue" style="width:'+Math.round(p.assists/maxA*100)+'%"></div></div>';
-    h+='<span class="dash-val">'+p.assists+'</span>';
-    h+='</div>';
-  });
-  if(!assisters.length) h+='<p style="color:var(--muted);font-family:Arial,sans-serif;font-size:.82rem;padding:1rem">Assist data loading...</p>';
-  h+='</div></div>';
-
-  // ── TOP RATED ─────────────────────────────────────────────────
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">⭐</span><span class="dch-title">Top Rated Players</span></div>';
-  h+='<div class="dash-card-body">';
-  rated.forEach(function(p,i){
-    var tname = p.team_code?(teams[p.team_code]||D.teams[p.team_code]||{name:p.team_code}).name:'';
-    var rCls = p.rating>=8?'rating-high':p.rating>=7?'rating-mid':'rating-low';
-    h+='<div class="dash-stat-row">';
-    h+='<span class="dash-rank '+(i===0?'gold':'')+'">'+flag(p.team_code)+'</span>';
-    h+='<span class="dash-name">'+p.name+'<small>'+tname+' · '+p.appearances+' app'+( p.goals?' · '+p.goals+'⚽':'' )+'</small></span>';
-    h+='<span class="rating-badge '+rCls+'">'+p.rating.toFixed(1)+'</span>';
-    h+='</div>';
-  });
-  if(!rated.length) h+='<p style="color:var(--muted);font-family:Arial,sans-serif;font-size:.82rem;padding:1rem">Rating data loading...</p>';
-  h+='</div></div>';
-
-  // ── BEST ATTACK ───────────────────────────────────────────────
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">🔥</span><span class="dch-title">Best Attack</span></div>';
-  h+='<div class="dash-card-body">';
-  var maxGF = byGF[0]?byGF[0].gf:1;
-  byGF.forEach(function(t,i){
-    var tname=(teams[t.code]||D.teams[t.code]||{name:t.code}).name;
-    h+='<div class="dash-stat-row">';
-    h+='<span class="dash-rank '+(i===0?'gold':'')+'">'+flag(t.code)+'</span>';
-    h+='<span class="dash-name">'+tname+'<small>'+t.played+' played · '+t.wins+'W '+t.draws+'D '+t.losses+'L</small></span>';
-    h+='<div class="dash-bar-wrap"><div class="dash-bar" style="width:'+Math.round(t.gf/maxGF*100)+'%"></div></div>';
-    h+='<span class="dash-val">'+t.gf+'</span>';
-    h+='</div>';
-  });
-  h+='</div></div>';
-
-  // ── BEST DEFENCE ─────────────────────────────────────────────
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">🛡️</span><span class="dch-title">Best Defence</span></div>';
-  h+='<div class="dash-card-body">';
-  var maxGA2 = Math.max.apply(null,byGA.map(function(t){return t.ga;}))||1;
-  byGA.forEach(function(t,i){
-    var tname=(teams[t.code]||D.teams[t.code]||{name:t.code}).name;
-    var barW = Math.round((1-t.ga/maxGA2)*100);
-    h+='<div class="dash-stat-row">';
-    h+='<span class="dash-rank '+(i===0?'gold':'')+'">'+flag(t.code)+'</span>';
-    h+='<span class="dash-name">'+tname+'<small>'+t.played+' played · '+t.gf+' scored</small></span>';
-    h+='<div class="dash-bar-wrap"><div class="dash-bar" style="width:'+barW+'%"></div></div>';
-    h+='<span class="dash-val">'+t.ga+'</span>';
-    h+='</div>';
-  });
-  h+='</div></div>';
-
-  // ── BIGGEST GAMES ─────────────────────────────────────────────
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">🎆</span><span class="dch-title">Highest Scoring Matches</span></div>';
-  h+='<div class="dash-card-body">';
-  bigGames.forEach(function(r){
-    var hn=(teams[r.home]||D.teams[r.home]||{name:r.home}).name;
-    var an=(teams[r.away]||D.teams[r.away]||{name:r.away}).name;
-    var winner = r.hg>r.ag?'home':r.ag>r.hg?'away':'draw';
-    h+='<div class="match-result-card">';
-    h+='<div class="teams" style="text-align:right;flex:1">'+flag(r.home)+' <span style="'+(winner==='home'?'font-weight:700':'opacity:.6')+'">'+hn+'</span></div>';
-    h+='<div class="score-big">'+r.hg+'–'+r.ag+'</div>';
-    h+='<div class="teams" style="flex:1"><span style="'+(winner==='away'?'font-weight:700':'opacity:.6')+'">'+an+'</span> '+flag(r.away)+'</div>';
-    h+='<span style="font-family:\'Courier New\',monospace;font-size:.62rem;color:var(--muted);white-space:nowrap;margin-left:.4rem">'+( r.hg+r.ag)+' gls</span>';
-    h+='</div>';
-  });
-  h+='</div></div>';
-
-  // ── YELLOW CARDS ─────────────────────────────────────────────
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">🟨</span><span class="dch-title">Disciplinary — Teams</span></div>';
-  h+='<div class="dash-card-body">';
-  var maxY = yellowArr[0]?yellowArr[0].y:1;
-  yellowArr.forEach(function(t,i){
-    var tname=(teams[t.code]||D.teams[t.code]||{name:t.code}).name;
-    h+='<div class="dash-stat-row">';
-    h+='<span class="dash-rank">'+flag(t.code)+'</span>';
-    h+='<span class="dash-name">'+tname+'<small>'+(t.r?t.r+' red card'+(t.r>1?'s':''):'No red cards')+'</small></span>';
-    h+='<div class="dash-bar-wrap"><div class="dash-bar" style="background:linear-gradient(90deg,#c9a84c,#f0c040);width:'+Math.round(t.y/maxY*100)+'%"></div></div>';
-    h+='<span class="dash-val" style="color:#c9a84c">'+t.y+'</span>';
-    h+='</div>';
-  });
-  if(!yellowArr.length) h+='<p style="color:var(--muted);font-family:Arial,sans-serif;font-size:.82rem;padding:1rem">Card data loading...</p>';
-  h+='</div></div>';
-
-  h+='</div>'; // end main dash-grid
-
-  // ── OVER/UNDERPERFORMERS FULL WIDTH ──────────────────────────
-  h+='<div class="dash-grid wide" style="margin-top:0">';
-
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">📈</span><span class="dch-title">Overperformers vs Pre-Tournament Prediction</span></div>';
-  h+='<div class="dash-card-body">';
+  h+='<div class="dash-card"><div class="dash-card-hdr"><span class="dch-icon">&#128200;</span><span class="dch-title">Overperformers vs Pre-Tournament</span></div><div class="dash-card-body">';
   overPerf.forEach(function(p){
-    var tname=(teams[p.code]||D.teams[p.code]||{name:p.code}).name;
-    var barW=Math.min(Math.round(Math.abs(p.delta)/3*100),100);
-    h+='<div class="perf-bar-wrap">';
-    h+='<span class="perf-label">'+flag(p.code)+' '+tname.split(' ')[0]+'</span>';
-    h+='<div class="perf-bar-track"><div class="perf-bar-fill pos" style="width:'+barW+'%"></div></div>';
+    var tn=(teams[p.code]||D.teams[p.code]||{name:p.code}).name;
+    var bw=Math.min(Math.round(Math.abs(p.delta)/3*100),100);
+    h+='<div class="perf-bar-wrap"><span class="perf-label">'+flag(p.code)+' '+tn.split(' ')[0]+'</span>';
+    h+='<div class="perf-bar-track"><div class="perf-bar-fill pos" style="width:'+bw+'%"></div></div>';
     h+='<span class="perf-delta pos">+'+p.delta+'%</span>';
-    h+='<span style="font-family:\'Courier New\',monospace;font-size:.68rem;color:var(--muted);margin-left:.4rem">'+p.pre+'%→'+p.live+'%</span>';
+    h+='<span style="font-family:'Courier New',monospace;font-size:.65rem;color:var(--muted);margin-left:.3rem">'+p.pre+'&#8594;'+p.live+'%</span>';
     h+='</div>';
   });
   h+='</div></div>';
-
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">📉</span><span class="dch-title">Underperformers vs Pre-Tournament Prediction</span></div>';
-  h+='<div class="dash-card-body">';
+  h+='<div class="dash-card"><div class="dash-card-hdr"><span class="dch-icon">&#128201;</span><span class="dch-title">Underperformers vs Pre-Tournament</span></div><div class="dash-card-body">';
   underPerf.forEach(function(p){
-    var tname=(teams[p.code]||D.teams[p.code]||{name:p.code}).name;
-    var barW=Math.min(Math.round(Math.abs(p.delta)/3*100),100);
-    h+='<div class="perf-bar-wrap">';
-    h+='<span class="perf-label">'+flag(p.code)+' '+tname.split(' ')[0]+'</span>';
-    h+='<div class="perf-bar-track"><div class="perf-bar-fill neg" style="width:'+barW+'%"></div></div>';
+    var tn=(teams[p.code]||D.teams[p.code]||{name:p.code}).name;
+    var bw=Math.min(Math.round(Math.abs(p.delta)/3*100),100);
+    h+='<div class="perf-bar-wrap"><span class="perf-label">'+flag(p.code)+' '+tn.split(' ')[0]+'</span>';
+    h+='<div class="perf-bar-track"><div class="perf-bar-fill neg" style="width:'+bw+'%"></div></div>';
     h+='<span class="perf-delta neg">'+p.delta+'%</span>';
-    h+='<span style="font-family:\'Courier New\',monospace;font-size:.68rem;color:var(--muted);margin-left:.4rem">'+p.pre+'%→'+p.live+'%</span>';
+    h+='<span style="font-family:'Courier New',monospace;font-size:.65rem;color:var(--muted);margin-left:.3rem">'+p.pre+'&#8594;'+p.live+'%</span>';
     h+='</div>';
   });
   h+='</div></div>';
+  h+='</div>';
 
-  h+='</div>'; // end wide grid
-
-  // Footer timestamp
   var upd='';
-  try{
-    var meta=LIVE.meta||{};
-    if(meta.last_updated) upd=new Date(meta.last_updated.replace('Z','').replace('+00:00','')+'+00:00').toLocaleString('en-US',{timeZone:'America/Chicago',month:'short',day:'numeric',hour:'numeric',minute:'2-digit',hour12:true})+' CT';
-  }catch(e){}
-  if(upd) h+='<p class="update-time" style="text-align:right;margin-top:.5rem">Last updated: '+upd+'</p>';
+  try{var m=LIVE.meta||{};if(m.last_updated)upd=new Date(m.last_updated.replace('Z','').replace('+00:00','')+'+00:00').toLocaleString('en-US',{timeZone:'America/Chicago',month:'short',day:'numeric',hour:'numeric',minute:'2-digit',hour12:true})+' CT';}catch(e){}
+  if(upd)h+='<p class="update-time" style="text-align:right;margin-top:.5rem">Last updated: '+upd+'</p>';
 
-  container.innerHTML = h;
-}
-
-// ── PRONÓSTICOS DEL DÍA ──────────────────────────────────────────
-function getTodayMatches(){
-  // Gets today's matches from olympus_live.json (already loaded as LIVE)
-  if(!LIVE || !LIVE.live) return [];
-
-  var now = new Date();
-  // Today in CT (UTC-5 during summer)
-  var ct = new Date(now.getTime() - 5*60*60*1000);
-  var todayStr = ct.toISOString().slice(0,10); // "2026-06-22"
-
-  var all = [];
-
-  // Add matches from results (finished today) and remaining (upcoming today)
-  var sources = (LIVE.live.results||[]).concat(LIVE.live.remaining||[]);
-
-  // Also add live_now matches
-  if(LIVE.live.live_now){
-    for(var i=0;i<LIVE.live.live_now.length;i++){
-      var ln = LIVE.live.live_now[i];
-      all.push({home:ln.home, away:ln.away, date:ln.date||'', stage:ln.stage||'', status:'LIVE', hg:ln.hg, ag:ln.ag});
-    }
-  }
-
-  for(var i=0;i<sources.length;i++){
-    var m = sources[i];
-    if(!m.date) continue;
-    // Normalize date string to extract date part
-    var dStr = m.date.trim().replace(' ','T');
-    if(dStr.length===16) dStr += ':00Z';
-    else if(!dStr.endsWith('Z') && !dStr.includes('+')) dStr += 'Z';
-    try {
-      var d = new Date(dStr);
-      var mCt = new Date(d.getTime() - 5*60*60*1000);
-      var mDate = mCt.toISOString().slice(0,10);
-      if(mDate === todayStr){
-        var status = m.live ? 'LIVE' : (m.hg!==undefined && !m.live ? 'FT' : 'UPCOMING');
-        all.push({home:m.home, away:m.away, date:m.date, stage:m.stage||'', status:status, hg:m.hg, ag:m.ag});
-      }
-    } catch(e){}
-  }
-
-  // Deduplicate by home+away
-  var seen = {}, result = [];
-  for(var i=0;i<all.length;i++){
-    var key = all[i].home + '_' + all[i].away;
-    if(!seen[key]){ seen[key]=true; result.push(all[i]); }
-  }
-  return result;
-}
-
-
-  renderLiveBracket();
-  renderPredictions();
-}
-
-
-
-
-
-// ── PLAYER STATS TAB ─────────────────────────────────────────────
-var _currentStatSort = 'goals';
-var _currentTeamFilter = 'ALL';
-
-var STAT_CATEGORIES = [
-  {key:'goals',      label:'Top Scorers',    col:'Goals'},
-  {key:'assists',    label:'Top Assists',    col:'Assists'},
-  {key:'goals_assists', label:'Goals + Assists', col:'G+A'},
-  {key:'yellow_cards', label:'Yellow Cards', col:'Yellows'},
-  {key:'red_cards',  label:'Red Cards',      col:'Reds'},
-  {key:'shots_on',   label:'Shots on Target',col:'Shots'},
-  {key:'key_passes', label:'Key Passes',     col:'Key Pass'},
-  {key:'rating',     label:'Top Rated',      col:'Rating'},
-  {key:'dribbles',   label:'Dribbles',       col:'Dribbles'},
-];
-
-function renderPlayerStats(){
-  if(!LIVE || !LIVE.live) return;
-
-  // Copy player_stats — do not mutate the cached array
-  var players = (LIVE.live.player_stats || []).map(function(p){ return Object.assign({},p); });
-  var tgoals  = LIVE.live.tournament_goals || {};
-
-  // Build name/team lookup from match events (for players missing from /players API)
-  var eventInfo = {};
-  (LIVE.live.lineups || []).forEach(function(m){
-    (m.events || []).forEach(function(ev){
-      if(ev.player_id && ev.detail !== 'Own Goal')
-        eventInfo[String(ev.player_id)] = { name: ev.player_name, team_name: ev.team_name };
-    });
-  });
-
-  // Patch existing players: trust tournament_goals over stale API count
-  var existingIds = {};
-  players.forEach(function(p){
-    existingIds[String(p.id)] = p;
-    var eg = tgoals[String(p.id)];
-    if(eg !== undefined && eg > (p.goals||0)) p.goals = eg;
-  });
-
-  // Add scorers missing entirely from /players API (live match players)
-  Object.keys(tgoals).forEach(function(pid){
-    if(!existingIds[pid] && tgoals[pid] > 0){
-      var info = eventInfo[pid] || {};
-      var teamCode = null;
-      if(info.team_name) Object.keys(D.teams).forEach(function(c){
-        if(D.teams[c].name === info.team_name) teamCode = c;
-      });
-      players.push({ id:pid, name:info.name||('Player #'+pid), nationality:'', photo:'',
-        team_name:info.team_name||'', team_code:teamCode, appearances:1, minutes:0, rating:null,
-        goals:tgoals[pid], assists:0, yellow_cards:0, red_cards:0,
-        shots_total:0, shots_on:0, key_passes:0, pass_accuracy:0, dribbles:0 });
-    }
-  });
-
-  var content = document.getElementById('playerstats-content');
-  if(!content) return;
-
-  if(!players.length){
-    content.innerHTML='<p class="no-stats">Player stats will appear here once matches start.</p>';
-    return;
-  }
-
-  // Build team list for filter
-  var teams = ['ALL'];
-  var seen = {};
-  for(var i=0;i<players.length;i++){
-    var tc = players[i].team_code;
-    if(tc && !seen[tc]){ teams.push(tc); seen[tc]=true; }
-  }
-  teams.sort();
-
-  var html = '';
-
-  // Filters
-  html += '<div class="stats-filters">';
-  for(var ci=0;ci<STAT_CATEGORIES.length;ci++){
-    var cat = STAT_CATEGORIES[ci];
-    html += '<button class="stat-filter-btn'+(cat.key===_currentStatSort?' active':'')+'" onclick="setSortStat(\'' + cat.key + '\')">' + cat.label + '</button>';
-  }
-  html += '</div>';
-
-  // Team filter
-  html += '<div class="stats-filters" style="margin-bottom:1rem">';
-  html += '<span class="sans" style="font-size:.75rem;color:var(--muted);margin-right:.3rem">Filter by team:</span>';
-  html += '<select class="team-filter" onchange="setTeamFilter(this.value)">';
-  for(var ti=0;ti<teams.length;ti++){
-    var tc2 = teams[ti];
-    var tn2 = tc2==='ALL'?'All Teams':(D.teams[tc2]?D.teams[tc2].name:tc2);
-    html += '<option value="'+tc2+'"'+(tc2===_currentTeamFilter?' selected':'')+'>'+tn2+'</option>';
-  }
-  html += '</select>';
-  html += '</div>';
-
-  // Filter and sort
-  var filtered = players.filter(function(p){
-    return _currentTeamFilter === 'ALL' || p.team_code === _currentTeamFilter;
-  });
-
-  var sortKey = _currentStatSort;
-  filtered.sort(function(a,b){
-    var av = sortKey==='goals_assists' ? (a.goals+a.assists) : (a[sortKey]||0);
-    var bv = sortKey==='goals_assists' ? (b.goals+b.assists) : (b[sortKey]||0);
-    if(bv !== av) return bv - av;
-    return (b.goals||0) - (a.goals||0);
-  });
-
-  // Show top 30
-  var shown = filtered.slice(0, 30);
-  var currentCat = STAT_CATEGORIES.find(function(c){return c.key===sortKey;}) || STAT_CATEGORIES[0];
-
-  html += '<div style="overflow-x:auto"><table class="stats-table"><thead><tr>';
-  html += '<th>#</th><th>Player</th><th>Team</th>';
-  html += '<th>'+currentCat.col+'</th>';
-  html += '<th>Goals</th><th>Assists</th><th>G+A</th>';
-  html += '<th>Shots</th><th>Key Pass</th>';
-  html += '<th><span class="ycard"></span></th><th><span class="rcard"></span></th>';
-  html += '<th>Mins</th><th>Rating</th>';
-  html += '</tr></thead><tbody>';
-
-  for(var i=0;i<shown.length;i++){
-    var p = shown[i];
-    var mainVal = sortKey==='goals_assists' ? (p.goals+p.assists) : (p[sortKey]||0);
-    var ratingClass = !p.rating?'':p.rating>=8?'rating-high':p.rating>=7?'rating-mid':'rating-low';
-    var teamName = p.team_code && D.teams[p.team_code] ? D.teams[p.team_code].name : p.team_name;
-
-    html += '<tr class="'+(i<3?'top3':'')+'"><td>'+(i+1)+'</td>';
-    html += '<td><strong>'+p.name+'</strong></td>';
-    html += '<td class="sans" style="font-size:.75rem">'+flag(p.team_code)+' '+teamName+'</td>';
-    html += '<td class="stat-val stat-highlight">'+mainVal+'</td>';
-    html += '<td class="stat-val">'+(p.goals||0)+'</td>';
-    html += '<td class="stat-val">'+(p.assists||0)+'</td>';
-    html += '<td class="stat-val">'+(p.goals+p.assists)+'</td>';
-    html += '<td class="stat-val">'+(p.shots_on||0)+'</td>';
-    html += '<td class="stat-val">'+(p.key_passes||0)+'</td>';
-    html += '<td class="stat-val">'+(p.yellow_cards?'<span class="ycard"></span>'+p.yellow_cards:'0')+'</td>';
-    html += '<td class="stat-val">'+(p.red_cards?'<span class="rcard"></span>'+p.red_cards:'0')+'</td>';
-    html += '<td class="stat-val" style="color:var(--muted)">'+(p.minutes||0)+"'</td>";
-    html += '<td>'+(p.rating?'<span class="rating-badge '+ratingClass+'">'+p.rating+'</span>':'-')+'</td>';
-    html += '</tr>';
-  }
-
-  html += '</tbody></table></div>';
-  if(filtered.length > 30) html += '<p class="sans" style="font-size:.75rem;color:var(--muted);margin-top:.75rem;text-align:center">Showing top 30 of '+filtered.length+' players</p>';
-
-  content.innerHTML = html;
-}
-
-function setSortStat(key){
-  _currentStatSort = key;
-  renderPlayerStats();
-}
-
-function setTeamFilter(val){
-  _currentTeamFilter = val;
-  renderPlayerStats();
-}
-
-// ── LINEUPS TAB ───────────────────────────────────────────────────
-function renderLineups(){
-  if(!LIVE || !LIVE.live) return;
-  var live = LIVE.live;
-  var lineups = live.lineups || [];
-  var tgoals  = live.tournament_goals || {};
-  var content = document.getElementById('lineups-content');
-  if(!content) return;
-
-  if(!lineups.length){
-    content.innerHTML='<p class="sans" style="color:var(--muted);font-size:.85rem;text-align:center;padding:3rem 0">Lineups will appear here once matches start.</p>';
-    return;
-  }
-
-  // Sort: live first, then most recent
-  var sorted = lineups.slice().sort(function(a,b){
-    if(a.live && !b.live) return -1;
-    if(!a.live && b.live) return 1;
-    return b.date > a.date ? 1 : -1;
-  });
-
-  var html = '';
-
-  // Live match pitch at top (if any)
-  var liveMatch = sorted.find(function(l){ return l.live; });
-  if(liveMatch){
-    html += '<div class="sec-title" style="font-size:1.1rem;margin-bottom:1rem">&#9679; Live Lineup</div>';
-    html += buildPitch(liveMatch, tgoals);
-  }
-
-  // Past lineups as clickable cards
-  var past = sorted.filter(function(l){ return !l.live; });
-  if(past.length){
-    html += '<div class="sec-title" style="font-size:1.1rem;margin-top:2rem;margin-bottom:1rem">Past Lineups</div>';
-    html += '<div class="lineup-grid">';
-    for(var i=0;i<past.length;i++){
-      var m = past[i];
-      var hn = D.teams[m.home] ? D.teams[m.home].name : m.home;
-      var an = D.teams[m.away] ? D.teams[m.away].name : m.away;
-      html += '<div class="lineup-card" onclick="openLineup('+i+')">';
-      html += '<div class="lc-teams">'+flag(m.home)+' '+hn+'</div>';
-      html += '<div class="lc-score">'+m.hg+' &ndash; '+m.ag+'</div>';
-      html += '<div class="lc-teams">'+flag(m.away)+' '+an+'</div>';
-      html += '<div class="lc-date">'+m.date+'</div>';
-      if(m.lineups && m.lineups.length) html += '<div class="lc-badge">&#10003; Lineup available</div>';
-      html += '</div>';
-    }
-    html += '</div>';
-  }
-
-  content.innerHTML = html;
-
-  // Store past for modal
-  window._pastLineups = past;
-  window._tgoals = tgoals;
-}
-
-function buildPitch(match, tgoals){
-  if(!match.lineups || match.lineups.length < 2) return '<p style="color:var(--muted);text-align:center;padding:2rem">Lineup not yet available</p>';
-
-  var home_lu = match.lineups[0];
-  var away_lu = match.lineups[1];
-  var hn = D.teams[match.home] ? D.teams[match.home].name : match.home;
-  var an = D.teams[match.away] ? D.teams[match.away].name : match.away;
-
-  var html = '<div class="pitch-wrap">';
-
-  // Header
-  html += '<div class="pitch-header">';
-  html += '<div class="team-name">'+flag(match.home)+' '+hn+'<span class="formation">'+home_lu.formation+'</span></div>';
-  html += '<div class="pitch-score">'+match.hg+' &ndash; '+match.ag+'</div>';
-  html += '<div class="team-name" style="flex-direction:row-reverse">'+an+' '+flag(match.away)+'<span class="formation">'+away_lu.formation+'</span></div>';
-  html += '</div>';
-
-  html += '<div class="pitch-inner">';
-
-  // Home team (top half)
-  html += buildTeamOnPitch(home_lu, tgoals, true);
-
-  // Centre divider
-  html += '<div class="pitch-divider"></div>';
-
-  // Away team (bottom half)
-  html += buildTeamOnPitch(away_lu, tgoals, false);
-
-  html += '</div></div>';
-  return html;
-}
-
-function buildTeamOnPitch(lineup, tgoals, isHome){
-  var players = lineup.players || [];
-  if(!players.length) return '';
-
-  // Group by grid row (first number before colon)
-  var rows = {};
-  for(var i=0;i<players.length;i++){
-    var p = players[i];
-    var row = p.grid ? p.grid.split(':')[0] : (p.pos === 'G' ? '1' : '2');
-    if(!rows[row]) rows[row] = [];
-    rows[row].push(p);
-  }
-
-  // Home(top half): GK row=1 at top -> ascending. Away(bottom): GK row=1 at bottom -> descending.
-  var rowKeys = Object.keys(rows).map(Number).sort(function(a,b){ return isHome ? a-b : b-a; });
-
-  var html = '<div style="margin:'+(isHome?'0 0 1rem':'1rem 0 0')+'">';
-  for(var ri=0;ri<rowKeys.length;ri++){
-    var rowPlayers = rows[rowKeys[ri]];
-    html += '<div class="pitch-row">';
-    for(var pi=0;pi<rowPlayers.length;pi++){
-      var p = rowPlayers[pi];
-      var goals = tgoals[String(p.id)] || 0;
-      var isGK = p.pos === 'G';
-      var shortName = p.name ? p.name.split(' ').pop() : '?';
-      html += '<div class="pitch-player'+(isGK?' gk':'')+'">';
-      html += '<span class="pname" title="'+p.name+'">'+shortName+'</span>';
-      if(goals > 0) html += '<span class="pgoals">&#9917;'.repeat(goals)+'</span>';
-      html += '</div>';
-    }
-    html += '</div>';
-  }
-  html += '</div>';
-  return html;
-}
-
-function openLineup(idx){
-  var match = window._pastLineups[idx];
-  var tgoals = window._tgoals || {};
-  var modal = document.getElementById('lineup-modal');
-  var mc    = document.getElementById('modal-content');
-  var hn = D.teams[match.home] ? D.teams[match.home].name : match.home;
-  var an = D.teams[match.away] ? D.teams[match.away].name : match.away;
-  mc.innerHTML = '<h3 style="margin-bottom:1rem;font-size:1.1rem">'+flag(match.home)+' '+hn+' '+match.hg+' &ndash; '+match.ag+' '+an+' '+flag(match.away)+'</h3>' + buildPitch(match, tgoals);
-  modal.className = 'modal-overlay open';
-  document.body.style.overflow = 'hidden';
-}
-
-function closeModal(){
-  document.getElementById('lineup-modal').className = 'modal-overlay';
-  document.body.style.overflow = '';
-}
-
-// ── LIVE BRACKET TAB ─────────────────────────────────────────────
-function renderLiveBracket(){
-  if(!LIVE || !LIVE.live || !LIVE.live.live_bracket) return;
-  var lb = LIVE.live.live_bracket;
-  var phase = (LIVE.live && LIVE.live.phase) || 'GROUP_STAGE';
-  var badge = document.getElementById('lb-phase-badge');
-  var phaseLabels = {
-    'PRE_TOURNAMENT':'Pre-Tournament','GROUP_STAGE':'Group Stage',
-    'ROUND_OF_32':'Round of 32','QUARTER_FINALS':'Quarter-Finals',
-    'SEMI_FINALS':'Semi-Finals','FINAL':'Final'
-  };
-  if(badge) badge.textContent = phaseLabels[phase]||phase;
-  var content = document.getElementById('livebracket-content');
-  if(!content) return;
-  function bcard(matchObj, isFinal){
-    if(!matchObj) return '<div class="bm"><div class="bmr"><span class="bmr-name">TBD</span></div><div class="bmr"><span class="bmr-name">TBD</span></div></div>';
-    var h=matchObj.home, a=matchObj.away, w=matchObj.winner;
-    var hCode=h?h.code:null, aCode=a?a.code:null, wCode=w?w.code:null;
-    var out='<div class="bm'+(isFinal?' isfin':'')+'">';
-    if(isFinal) out+='<div class="fin-banner">&#9733; Live Predicted Final</div>';
-    out+='<div class="bmr'+(wCode===hCode?' won':wCode&&wCode!==aCode?' lost':'')+'">';
-    out+='<span class="bmr-flag">'+(hCode?flag(hCode):'?')+'</span>';
-    out+='<span class="bmr-name">'+(hCode?(D.teams[hCode]?D.teams[hCode].name:hCode):'TBD')+'</span>';
-    out+='<span class="bmr-sc" style="color:var(--muted);font-size:.62rem">'+(h&&h.pct?h.pct+'%':'')+'</span>';
-    out+='</div>';
-    out+='<div class="bmr'+(wCode===aCode?' won':wCode&&wCode!==hCode?' lost':'')+'">';
-    out+='<span class="bmr-flag">'+(aCode?flag(aCode):'?')+'</span>';
-    out+='<span class="bmr-name">'+(aCode?(D.teams[aCode]?D.teams[aCode].name:aCode):'TBD')+'</span>';
-    out+='<span class="bmr-sc" style="color:var(--muted);font-size:.62rem">'+(a&&a.pct?a.pct+'%':'')+'</span>';
-    out+='</div>';
-    if(w){ var wName=D.teams[wCode]?D.teams[wCode].name:wCode; out+='<div class="bmf'+(isFinal?' iswinner':'')+'">'+flag(wCode)+' '+wName+' '+w.pct+'%</div>'; }
-    out+='</div>';
-    return out;
-  }
-  var html='<div class="bk-wrap"><table class="bk-table"><thead><tr>';
-  html+='<th class="bkth">R32</th><th class="bkth">R16</th><th class="bkth">QF</th><th class="bkth">SF</th>';
-  html+='<th class="bkth fin">Final</th>';
-  html+='<th class="bkth">SF</th><th class="bkth">QF</th><th class="bkth">R16</th><th class="bkth">R32</th>';
-  html+='</tr></thead><tbody>';
-  var r32=lb.r32||[], r16=lb.r16||[], qf=lb.qf||[], sf=lb.sf||[], fin=lb.final||{};
-  for(var row=0;row<8;row++){
-    html+='<tr>';
-    html+='<td style="vertical-align:middle;padding:2px">'+bcard(r32[row],false)+'</td>';
-    if(row%2===0) html+='<td rowspan="2" style="vertical-align:middle;padding:2px">'+bcard(r16[Math.floor(row/2)],false)+'</td>';
-    if(row%4===0) html+='<td rowspan="4" style="vertical-align:middle;padding:2px">'+bcard(qf[Math.floor(row/4)],false)+'</td>';
-    if(row===0)   html+='<td rowspan="8" style="vertical-align:middle;padding:2px">'+bcard(sf[0],false)+'</td>';
-    if(row===0)   html+='<td rowspan="8" style="vertical-align:middle;padding:2px">'+bcard(fin,true)+'</td>';
-    if(row===0)   html+='<td rowspan="8" style="vertical-align:middle;padding:2px">'+bcard(sf[1],false)+'</td>';
-    if(row%4===0) html+='<td rowspan="4" style="vertical-align:middle;padding:2px">'+bcard(qf[2+Math.floor(row/4)],false)+'</td>';
-    if(row%2===0) html+='<td rowspan="2" style="vertical-align:middle;padding:2px">'+bcard(r16[4+Math.floor(row/2)],false)+'</td>';
-    html+='<td style="vertical-align:middle;padding:2px">'+bcard(r32[8+row],false)+'</td>';
-    html+='</tr>';
-  }
-  html+='</tbody></table></div>';
-  html+='<p class="sans" style="font-size:.75rem;color:var(--muted);margin-top:1rem;text-align:center">Based on 10,000 simulations · Updates after every match · % = probability of appearing in that slot</p>';
-  content.innerHTML=html;
-}
-
-
-
-// ── TOURNAMENT DASHBOARD ─────────────────────────────────────────
-function renderDashboard(){
-  var container = document.getElementById('dashboard-content');
-  if(!container) return;
-  if(!LIVE || !LIVE.live){ container.innerHTML='<p style="text-align:center;padding:3rem;color:var(--muted);font-family:Arial,sans-serif">Loading...</p>'; return; }
-
-  var live = LIVE.live;
-  var teams = LIVE.teams || D.teams;
-  var results = (live.results||[]).filter(function(r){return !r.live;});
-  var players = live.player_stats||[];
-  var tgoals  = live.tournament_goals||{};
-  var lranked = live.live_ranked||[];
-  var preranked = LIVE.ranked||[];
-  var phase = live.phase||'GROUP_STAGE';
-  var phaseLabels = {'PRE_TOURNAMENT':'Pre-Tournament','GROUP_STAGE':'Group Stage','ROUND_OF_32':'Round of 32','QUARTER_FINALS':'Quarter-Finals','SEMI_FINALS':'Semi-Finals','FINAL':'Final'};
-  var badge = document.getElementById('dash-phase-badge');
-  if(badge) badge.textContent = phaseLabels[phase]||phase;
-
-  // ── BUILD TEAM STATS FROM RESULTS ────────────────────────────
-  var ts = {};
-  results.forEach(function(r){
-    [r.home,r.away].forEach(function(c){ if(!ts[c]) ts[c]={gf:0,ga:0,played:0,wins:0,draws:0,losses:0,xgf:0,xga:0}; });
-    ts[r.home].gf+=r.hg; ts[r.home].ga+=r.ag; ts[r.home].played++;
-    ts[r.away].gf+=r.ag; ts[r.away].ga+=r.hg; ts[r.away].played++;
-    if(r.hg>r.ag){ts[r.home].wins++;ts[r.away].losses++;}
-    else if(r.hg===r.ag){ts[r.home].draws++;ts[r.away].draws++;}
-    else{ts[r.home].losses++;ts[r.away].wins++;}
-    if(r.prediction){
-      ts[r.home].xgf+=r.prediction.exp_home; ts[r.home].xga+=r.prediction.exp_away;
-      ts[r.away].xgf+=r.prediction.exp_away; ts[r.away].xga+=r.prediction.exp_home;
-    }
-  });
-
-  // ── KPI TOTALS ────────────────────────────────────────────────
-  var totalGoals = results.reduce(function(s,r){return s+r.hg+r.ag;},0);
-  var avgGoals   = results.length ? (totalGoals/results.length).toFixed(2) : 0;
-  var totalMatches = results.length;
-
-  // ── MODEL ACCURACY ────────────────────────────────────────────
-  var correct=0, upsets=[], modelResults=[];
-  results.forEach(function(r){
-    var p=r.prediction; if(!p) return;
-    var actual = r.hg>r.ag?'home':r.ag>r.hg?'away':'draw';
-    var maxP = Math.max(p.home_win,p.draw,p.away_win);
-    var predicted = p.home_win===maxP?'home':p.away_win===maxP?'away':'draw';
-    var hit = actual===predicted;
-    if(hit) correct++;
-    var htName=(teams[r.home]||D.teams[r.home]||{name:r.home}).name;
-    var atName=(teams[r.away]||D.teams[r.away]||{name:r.away}).name;
-    var isUpset = !hit && ((actual==='away'&&p.home_win>50)||(actual==='home'&&p.away_win>50)||(actual!=='draw'&&p.draw>40));
-    modelResults.push({home:r.home,away:r.away,hg:r.hg,ag:r.ag,hit:hit,isUpset:isUpset,predicted:predicted,actual:actual,pred:p,htName:htName,atName:atName,stage:r.stage,date:r.date});
-    if(isUpset){
-      var favPct = actual==='away'?p.home_win:p.away_win;
-      upsets.push({home:r.home,away:r.away,hg:r.hg,ag:r.ag,htName:htName,atName:atName,favPct:favPct,winner:actual==='home'?htName:atName,loser:actual==='home'?atName:htName});
-    }
-  });
-  upsets.sort(function(a,b){return b.favPct-a.favPct;});
-  var accPct = totalMatches ? Math.round(correct/totalMatches*100) : 0;
-
-  // ── TOP SCORERS (merge tournament_goals + player_stats) ───────
-  var playerMap={};
-  players.forEach(function(p){ playerMap[String(p.id)]=p; });
-  var scorers=[];
-  Object.keys(tgoals).forEach(function(pid){
-    var g=tgoals[pid]; if(!g) return;
-    var p=playerMap[pid]||{name:'Player #'+pid,team_code:null};
-    scorers.push({name:p.name,team:p.team_code,goals:g,assists:p.assists||0,rating:p.rating||null});
-  });
-  // Also pick up goals from player_stats for players not in tgoals
-  players.forEach(function(p){
-    if(p.goals>0 && !tgoals[String(p.id)]){
-      scorers.push({name:p.name,team:p.team_code,goals:p.goals,assists:p.assists||0,rating:p.rating||null});
-    }
-  });
-  scorers.sort(function(a,b){return b.goals-a.goals||b.assists-a.assists;});
-  // deduplicate by name
-  var seenNames={}, uniqueScorers=[];
-  scorers.forEach(function(s){ if(!seenNames[s.name]){seenNames[s.name]=true;uniqueScorers.push(s);} });
-  scorers=uniqueScorers.slice(0,10);
-
-  // ── TOP ASSISTS ───────────────────────────────────────────────
-  var assisters = players.filter(function(p){return p.assists>0;});
-  assisters.sort(function(a,b){return b.assists-a.assists||b.goals-a.goals;});
-  assisters=assisters.slice(0,8);
-
-  // ── TOP RATED ─────────────────────────────────────────────────
-  var rated = players.filter(function(p){return p.rating&&p.rating>0&&p.appearances>=1;});
-  rated.sort(function(a,b){return b.rating-a.rating;});
-  rated=rated.slice(0,8);
-
-  // ── BEST ATTACK / DEFENCE ─────────────────────────────────────
-  var teamArr = Object.keys(ts).map(function(c){return Object.assign({code:c},ts[c]);});
-  var byGF = teamArr.slice().sort(function(a,b){return b.gf-a.gf||a.ga-b.ga;}).slice(0,8);
-  var byGA = teamArr.filter(function(t){return t.played>0;}).slice().sort(function(a,b){return a.ga-b.ga||b.gf-a.gf;}).slice(0,8);
-
-  // ── BIGGEST GAMES ─────────────────────────────────────────────
-  var bigGames = results.slice().sort(function(a,b){return (b.hg+b.ag)-(a.hg+a.ag);}).slice(0,6);
-
-  // ── OVER/UNDERPERFORMERS ──────────────────────────────────────
-  var preMap={};
-  preranked.forEach(function(r){preMap[r.code]=r.win;});
-  var perfArr=[];
-  lranked.forEach(function(lr){
-    var pre=preMap[lr.code]||0;
-    var delta=parseFloat((lr.win-pre).toFixed(1));
-    perfArr.push({code:lr.code,live:lr.win,pre:pre,delta:delta});
-  });
-  perfArr.sort(function(a,b){return b.delta-a.delta;});
-  var overPerf  = perfArr.filter(function(p){return p.delta>0;}).slice(0,6);
-  var underPerf = perfArr.filter(function(p){return p.delta<0;}).slice(-6).reverse();
-
-  // ── CARDS ─────────────────────────────────────────────────────
-  var yellows={}, reds={};
-  players.forEach(function(p){
-    var c=p.team_code||'??';
-    yellows[c]=(yellows[c]||0)+(p.yellow_cards||0);
-    reds[c]=(reds[c]||0)+(p.red_cards||0);
-  });
-  var yellowArr=Object.keys(yellows).map(function(c){return{code:c,y:yellows[c],r:reds[c]||0};}).filter(function(x){return x.y>0;});
-  yellowArr.sort(function(a,b){return b.y-a.y||b.r-a.r;});
-  yellowArr=yellowArr.slice(0,8);
-
-  // ── RECENT FORM (last 3 results per team) ────────────────────
-  var teamForm={};
-  results.forEach(function(r){
-    ['home','away'].forEach(function(side){
-      var c=r[side], gf=side==='home'?r.hg:r.ag, ga=side==='home'?r.ag:r.hg;
-      if(!teamForm[c]) teamForm[c]=[];
-      teamForm[c].push(gf>ga?'W':gf===ga?'D':'L');
-    });
-  });
-
-  // ── BUILD HTML ────────────────────────────────────────────────
-  var h='';
-
-  // KPI row
-  h+='<div class="kpi-grid">';
-  h+='<div class="kpi k-gold"><div class="kpi-val">'+totalGoals+'</div><div class="kpi-label">Total Goals</div></div>';
-  h+='<div class="kpi k-green"><div class="kpi-val">'+avgGoals+'</div><div class="kpi-label">Goals / Match</div></div>';
-  h+='<div class="kpi k-blue"><div class="kpi-val">'+totalMatches+'</div><div class="kpi-label">Matches Played</div></div>';
-  h+='<div class="kpi k-red"><div class="kpi-val">'+accPct+'%</div><div class="kpi-label">Model Accuracy</div></div>';
-  h+='<div class="kpi k-gold"><div class="kpi-val">'+(scorers[0]?scorers[0].goals:'-')+'</div><div class="kpi-label">Top Scorer Goals</div></div>';
-  h+='<div class="kpi k-green"><div class="kpi-val">'+upsets.length+'</div><div class="kpi-label">Upsets</div></div>';
-  h+='</div>';
-
-  h+='<div class="dash-grid wide">';
-
-  // ── MODEL ACCURACY CARD ───────────────────────────────────────
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">🎯</span><span class="dch-title">Model Accuracy</span></div>';
-  h+='<div class="dash-card-body">';
-  h+='<div class="acc-pct-ring">';
-  h+='<div class="ring-stat"><div class="ring-num green">'+correct+'</div><div class="ring-lbl">Correct</div></div>';
-  h+='<div class="ring-stat"><div class="ring-num" style="font-size:2.8rem;color:var(--pitch)">'+accPct+'%</div><div class="ring-lbl">Accuracy</div></div>';
-  h+='<div class="ring-stat"><div class="ring-num red">'+(totalMatches-correct)+'</div><div class="ring-lbl">Wrong</div></div>';
-  h+='</div>';
-  h+='<div class="acc-progress"><div class="acc-progress-fill" style="width:'+accPct+'%"></div></div>';
-  h+='<div style="font-family:Arial,sans-serif;font-size:.74rem;color:var(--muted);margin-bottom:.75rem">Last 8 results:</div>';
-  var last8 = modelResults.slice(-8).reverse();
-  last8.forEach(function(r){
-    var badgeCls = r.hit?'hit':r.isUpset?'upset':'miss';
-    var badgeTxt = r.hit?'✓ Correct':r.isUpset?'⚡ Upset':'✗ Wrong';
-    h+='<div class="acc-row">';
-    h+='<span style="font-size:.95rem">'+flag(r.home)+flag(r.away)+'</span>';
-    h+='<span class="acc-result">'+r.hg+'–'+r.ag+'</span>';
-    h+='<span style="flex:1;font-size:.78rem;color:var(--muted)">'+r.htName.split(' ')[0]+' vs '+r.atName.split(' ')[0]+'</span>';
-    h+='<span class="acc-badge '+badgeCls+'">'+badgeTxt+'</span>';
-    h+='</div>';
-  });
-  h+='</div></div>';
-
-  // ── BIGGEST UPSETS ────────────────────────────────────────────
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">⚡</span><span class="dch-title">Biggest Upsets</span></div>';
-  h+='<div class="dash-card-body">';
-  if(!upsets.length){
-    h+='<p style="color:var(--muted);font-family:Arial,sans-serif;font-size:.82rem;text-align:center;padding:1.5rem">No major upsets yet</p>';
-  } else {
-    upsets.slice(0,6).forEach(function(u,i){
-      h+='<div class="dash-stat-row">';
-      h+='<span class="dash-rank '+(i===0?'gold':'')+'">'+flag(u.home)+flag(u.away)+'</span>';
-      h+='<span class="dash-name">'+u.winner+' def. '+u.loser+'<small>Score: '+u.hg+'–'+u.ag+' · Model had '+u.loser+' at '+u.favPct.toFixed(0)+'% fav.</small></span>';
-      h+='<span class="acc-badge upset">⚡ Upset</span>';
-      h+='</div>';
-    });
-  }
-  h+='</div></div>';
-
-  h+='</div>'; // end wide grid
-
-  h+='<div class="dash-grid">';
-
-  // ── TOP SCORERS ───────────────────────────────────────────────
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">⚽</span><span class="dch-title">Top Scorers</span></div>';
-  h+='<div class="dash-card-body">';
-  var maxG = scorers[0]?scorers[0].goals:1;
-  scorers.forEach(function(p,i){
-    var tname = p.team?(teams[p.team]||D.teams[p.team]||{name:p.team}).name:'';
-    h+='<div class="dash-stat-row">';
-    h+='<span class="dash-rank '+(i===0?'gold':'')+'">'+flag(p.team)+'</span>';
-    h+='<span class="dash-name">'+p.name+'<small>'+tname+(p.assists?' · '+p.assists+' ast':'')+'</small></span>';
-    h+='<div class="dash-bar-wrap"><div class="dash-bar" style="width:'+Math.round(p.goals/maxG*100)+'%"></div></div>';
-    h+='<span class="dash-val">'+p.goals+'</span>';
-    h+='</div>';
-  });
-  h+='</div></div>';
-
-  // ── TOP ASSISTS ───────────────────────────────────────────────
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">🎁</span><span class="dch-title">Top Assists</span></div>';
-  h+='<div class="dash-card-body">';
-  var maxA = assisters[0]?assisters[0].assists:1;
-  assisters.forEach(function(p,i){
-    var tname = p.team_code?(teams[p.team_code]||D.teams[p.team_code]||{name:p.team_code}).name:'';
-    h+='<div class="dash-stat-row">';
-    h+='<span class="dash-rank '+(i===0?'gold':'')+'">'+flag(p.team_code)+'</span>';
-    h+='<span class="dash-name">'+p.name+'<small>'+tname+(p.goals?' · '+p.goals+' goals':'')+'</small></span>';
-    h+='<div class="dash-bar-wrap"><div class="dash-bar blue" style="width:'+Math.round(p.assists/maxA*100)+'%"></div></div>';
-    h+='<span class="dash-val">'+p.assists+'</span>';
-    h+='</div>';
-  });
-  if(!assisters.length) h+='<p style="color:var(--muted);font-family:Arial,sans-serif;font-size:.82rem;padding:1rem">Assist data loading...</p>';
-  h+='</div></div>';
-
-  // ── TOP RATED ─────────────────────────────────────────────────
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">⭐</span><span class="dch-title">Top Rated Players</span></div>';
-  h+='<div class="dash-card-body">';
-  rated.forEach(function(p,i){
-    var tname = p.team_code?(teams[p.team_code]||D.teams[p.team_code]||{name:p.team_code}).name:'';
-    var rCls = p.rating>=8?'rating-high':p.rating>=7?'rating-mid':'rating-low';
-    h+='<div class="dash-stat-row">';
-    h+='<span class="dash-rank '+(i===0?'gold':'')+'">'+flag(p.team_code)+'</span>';
-    h+='<span class="dash-name">'+p.name+'<small>'+tname+' · '+p.appearances+' app'+( p.goals?' · '+p.goals+'⚽':'' )+'</small></span>';
-    h+='<span class="rating-badge '+rCls+'">'+p.rating.toFixed(1)+'</span>';
-    h+='</div>';
-  });
-  if(!rated.length) h+='<p style="color:var(--muted);font-family:Arial,sans-serif;font-size:.82rem;padding:1rem">Rating data loading...</p>';
-  h+='</div></div>';
-
-  // ── BEST ATTACK ───────────────────────────────────────────────
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">🔥</span><span class="dch-title">Best Attack</span></div>';
-  h+='<div class="dash-card-body">';
-  var maxGF = byGF[0]?byGF[0].gf:1;
-  byGF.forEach(function(t,i){
-    var tname=(teams[t.code]||D.teams[t.code]||{name:t.code}).name;
-    h+='<div class="dash-stat-row">';
-    h+='<span class="dash-rank '+(i===0?'gold':'')+'">'+flag(t.code)+'</span>';
-    h+='<span class="dash-name">'+tname+'<small>'+t.played+' played · '+t.wins+'W '+t.draws+'D '+t.losses+'L</small></span>';
-    h+='<div class="dash-bar-wrap"><div class="dash-bar" style="width:'+Math.round(t.gf/maxGF*100)+'%"></div></div>';
-    h+='<span class="dash-val">'+t.gf+'</span>';
-    h+='</div>';
-  });
-  h+='</div></div>';
-
-  // ── BEST DEFENCE ─────────────────────────────────────────────
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">🛡️</span><span class="dch-title">Best Defence</span></div>';
-  h+='<div class="dash-card-body">';
-  var maxGA2 = Math.max.apply(null,byGA.map(function(t){return t.ga;}))||1;
-  byGA.forEach(function(t,i){
-    var tname=(teams[t.code]||D.teams[t.code]||{name:t.code}).name;
-    var barW = Math.round((1-t.ga/maxGA2)*100);
-    h+='<div class="dash-stat-row">';
-    h+='<span class="dash-rank '+(i===0?'gold':'')+'">'+flag(t.code)+'</span>';
-    h+='<span class="dash-name">'+tname+'<small>'+t.played+' played · '+t.gf+' scored</small></span>';
-    h+='<div class="dash-bar-wrap"><div class="dash-bar" style="width:'+barW+'%"></div></div>';
-    h+='<span class="dash-val">'+t.ga+'</span>';
-    h+='</div>';
-  });
-  h+='</div></div>';
-
-  // ── BIGGEST GAMES ─────────────────────────────────────────────
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">🎆</span><span class="dch-title">Highest Scoring Matches</span></div>';
-  h+='<div class="dash-card-body">';
-  bigGames.forEach(function(r){
-    var hn=(teams[r.home]||D.teams[r.home]||{name:r.home}).name;
-    var an=(teams[r.away]||D.teams[r.away]||{name:r.away}).name;
-    var winner = r.hg>r.ag?'home':r.ag>r.hg?'away':'draw';
-    h+='<div class="match-result-card">';
-    h+='<div class="teams" style="text-align:right;flex:1">'+flag(r.home)+' <span style="'+(winner==='home'?'font-weight:700':'opacity:.6')+'">'+hn+'</span></div>';
-    h+='<div class="score-big">'+r.hg+'–'+r.ag+'</div>';
-    h+='<div class="teams" style="flex:1"><span style="'+(winner==='away'?'font-weight:700':'opacity:.6')+'">'+an+'</span> '+flag(r.away)+'</div>';
-    h+='<span style="font-family:\'Courier New\',monospace;font-size:.62rem;color:var(--muted);white-space:nowrap;margin-left:.4rem">'+( r.hg+r.ag)+' gls</span>';
-    h+='</div>';
-  });
-  h+='</div></div>';
-
-  // ── YELLOW CARDS ─────────────────────────────────────────────
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">🟨</span><span class="dch-title">Disciplinary — Teams</span></div>';
-  h+='<div class="dash-card-body">';
-  var maxY = yellowArr[0]?yellowArr[0].y:1;
-  yellowArr.forEach(function(t,i){
-    var tname=(teams[t.code]||D.teams[t.code]||{name:t.code}).name;
-    h+='<div class="dash-stat-row">';
-    h+='<span class="dash-rank">'+flag(t.code)+'</span>';
-    h+='<span class="dash-name">'+tname+'<small>'+(t.r?t.r+' red card'+(t.r>1?'s':''):'No red cards')+'</small></span>';
-    h+='<div class="dash-bar-wrap"><div class="dash-bar" style="background:linear-gradient(90deg,#c9a84c,#f0c040);width:'+Math.round(t.y/maxY*100)+'%"></div></div>';
-    h+='<span class="dash-val" style="color:#c9a84c">'+t.y+'</span>';
-    h+='</div>';
-  });
-  if(!yellowArr.length) h+='<p style="color:var(--muted);font-family:Arial,sans-serif;font-size:.82rem;padding:1rem">Card data loading...</p>';
-  h+='</div></div>';
-
-  h+='</div>'; // end main dash-grid
-
-  // ── OVER/UNDERPERFORMERS FULL WIDTH ──────────────────────────
-  h+='<div class="dash-grid wide" style="margin-top:0">';
-
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">📈</span><span class="dch-title">Overperformers vs Pre-Tournament Prediction</span></div>';
-  h+='<div class="dash-card-body">';
-  overPerf.forEach(function(p){
-    var tname=(teams[p.code]||D.teams[p.code]||{name:p.code}).name;
-    var barW=Math.min(Math.round(Math.abs(p.delta)/3*100),100);
-    h+='<div class="perf-bar-wrap">';
-    h+='<span class="perf-label">'+flag(p.code)+' '+tname.split(' ')[0]+'</span>';
-    h+='<div class="perf-bar-track"><div class="perf-bar-fill pos" style="width:'+barW+'%"></div></div>';
-    h+='<span class="perf-delta pos">+'+p.delta+'%</span>';
-    h+='<span style="font-family:\'Courier New\',monospace;font-size:.68rem;color:var(--muted);margin-left:.4rem">'+p.pre+'%→'+p.live+'%</span>';
-    h+='</div>';
-  });
-  h+='</div></div>';
-
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">📉</span><span class="dch-title">Underperformers vs Pre-Tournament Prediction</span></div>';
-  h+='<div class="dash-card-body">';
-  underPerf.forEach(function(p){
-    var tname=(teams[p.code]||D.teams[p.code]||{name:p.code}).name;
-    var barW=Math.min(Math.round(Math.abs(p.delta)/3*100),100);
-    h+='<div class="perf-bar-wrap">';
-    h+='<span class="perf-label">'+flag(p.code)+' '+tname.split(' ')[0]+'</span>';
-    h+='<div class="perf-bar-track"><div class="perf-bar-fill neg" style="width:'+barW+'%"></div></div>';
-    h+='<span class="perf-delta neg">'+p.delta+'%</span>';
-    h+='<span style="font-family:\'Courier New\',monospace;font-size:.68rem;color:var(--muted);margin-left:.4rem">'+p.pre+'%→'+p.live+'%</span>';
-    h+='</div>';
-  });
-  h+='</div></div>';
-
-  h+='</div>'; // end wide grid
-
-  // Footer timestamp
-  var upd='';
-  try{
-    var meta=LIVE.meta||{};
-    if(meta.last_updated) upd=new Date(meta.last_updated.replace('Z','').replace('+00:00','')+'+00:00').toLocaleString('en-US',{timeZone:'America/Chicago',month:'short',day:'numeric',hour:'numeric',minute:'2-digit',hour12:true})+' CT';
-  }catch(e){}
-  if(upd) h+='<p class="update-time" style="text-align:right;margin-top:.5rem">Last updated: '+upd+'</p>';
-
-  container.innerHTML = h;
-}
-
-// ── PRONÓSTICOS DEL DÍA ──────────────────────────────────────────
-function getTodayMatches(){
-  // Gets today's matches from olympus_live.json (already loaded as LIVE)
-  if(!LIVE || !LIVE.live) return [];
-
-  var now = new Date();
-  // Today in CT (UTC-5 during summer)
-  var ct = new Date(now.getTime() - 5*60*60*1000);
-  var todayStr = ct.toISOString().slice(0,10); // "2026-06-22"
-
-  var all = [];
-
-  // Add matches from results (finished today) and remaining (upcoming today)
-  var sources = (LIVE.live.results||[]).concat(LIVE.live.remaining||[]);
-
-  // Also add live_now matches
-  if(LIVE.live.live_now){
-    for(var i=0;i<LIVE.live.live_now.length;i++){
-      var ln = LIVE.live.live_now[i];
-      all.push({home:ln.home, away:ln.away, date:ln.date||'', stage:ln.stage||'', status:'LIVE', hg:ln.hg, ag:ln.ag});
-    }
-  }
-
-  for(var i=0;i<sources.length;i++){
-    var m = sources[i];
-    if(!m.date) continue;
-    // Normalize date string to extract date part
-    var dStr = m.date.trim().replace(' ','T');
-    if(dStr.length===16) dStr += ':00Z';
-    else if(!dStr.endsWith('Z') && !dStr.includes('+')) dStr += 'Z';
-    try {
-      var d = new Date(dStr);
-      var mCt = new Date(d.getTime() - 5*60*60*1000);
-      var mDate = mCt.toISOString().slice(0,10);
-      if(mDate === todayStr){
-        var status = m.live ? 'LIVE' : (m.hg!==undefined && !m.live ? 'FT' : 'UPCOMING');
-        all.push({home:m.home, away:m.away, date:m.date, stage:m.stage||'', status:status, hg:m.hg, ag:m.ag});
-      }
-    } catch(e){}
-  }
-
-  // Deduplicate by home+away
-  var seen = {}, result = [];
-  for(var i=0;i<all.length;i++){
-    var key = all[i].home + '_' + all[i].away;
-    if(!seen[key]){ seen[key]=true; result.push(all[i]); }
-  }
-  return result;
-}
-
-
-  renderLiveBracket();
-  renderPredictions();
-}
-
-
-
-
-
-// ── PLAYER STATS TAB ─────────────────────────────────────────────
-var _currentStatSort = 'goals';
-var _currentTeamFilter = 'ALL';
-
-var STAT_CATEGORIES = [
-  {key:'goals',      label:'Top Scorers',    col:'Goals'},
-  {key:'assists',    label:'Top Assists',    col:'Assists'},
-  {key:'goals_assists', label:'Goals + Assists', col:'G+A'},
-  {key:'yellow_cards', label:'Yellow Cards', col:'Yellows'},
-  {key:'red_cards',  label:'Red Cards',      col:'Reds'},
-  {key:'shots_on',   label:'Shots on Target',col:'Shots'},
-  {key:'key_passes', label:'Key Passes',     col:'Key Pass'},
-  {key:'rating',     label:'Top Rated',      col:'Rating'},
-  {key:'dribbles',   label:'Dribbles',       col:'Dribbles'},
-];
-
-function renderPlayerStats(){
-  if(!LIVE || !LIVE.live) return;
-
-  // Copy player_stats — do not mutate the cached array
-  var players = (LIVE.live.player_stats || []).map(function(p){ return Object.assign({},p); });
-  var tgoals  = LIVE.live.tournament_goals || {};
-
-  // Build name/team lookup from match events (for players missing from /players API)
-  var eventInfo = {};
-  (LIVE.live.lineups || []).forEach(function(m){
-    (m.events || []).forEach(function(ev){
-      if(ev.player_id && ev.detail !== 'Own Goal')
-        eventInfo[String(ev.player_id)] = { name: ev.player_name, team_name: ev.team_name };
-    });
-  });
-
-  // Patch existing players: trust tournament_goals over stale API count
-  var existingIds = {};
-  players.forEach(function(p){
-    existingIds[String(p.id)] = p;
-    var eg = tgoals[String(p.id)];
-    if(eg !== undefined && eg > (p.goals||0)) p.goals = eg;
-  });
-
-  // Add scorers missing entirely from /players API (live match players)
-  Object.keys(tgoals).forEach(function(pid){
-    if(!existingIds[pid] && tgoals[pid] > 0){
-      var info = eventInfo[pid] || {};
-      var teamCode = null;
-      if(info.team_name) Object.keys(D.teams).forEach(function(c){
-        if(D.teams[c].name === info.team_name) teamCode = c;
-      });
-      players.push({ id:pid, name:info.name||('Player #'+pid), nationality:'', photo:'',
-        team_name:info.team_name||'', team_code:teamCode, appearances:1, minutes:0, rating:null,
-        goals:tgoals[pid], assists:0, yellow_cards:0, red_cards:0,
-        shots_total:0, shots_on:0, key_passes:0, pass_accuracy:0, dribbles:0 });
-    }
-  });
-
-  var content = document.getElementById('playerstats-content');
-  if(!content) return;
-
-  if(!players.length){
-    content.innerHTML='<p class="no-stats">Player stats will appear here once matches start.</p>';
-    return;
-  }
-
-  // Build team list for filter
-  var teams = ['ALL'];
-  var seen = {};
-  for(var i=0;i<players.length;i++){
-    var tc = players[i].team_code;
-    if(tc && !seen[tc]){ teams.push(tc); seen[tc]=true; }
-  }
-  teams.sort();
-
-  var html = '';
-
-  // Filters
-  html += '<div class="stats-filters">';
-  for(var ci=0;ci<STAT_CATEGORIES.length;ci++){
-    var cat = STAT_CATEGORIES[ci];
-    html += '<button class="stat-filter-btn'+(cat.key===_currentStatSort?' active':'')+'" onclick="setSortStat(\'' + cat.key + '\')">' + cat.label + '</button>';
-  }
-  html += '</div>';
-
-  // Team filter
-  html += '<div class="stats-filters" style="margin-bottom:1rem">';
-  html += '<span class="sans" style="font-size:.75rem;color:var(--muted);margin-right:.3rem">Filter by team:</span>';
-  html += '<select class="team-filter" onchange="setTeamFilter(this.value)">';
-  for(var ti=0;ti<teams.length;ti++){
-    var tc2 = teams[ti];
-    var tn2 = tc2==='ALL'?'All Teams':(D.teams[tc2]?D.teams[tc2].name:tc2);
-    html += '<option value="'+tc2+'"'+(tc2===_currentTeamFilter?' selected':'')+'>'+tn2+'</option>';
-  }
-  html += '</select>';
-  html += '</div>';
-
-  // Filter and sort
-  var filtered = players.filter(function(p){
-    return _currentTeamFilter === 'ALL' || p.team_code === _currentTeamFilter;
-  });
-
-  var sortKey = _currentStatSort;
-  filtered.sort(function(a,b){
-    var av = sortKey==='goals_assists' ? (a.goals+a.assists) : (a[sortKey]||0);
-    var bv = sortKey==='goals_assists' ? (b.goals+b.assists) : (b[sortKey]||0);
-    if(bv !== av) return bv - av;
-    return (b.goals||0) - (a.goals||0);
-  });
-
-  // Show top 30
-  var shown = filtered.slice(0, 30);
-  var currentCat = STAT_CATEGORIES.find(function(c){return c.key===sortKey;}) || STAT_CATEGORIES[0];
-
-  html += '<div style="overflow-x:auto"><table class="stats-table"><thead><tr>';
-  html += '<th>#</th><th>Player</th><th>Team</th>';
-  html += '<th>'+currentCat.col+'</th>';
-  html += '<th>Goals</th><th>Assists</th><th>G+A</th>';
-  html += '<th>Shots</th><th>Key Pass</th>';
-  html += '<th><span class="ycard"></span></th><th><span class="rcard"></span></th>';
-  html += '<th>Mins</th><th>Rating</th>';
-  html += '</tr></thead><tbody>';
-
-  for(var i=0;i<shown.length;i++){
-    var p = shown[i];
-    var mainVal = sortKey==='goals_assists' ? (p.goals+p.assists) : (p[sortKey]||0);
-    var ratingClass = !p.rating?'':p.rating>=8?'rating-high':p.rating>=7?'rating-mid':'rating-low';
-    var teamName = p.team_code && D.teams[p.team_code] ? D.teams[p.team_code].name : p.team_name;
-
-    html += '<tr class="'+(i<3?'top3':'')+'"><td>'+(i+1)+'</td>';
-    html += '<td><strong>'+p.name+'</strong></td>';
-    html += '<td class="sans" style="font-size:.75rem">'+flag(p.team_code)+' '+teamName+'</td>';
-    html += '<td class="stat-val stat-highlight">'+mainVal+'</td>';
-    html += '<td class="stat-val">'+(p.goals||0)+'</td>';
-    html += '<td class="stat-val">'+(p.assists||0)+'</td>';
-    html += '<td class="stat-val">'+(p.goals+p.assists)+'</td>';
-    html += '<td class="stat-val">'+(p.shots_on||0)+'</td>';
-    html += '<td class="stat-val">'+(p.key_passes||0)+'</td>';
-    html += '<td class="stat-val">'+(p.yellow_cards?'<span class="ycard"></span>'+p.yellow_cards:'0')+'</td>';
-    html += '<td class="stat-val">'+(p.red_cards?'<span class="rcard"></span>'+p.red_cards:'0')+'</td>';
-    html += '<td class="stat-val" style="color:var(--muted)">'+(p.minutes||0)+"'</td>";
-    html += '<td>'+(p.rating?'<span class="rating-badge '+ratingClass+'">'+p.rating+'</span>':'-')+'</td>';
-    html += '</tr>';
-  }
-
-  html += '</tbody></table></div>';
-  if(filtered.length > 30) html += '<p class="sans" style="font-size:.75rem;color:var(--muted);margin-top:.75rem;text-align:center">Showing top 30 of '+filtered.length+' players</p>';
-
-  content.innerHTML = html;
-}
-
-function setSortStat(key){
-  _currentStatSort = key;
-  renderPlayerStats();
-}
-
-function setTeamFilter(val){
-  _currentTeamFilter = val;
-  renderPlayerStats();
-}
-
-// ── LINEUPS TAB ───────────────────────────────────────────────────
-function renderLineups(){
-  if(!LIVE || !LIVE.live) return;
-  var live = LIVE.live;
-  var lineups = live.lineups || [];
-  var tgoals  = live.tournament_goals || {};
-  var content = document.getElementById('lineups-content');
-  if(!content) return;
-
-  if(!lineups.length){
-    content.innerHTML='<p class="sans" style="color:var(--muted);font-size:.85rem;text-align:center;padding:3rem 0">Lineups will appear here once matches start.</p>';
-    return;
-  }
-
-  // Sort: live first, then most recent
-  var sorted = lineups.slice().sort(function(a,b){
-    if(a.live && !b.live) return -1;
-    if(!a.live && b.live) return 1;
-    return b.date > a.date ? 1 : -1;
-  });
-
-  var html = '';
-
-  // Live match pitch at top (if any)
-  var liveMatch = sorted.find(function(l){ return l.live; });
-  if(liveMatch){
-    html += '<div class="sec-title" style="font-size:1.1rem;margin-bottom:1rem">&#9679; Live Lineup</div>';
-    html += buildPitch(liveMatch, tgoals);
-  }
-
-  // Past lineups as clickable cards
-  var past = sorted.filter(function(l){ return !l.live; });
-  if(past.length){
-    html += '<div class="sec-title" style="font-size:1.1rem;margin-top:2rem;margin-bottom:1rem">Past Lineups</div>';
-    html += '<div class="lineup-grid">';
-    for(var i=0;i<past.length;i++){
-      var m = past[i];
-      var hn = D.teams[m.home] ? D.teams[m.home].name : m.home;
-      var an = D.teams[m.away] ? D.teams[m.away].name : m.away;
-      html += '<div class="lineup-card" onclick="openLineup('+i+')">';
-      html += '<div class="lc-teams">'+flag(m.home)+' '+hn+'</div>';
-      html += '<div class="lc-score">'+m.hg+' &ndash; '+m.ag+'</div>';
-      html += '<div class="lc-teams">'+flag(m.away)+' '+an+'</div>';
-      html += '<div class="lc-date">'+m.date+'</div>';
-      if(m.lineups && m.lineups.length) html += '<div class="lc-badge">&#10003; Lineup available</div>';
-      html += '</div>';
-    }
-    html += '</div>';
-  }
-
-  content.innerHTML = html;
-
-  // Store past for modal
-  window._pastLineups = past;
-  window._tgoals = tgoals;
-}
-
-function buildPitch(match, tgoals){
-  if(!match.lineups || match.lineups.length < 2) return '<p style="color:var(--muted);text-align:center;padding:2rem">Lineup not yet available</p>';
-
-  var home_lu = match.lineups[0];
-  var away_lu = match.lineups[1];
-  var hn = D.teams[match.home] ? D.teams[match.home].name : match.home;
-  var an = D.teams[match.away] ? D.teams[match.away].name : match.away;
-
-  var html = '<div class="pitch-wrap">';
-
-  // Header
-  html += '<div class="pitch-header">';
-  html += '<div class="team-name">'+flag(match.home)+' '+hn+'<span class="formation">'+home_lu.formation+'</span></div>';
-  html += '<div class="pitch-score">'+match.hg+' &ndash; '+match.ag+'</div>';
-  html += '<div class="team-name" style="flex-direction:row-reverse">'+an+' '+flag(match.away)+'<span class="formation">'+away_lu.formation+'</span></div>';
-  html += '</div>';
-
-  html += '<div class="pitch-inner">';
-
-  // Home team (top half)
-  html += buildTeamOnPitch(home_lu, tgoals, true);
-
-  // Centre divider
-  html += '<div class="pitch-divider"></div>';
-
-  // Away team (bottom half)
-  html += buildTeamOnPitch(away_lu, tgoals, false);
-
-  html += '</div></div>';
-  return html;
-}
-
-function buildTeamOnPitch(lineup, tgoals, isHome){
-  var players = lineup.players || [];
-  if(!players.length) return '';
-
-  // Group by grid row (first number before colon)
-  var rows = {};
-  for(var i=0;i<players.length;i++){
-    var p = players[i];
-    var row = p.grid ? p.grid.split(':')[0] : (p.pos === 'G' ? '1' : '2');
-    if(!rows[row]) rows[row] = [];
-    rows[row].push(p);
-  }
-
-  // Home(top half): GK row=1 at top -> ascending. Away(bottom): GK row=1 at bottom -> descending.
-  var rowKeys = Object.keys(rows).map(Number).sort(function(a,b){ return isHome ? a-b : b-a; });
-
-  var html = '<div style="margin:'+(isHome?'0 0 1rem':'1rem 0 0')+'">';
-  for(var ri=0;ri<rowKeys.length;ri++){
-    var rowPlayers = rows[rowKeys[ri]];
-    html += '<div class="pitch-row">';
-    for(var pi=0;pi<rowPlayers.length;pi++){
-      var p = rowPlayers[pi];
-      var goals = tgoals[String(p.id)] || 0;
-      var isGK = p.pos === 'G';
-      var shortName = p.name ? p.name.split(' ').pop() : '?';
-      html += '<div class="pitch-player'+(isGK?' gk':'')+'">';
-      html += '<span class="pname" title="'+p.name+'">'+shortName+'</span>';
-      if(goals > 0) html += '<span class="pgoals">&#9917;'.repeat(goals)+'</span>';
-      html += '</div>';
-    }
-    html += '</div>';
-  }
-  html += '</div>';
-  return html;
-}
-
-function openLineup(idx){
-  var match = window._pastLineups[idx];
-  var tgoals = window._tgoals || {};
-  var modal = document.getElementById('lineup-modal');
-  var mc    = document.getElementById('modal-content');
-  var hn = D.teams[match.home] ? D.teams[match.home].name : match.home;
-  var an = D.teams[match.away] ? D.teams[match.away].name : match.away;
-  mc.innerHTML = '<h3 style="margin-bottom:1rem;font-size:1.1rem">'+flag(match.home)+' '+hn+' '+match.hg+' &ndash; '+match.ag+' '+an+' '+flag(match.away)+'</h3>' + buildPitch(match, tgoals);
-  modal.className = 'modal-overlay open';
-  document.body.style.overflow = 'hidden';
-}
-
-function closeModal(){
-  document.getElementById('lineup-modal').className = 'modal-overlay';
-  document.body.style.overflow = '';
-}
-
-// ── LIVE BRACKET TAB ─────────────────────────────────────────────
-function renderLiveBracket(){
-  if(!LIVE || !LIVE.live || !LIVE.live.live_bracket) return;
-  var lb = LIVE.live.live_bracket;
-  var phase = (LIVE.live && LIVE.live.phase) || 'GROUP_STAGE';
-  var badge = document.getElementById('lb-phase-badge');
-  var phaseLabels = {
-    'PRE_TOURNAMENT':'Pre-Tournament','GROUP_STAGE':'Group Stage',
-    'ROUND_OF_32':'Round of 32','QUARTER_FINALS':'Quarter-Finals',
-    'SEMI_FINALS':'Semi-Finals','FINAL':'Final'
-  };
-  if(badge) badge.textContent = phaseLabels[phase]||phase;
-  var content = document.getElementById('livebracket-content');
-  if(!content) return;
-  function bcard(matchObj, isFinal){
-    if(!matchObj) return '<div class="bm"><div class="bmr"><span class="bmr-name">TBD</span></div><div class="bmr"><span class="bmr-name">TBD</span></div></div>';
-    var h=matchObj.home, a=matchObj.away, w=matchObj.winner;
-    var hCode=h?h.code:null, aCode=a?a.code:null, wCode=w?w.code:null;
-    var out='<div class="bm'+(isFinal?' isfin':'')+'">';
-    if(isFinal) out+='<div class="fin-banner">&#9733; Live Predicted Final</div>';
-    out+='<div class="bmr'+(wCode===hCode?' won':wCode&&wCode!==aCode?' lost':'')+'">';
-    out+='<span class="bmr-flag">'+(hCode?flag(hCode):'?')+'</span>';
-    out+='<span class="bmr-name">'+(hCode?(D.teams[hCode]?D.teams[hCode].name:hCode):'TBD')+'</span>';
-    out+='<span class="bmr-sc" style="color:var(--muted);font-size:.62rem">'+(h&&h.pct?h.pct+'%':'')+'</span>';
-    out+='</div>';
-    out+='<div class="bmr'+(wCode===aCode?' won':wCode&&wCode!==hCode?' lost':'')+'">';
-    out+='<span class="bmr-flag">'+(aCode?flag(aCode):'?')+'</span>';
-    out+='<span class="bmr-name">'+(aCode?(D.teams[aCode]?D.teams[aCode].name:aCode):'TBD')+'</span>';
-    out+='<span class="bmr-sc" style="color:var(--muted);font-size:.62rem">'+(a&&a.pct?a.pct+'%':'')+'</span>';
-    out+='</div>';
-    if(w){ var wName=D.teams[wCode]?D.teams[wCode].name:wCode; out+='<div class="bmf'+(isFinal?' iswinner':'')+'">'+flag(wCode)+' '+wName+' '+w.pct+'%</div>'; }
-    out+='</div>';
-    return out;
-  }
-  var html='<div class="bk-wrap"><table class="bk-table"><thead><tr>';
-  html+='<th class="bkth">R32</th><th class="bkth">R16</th><th class="bkth">QF</th><th class="bkth">SF</th>';
-  html+='<th class="bkth fin">Final</th>';
-  html+='<th class="bkth">SF</th><th class="bkth">QF</th><th class="bkth">R16</th><th class="bkth">R32</th>';
-  html+='</tr></thead><tbody>';
-  var r32=lb.r32||[], r16=lb.r16||[], qf=lb.qf||[], sf=lb.sf||[], fin=lb.final||{};
-  for(var row=0;row<8;row++){
-    html+='<tr>';
-    html+='<td style="vertical-align:middle;padding:2px">'+bcard(r32[row],false)+'</td>';
-    if(row%2===0) html+='<td rowspan="2" style="vertical-align:middle;padding:2px">'+bcard(r16[Math.floor(row/2)],false)+'</td>';
-    if(row%4===0) html+='<td rowspan="4" style="vertical-align:middle;padding:2px">'+bcard(qf[Math.floor(row/4)],false)+'</td>';
-    if(row===0)   html+='<td rowspan="8" style="vertical-align:middle;padding:2px">'+bcard(sf[0],false)+'</td>';
-    if(row===0)   html+='<td rowspan="8" style="vertical-align:middle;padding:2px">'+bcard(fin,true)+'</td>';
-    if(row===0)   html+='<td rowspan="8" style="vertical-align:middle;padding:2px">'+bcard(sf[1],false)+'</td>';
-    if(row%4===0) html+='<td rowspan="4" style="vertical-align:middle;padding:2px">'+bcard(qf[2+Math.floor(row/4)],false)+'</td>';
-    if(row%2===0) html+='<td rowspan="2" style="vertical-align:middle;padding:2px">'+bcard(r16[4+Math.floor(row/2)],false)+'</td>';
-    html+='<td style="vertical-align:middle;padding:2px">'+bcard(r32[8+row],false)+'</td>';
-    html+='</tr>';
-  }
-  html+='</tbody></table></div>';
-  html+='<p class="sans" style="font-size:.75rem;color:var(--muted);margin-top:1rem;text-align:center">Based on 10,000 simulations · Updates after every match · % = probability of appearing in that slot</p>';
-  content.innerHTML=html;
-}
-
-
-
-// ── TOURNAMENT DASHBOARD ─────────────────────────────────────────
-function renderDashboard(){
-  var container = document.getElementById('dashboard-content');
-  if(!container) return;
-  if(!LIVE || !LIVE.live){ container.innerHTML='<p style="text-align:center;padding:3rem;color:var(--muted);font-family:Arial,sans-serif">Loading...</p>'; return; }
-
-  var live = LIVE.live;
-  var teams = LIVE.teams || D.teams;
-  var results = (live.results||[]).filter(function(r){return !r.live;});
-  var players = live.player_stats||[];
-  var tgoals  = live.tournament_goals||{};
-  var lranked = live.live_ranked||[];
-  var preranked = LIVE.ranked||[];
-  var phase = live.phase||'GROUP_STAGE';
-  var phaseLabels = {'PRE_TOURNAMENT':'Pre-Tournament','GROUP_STAGE':'Group Stage','ROUND_OF_32':'Round of 32','QUARTER_FINALS':'Quarter-Finals','SEMI_FINALS':'Semi-Finals','FINAL':'Final'};
-  var badge = document.getElementById('dash-phase-badge');
-  if(badge) badge.textContent = phaseLabels[phase]||phase;
-
-  // ── BUILD TEAM STATS FROM RESULTS ────────────────────────────
-  var ts = {};
-  results.forEach(function(r){
-    [r.home,r.away].forEach(function(c){ if(!ts[c]) ts[c]={gf:0,ga:0,played:0,wins:0,draws:0,losses:0,xgf:0,xga:0}; });
-    ts[r.home].gf+=r.hg; ts[r.home].ga+=r.ag; ts[r.home].played++;
-    ts[r.away].gf+=r.ag; ts[r.away].ga+=r.hg; ts[r.away].played++;
-    if(r.hg>r.ag){ts[r.home].wins++;ts[r.away].losses++;}
-    else if(r.hg===r.ag){ts[r.home].draws++;ts[r.away].draws++;}
-    else{ts[r.home].losses++;ts[r.away].wins++;}
-    if(r.prediction){
-      ts[r.home].xgf+=r.prediction.exp_home; ts[r.home].xga+=r.prediction.exp_away;
-      ts[r.away].xgf+=r.prediction.exp_away; ts[r.away].xga+=r.prediction.exp_home;
-    }
-  });
-
-  // ── KPI TOTALS ────────────────────────────────────────────────
-  var totalGoals = results.reduce(function(s,r){return s+r.hg+r.ag;},0);
-  var avgGoals   = results.length ? (totalGoals/results.length).toFixed(2) : 0;
-  var totalMatches = results.length;
-
-  // ── MODEL ACCURACY ────────────────────────────────────────────
-  var correct=0, upsets=[], modelResults=[];
-  results.forEach(function(r){
-    var p=r.prediction; if(!p) return;
-    var actual = r.hg>r.ag?'home':r.ag>r.hg?'away':'draw';
-    var maxP = Math.max(p.home_win,p.draw,p.away_win);
-    var predicted = p.home_win===maxP?'home':p.away_win===maxP?'away':'draw';
-    var hit = actual===predicted;
-    if(hit) correct++;
-    var htName=(teams[r.home]||D.teams[r.home]||{name:r.home}).name;
-    var atName=(teams[r.away]||D.teams[r.away]||{name:r.away}).name;
-    var isUpset = !hit && ((actual==='away'&&p.home_win>50)||(actual==='home'&&p.away_win>50)||(actual!=='draw'&&p.draw>40));
-    modelResults.push({home:r.home,away:r.away,hg:r.hg,ag:r.ag,hit:hit,isUpset:isUpset,predicted:predicted,actual:actual,pred:p,htName:htName,atName:atName,stage:r.stage,date:r.date});
-    if(isUpset){
-      var favPct = actual==='away'?p.home_win:p.away_win;
-      upsets.push({home:r.home,away:r.away,hg:r.hg,ag:r.ag,htName:htName,atName:atName,favPct:favPct,winner:actual==='home'?htName:atName,loser:actual==='home'?atName:htName});
-    }
-  });
-  upsets.sort(function(a,b){return b.favPct-a.favPct;});
-  var accPct = totalMatches ? Math.round(correct/totalMatches*100) : 0;
-
-  // ── TOP SCORERS (merge tournament_goals + player_stats) ───────
-  var playerMap={};
-  players.forEach(function(p){ playerMap[String(p.id)]=p; });
-  var scorers=[];
-  Object.keys(tgoals).forEach(function(pid){
-    var g=tgoals[pid]; if(!g) return;
-    var p=playerMap[pid]||{name:'Player #'+pid,team_code:null};
-    scorers.push({name:p.name,team:p.team_code,goals:g,assists:p.assists||0,rating:p.rating||null});
-  });
-  // Also pick up goals from player_stats for players not in tgoals
-  players.forEach(function(p){
-    if(p.goals>0 && !tgoals[String(p.id)]){
-      scorers.push({name:p.name,team:p.team_code,goals:p.goals,assists:p.assists||0,rating:p.rating||null});
-    }
-  });
-  scorers.sort(function(a,b){return b.goals-a.goals||b.assists-a.assists;});
-  // deduplicate by name
-  var seenNames={}, uniqueScorers=[];
-  scorers.forEach(function(s){ if(!seenNames[s.name]){seenNames[s.name]=true;uniqueScorers.push(s);} });
-  scorers=uniqueScorers.slice(0,10);
-
-  // ── TOP ASSISTS ───────────────────────────────────────────────
-  var assisters = players.filter(function(p){return p.assists>0;});
-  assisters.sort(function(a,b){return b.assists-a.assists||b.goals-a.goals;});
-  assisters=assisters.slice(0,8);
-
-  // ── TOP RATED ─────────────────────────────────────────────────
-  var rated = players.filter(function(p){return p.rating&&p.rating>0&&p.appearances>=1;});
-  rated.sort(function(a,b){return b.rating-a.rating;});
-  rated=rated.slice(0,8);
-
-  // ── BEST ATTACK / DEFENCE ─────────────────────────────────────
-  var teamArr = Object.keys(ts).map(function(c){return Object.assign({code:c},ts[c]);});
-  var byGF = teamArr.slice().sort(function(a,b){return b.gf-a.gf||a.ga-b.ga;}).slice(0,8);
-  var byGA = teamArr.filter(function(t){return t.played>0;}).slice().sort(function(a,b){return a.ga-b.ga||b.gf-a.gf;}).slice(0,8);
-
-  // ── BIGGEST GAMES ─────────────────────────────────────────────
-  var bigGames = results.slice().sort(function(a,b){return (b.hg+b.ag)-(a.hg+a.ag);}).slice(0,6);
-
-  // ── OVER/UNDERPERFORMERS ──────────────────────────────────────
-  var preMap={};
-  preranked.forEach(function(r){preMap[r.code]=r.win;});
-  var perfArr=[];
-  lranked.forEach(function(lr){
-    var pre=preMap[lr.code]||0;
-    var delta=parseFloat((lr.win-pre).toFixed(1));
-    perfArr.push({code:lr.code,live:lr.win,pre:pre,delta:delta});
-  });
-  perfArr.sort(function(a,b){return b.delta-a.delta;});
-  var overPerf  = perfArr.filter(function(p){return p.delta>0;}).slice(0,6);
-  var underPerf = perfArr.filter(function(p){return p.delta<0;}).slice(-6).reverse();
-
-  // ── CARDS ─────────────────────────────────────────────────────
-  var yellows={}, reds={};
-  players.forEach(function(p){
-    var c=p.team_code||'??';
-    yellows[c]=(yellows[c]||0)+(p.yellow_cards||0);
-    reds[c]=(reds[c]||0)+(p.red_cards||0);
-  });
-  var yellowArr=Object.keys(yellows).map(function(c){return{code:c,y:yellows[c],r:reds[c]||0};}).filter(function(x){return x.y>0;});
-  yellowArr.sort(function(a,b){return b.y-a.y||b.r-a.r;});
-  yellowArr=yellowArr.slice(0,8);
-
-  // ── RECENT FORM (last 3 results per team) ────────────────────
-  var teamForm={};
-  results.forEach(function(r){
-    ['home','away'].forEach(function(side){
-      var c=r[side], gf=side==='home'?r.hg:r.ag, ga=side==='home'?r.ag:r.hg;
-      if(!teamForm[c]) teamForm[c]=[];
-      teamForm[c].push(gf>ga?'W':gf===ga?'D':'L');
-    });
-  });
-
-  // ── BUILD HTML ────────────────────────────────────────────────
-  var h='';
-
-  // KPI row
-  h+='<div class="kpi-grid">';
-  h+='<div class="kpi k-gold"><div class="kpi-val">'+totalGoals+'</div><div class="kpi-label">Total Goals</div></div>';
-  h+='<div class="kpi k-green"><div class="kpi-val">'+avgGoals+'</div><div class="kpi-label">Goals / Match</div></div>';
-  h+='<div class="kpi k-blue"><div class="kpi-val">'+totalMatches+'</div><div class="kpi-label">Matches Played</div></div>';
-  h+='<div class="kpi k-red"><div class="kpi-val">'+accPct+'%</div><div class="kpi-label">Model Accuracy</div></div>';
-  h+='<div class="kpi k-gold"><div class="kpi-val">'+(scorers[0]?scorers[0].goals:'-')+'</div><div class="kpi-label">Top Scorer Goals</div></div>';
-  h+='<div class="kpi k-green"><div class="kpi-val">'+upsets.length+'</div><div class="kpi-label">Upsets</div></div>';
-  h+='</div>';
-
-  h+='<div class="dash-grid wide">';
-
-  // ── MODEL ACCURACY CARD ───────────────────────────────────────
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">🎯</span><span class="dch-title">Model Accuracy</span></div>';
-  h+='<div class="dash-card-body">';
-  h+='<div class="acc-pct-ring">';
-  h+='<div class="ring-stat"><div class="ring-num green">'+correct+'</div><div class="ring-lbl">Correct</div></div>';
-  h+='<div class="ring-stat"><div class="ring-num" style="font-size:2.8rem;color:var(--pitch)">'+accPct+'%</div><div class="ring-lbl">Accuracy</div></div>';
-  h+='<div class="ring-stat"><div class="ring-num red">'+(totalMatches-correct)+'</div><div class="ring-lbl">Wrong</div></div>';
-  h+='</div>';
-  h+='<div class="acc-progress"><div class="acc-progress-fill" style="width:'+accPct+'%"></div></div>';
-  h+='<div style="font-family:Arial,sans-serif;font-size:.74rem;color:var(--muted);margin-bottom:.75rem">Last 8 results:</div>';
-  var last8 = modelResults.slice(-8).reverse();
-  last8.forEach(function(r){
-    var badgeCls = r.hit?'hit':r.isUpset?'upset':'miss';
-    var badgeTxt = r.hit?'✓ Correct':r.isUpset?'⚡ Upset':'✗ Wrong';
-    h+='<div class="acc-row">';
-    h+='<span style="font-size:.95rem">'+flag(r.home)+flag(r.away)+'</span>';
-    h+='<span class="acc-result">'+r.hg+'–'+r.ag+'</span>';
-    h+='<span style="flex:1;font-size:.78rem;color:var(--muted)">'+r.htName.split(' ')[0]+' vs '+r.atName.split(' ')[0]+'</span>';
-    h+='<span class="acc-badge '+badgeCls+'">'+badgeTxt+'</span>';
-    h+='</div>';
-  });
-  h+='</div></div>';
-
-  // ── BIGGEST UPSETS ────────────────────────────────────────────
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">⚡</span><span class="dch-title">Biggest Upsets</span></div>';
-  h+='<div class="dash-card-body">';
-  if(!upsets.length){
-    h+='<p style="color:var(--muted);font-family:Arial,sans-serif;font-size:.82rem;text-align:center;padding:1.5rem">No major upsets yet</p>';
-  } else {
-    upsets.slice(0,6).forEach(function(u,i){
-      h+='<div class="dash-stat-row">';
-      h+='<span class="dash-rank '+(i===0?'gold':'')+'">'+flag(u.home)+flag(u.away)+'</span>';
-      h+='<span class="dash-name">'+u.winner+' def. '+u.loser+'<small>Score: '+u.hg+'–'+u.ag+' · Model had '+u.loser+' at '+u.favPct.toFixed(0)+'% fav.</small></span>';
-      h+='<span class="acc-badge upset">⚡ Upset</span>';
-      h+='</div>';
-    });
-  }
-  h+='</div></div>';
-
-  h+='</div>'; // end wide grid
-
-  h+='<div class="dash-grid">';
-
-  // ── TOP SCORERS ───────────────────────────────────────────────
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">⚽</span><span class="dch-title">Top Scorers</span></div>';
-  h+='<div class="dash-card-body">';
-  var maxG = scorers[0]?scorers[0].goals:1;
-  scorers.forEach(function(p,i){
-    var tname = p.team?(teams[p.team]||D.teams[p.team]||{name:p.team}).name:'';
-    h+='<div class="dash-stat-row">';
-    h+='<span class="dash-rank '+(i===0?'gold':'')+'">'+flag(p.team)+'</span>';
-    h+='<span class="dash-name">'+p.name+'<small>'+tname+(p.assists?' · '+p.assists+' ast':'')+'</small></span>';
-    h+='<div class="dash-bar-wrap"><div class="dash-bar" style="width:'+Math.round(p.goals/maxG*100)+'%"></div></div>';
-    h+='<span class="dash-val">'+p.goals+'</span>';
-    h+='</div>';
-  });
-  h+='</div></div>';
-
-  // ── TOP ASSISTS ───────────────────────────────────────────────
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">🎁</span><span class="dch-title">Top Assists</span></div>';
-  h+='<div class="dash-card-body">';
-  var maxA = assisters[0]?assisters[0].assists:1;
-  assisters.forEach(function(p,i){
-    var tname = p.team_code?(teams[p.team_code]||D.teams[p.team_code]||{name:p.team_code}).name:'';
-    h+='<div class="dash-stat-row">';
-    h+='<span class="dash-rank '+(i===0?'gold':'')+'">'+flag(p.team_code)+'</span>';
-    h+='<span class="dash-name">'+p.name+'<small>'+tname+(p.goals?' · '+p.goals+' goals':'')+'</small></span>';
-    h+='<div class="dash-bar-wrap"><div class="dash-bar blue" style="width:'+Math.round(p.assists/maxA*100)+'%"></div></div>';
-    h+='<span class="dash-val">'+p.assists+'</span>';
-    h+='</div>';
-  });
-  if(!assisters.length) h+='<p style="color:var(--muted);font-family:Arial,sans-serif;font-size:.82rem;padding:1rem">Assist data loading...</p>';
-  h+='</div></div>';
-
-  // ── TOP RATED ─────────────────────────────────────────────────
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">⭐</span><span class="dch-title">Top Rated Players</span></div>';
-  h+='<div class="dash-card-body">';
-  rated.forEach(function(p,i){
-    var tname = p.team_code?(teams[p.team_code]||D.teams[p.team_code]||{name:p.team_code}).name:'';
-    var rCls = p.rating>=8?'rating-high':p.rating>=7?'rating-mid':'rating-low';
-    h+='<div class="dash-stat-row">';
-    h+='<span class="dash-rank '+(i===0?'gold':'')+'">'+flag(p.team_code)+'</span>';
-    h+='<span class="dash-name">'+p.name+'<small>'+tname+' · '+p.appearances+' app'+( p.goals?' · '+p.goals+'⚽':'' )+'</small></span>';
-    h+='<span class="rating-badge '+rCls+'">'+p.rating.toFixed(1)+'</span>';
-    h+='</div>';
-  });
-  if(!rated.length) h+='<p style="color:var(--muted);font-family:Arial,sans-serif;font-size:.82rem;padding:1rem">Rating data loading...</p>';
-  h+='</div></div>';
-
-  // ── BEST ATTACK ───────────────────────────────────────────────
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">🔥</span><span class="dch-title">Best Attack</span></div>';
-  h+='<div class="dash-card-body">';
-  var maxGF = byGF[0]?byGF[0].gf:1;
-  byGF.forEach(function(t,i){
-    var tname=(teams[t.code]||D.teams[t.code]||{name:t.code}).name;
-    h+='<div class="dash-stat-row">';
-    h+='<span class="dash-rank '+(i===0?'gold':'')+'">'+flag(t.code)+'</span>';
-    h+='<span class="dash-name">'+tname+'<small>'+t.played+' played · '+t.wins+'W '+t.draws+'D '+t.losses+'L</small></span>';
-    h+='<div class="dash-bar-wrap"><div class="dash-bar" style="width:'+Math.round(t.gf/maxGF*100)+'%"></div></div>';
-    h+='<span class="dash-val">'+t.gf+'</span>';
-    h+='</div>';
-  });
-  h+='</div></div>';
-
-  // ── BEST DEFENCE ─────────────────────────────────────────────
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">🛡️</span><span class="dch-title">Best Defence</span></div>';
-  h+='<div class="dash-card-body">';
-  var maxGA2 = Math.max.apply(null,byGA.map(function(t){return t.ga;}))||1;
-  byGA.forEach(function(t,i){
-    var tname=(teams[t.code]||D.teams[t.code]||{name:t.code}).name;
-    var barW = Math.round((1-t.ga/maxGA2)*100);
-    h+='<div class="dash-stat-row">';
-    h+='<span class="dash-rank '+(i===0?'gold':'')+'">'+flag(t.code)+'</span>';
-    h+='<span class="dash-name">'+tname+'<small>'+t.played+' played · '+t.gf+' scored</small></span>';
-    h+='<div class="dash-bar-wrap"><div class="dash-bar" style="width:'+barW+'%"></div></div>';
-    h+='<span class="dash-val">'+t.ga+'</span>';
-    h+='</div>';
-  });
-  h+='</div></div>';
-
-  // ── BIGGEST GAMES ─────────────────────────────────────────────
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">🎆</span><span class="dch-title">Highest Scoring Matches</span></div>';
-  h+='<div class="dash-card-body">';
-  bigGames.forEach(function(r){
-    var hn=(teams[r.home]||D.teams[r.home]||{name:r.home}).name;
-    var an=(teams[r.away]||D.teams[r.away]||{name:r.away}).name;
-    var winner = r.hg>r.ag?'home':r.ag>r.hg?'away':'draw';
-    h+='<div class="match-result-card">';
-    h+='<div class="teams" style="text-align:right;flex:1">'+flag(r.home)+' <span style="'+(winner==='home'?'font-weight:700':'opacity:.6')+'">'+hn+'</span></div>';
-    h+='<div class="score-big">'+r.hg+'–'+r.ag+'</div>';
-    h+='<div class="teams" style="flex:1"><span style="'+(winner==='away'?'font-weight:700':'opacity:.6')+'">'+an+'</span> '+flag(r.away)+'</div>';
-    h+='<span style="font-family:\'Courier New\',monospace;font-size:.62rem;color:var(--muted);white-space:nowrap;margin-left:.4rem">'+( r.hg+r.ag)+' gls</span>';
-    h+='</div>';
-  });
-  h+='</div></div>';
-
-  // ── YELLOW CARDS ─────────────────────────────────────────────
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">🟨</span><span class="dch-title">Disciplinary — Teams</span></div>';
-  h+='<div class="dash-card-body">';
-  var maxY = yellowArr[0]?yellowArr[0].y:1;
-  yellowArr.forEach(function(t,i){
-    var tname=(teams[t.code]||D.teams[t.code]||{name:t.code}).name;
-    h+='<div class="dash-stat-row">';
-    h+='<span class="dash-rank">'+flag(t.code)+'</span>';
-    h+='<span class="dash-name">'+tname+'<small>'+(t.r?t.r+' red card'+(t.r>1?'s':''):'No red cards')+'</small></span>';
-    h+='<div class="dash-bar-wrap"><div class="dash-bar" style="background:linear-gradient(90deg,#c9a84c,#f0c040);width:'+Math.round(t.y/maxY*100)+'%"></div></div>';
-    h+='<span class="dash-val" style="color:#c9a84c">'+t.y+'</span>';
-    h+='</div>';
-  });
-  if(!yellowArr.length) h+='<p style="color:var(--muted);font-family:Arial,sans-serif;font-size:.82rem;padding:1rem">Card data loading...</p>';
-  h+='</div></div>';
-
-  h+='</div>'; // end main dash-grid
-
-  // ── OVER/UNDERPERFORMERS FULL WIDTH ──────────────────────────
-  h+='<div class="dash-grid wide" style="margin-top:0">';
-
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">📈</span><span class="dch-title">Overperformers vs Pre-Tournament Prediction</span></div>';
-  h+='<div class="dash-card-body">';
-  overPerf.forEach(function(p){
-    var tname=(teams[p.code]||D.teams[p.code]||{name:p.code}).name;
-    var barW=Math.min(Math.round(Math.abs(p.delta)/3*100),100);
-    h+='<div class="perf-bar-wrap">';
-    h+='<span class="perf-label">'+flag(p.code)+' '+tname.split(' ')[0]+'</span>';
-    h+='<div class="perf-bar-track"><div class="perf-bar-fill pos" style="width:'+barW+'%"></div></div>';
-    h+='<span class="perf-delta pos">+'+p.delta+'%</span>';
-    h+='<span style="font-family:\'Courier New\',monospace;font-size:.68rem;color:var(--muted);margin-left:.4rem">'+p.pre+'%→'+p.live+'%</span>';
-    h+='</div>';
-  });
-  h+='</div></div>';
-
-  h+='<div class="dash-card">';
-  h+='<div class="dash-card-hdr"><span class="dch-icon">📉</span><span class="dch-title">Underperformers vs Pre-Tournament Prediction</span></div>';
-  h+='<div class="dash-card-body">';
-  underPerf.forEach(function(p){
-    var tname=(teams[p.code]||D.teams[p.code]||{name:p.code}).name;
-    var barW=Math.min(Math.round(Math.abs(p.delta)/3*100),100);
-    h+='<div class="perf-bar-wrap">';
-    h+='<span class="perf-label">'+flag(p.code)+' '+tname.split(' ')[0]+'</span>';
-    h+='<div class="perf-bar-track"><div class="perf-bar-fill neg" style="width:'+barW+'%"></div></div>';
-    h+='<span class="perf-delta neg">'+p.delta+'%</span>';
-    h+='<span style="font-family:\'Courier New\',monospace;font-size:.68rem;color:var(--muted);margin-left:.4rem">'+p.pre+'%→'+p.live+'%</span>';
-    h+='</div>';
-  });
-  h+='</div></div>';
-
-  h+='</div>'; // end wide grid
-
-  // Footer timestamp
-  var upd='';
-  try{
-    var meta=LIVE.meta||{};
-    if(meta.last_updated) upd=new Date(meta.last_updated.replace('Z','').replace('+00:00','')+'+00:00').toLocaleString('en-US',{timeZone:'America/Chicago',month:'short',day:'numeric',hour:'numeric',minute:'2-digit',hour12:true})+' CT';
-  }catch(e){}
-  if(upd) h+='<p class="update-time" style="text-align:right;margin-top:.5rem">Last updated: '+upd+'</p>';
-
-  container.innerHTML = h;
-}
-
-// ── PRONÓSTICOS DEL DÍA ──────────────────────────────────────────
-function getTodayMatches(){
-  // Gets today's matches from olympus_live.json (already loaded as LIVE)
-  if(!LIVE || !LIVE.live) return [];
-
-  var now = new Date();
-  // Today in CT (UTC-5 during summer)
-  var ct = new Date(now.getTime() - 5*60*60*1000);
-  var todayStr = ct.toISOString().slice(0,10); // "2026-06-22"
-
-  var all = [];
-
-  // Add matches from results (finished today) and remaining (upcoming today)
-  var sources = (LIVE.live.results||[]).concat(LIVE.live.remaining||[]);
-
-  // Also add live_now matches
-  if(LIVE.live.live_now){
-    for(var i=0;i<LIVE.live.live_now.length;i++){
-      var ln = LIVE.live.live_now[i];
-      all.push({home:ln.home, away:ln.away, date:ln.date||'', stage:ln.stage||'', status:'LIVE', hg:ln.hg, ag:ln.ag});
-    }
-  }
-
-  for(var i=0;i<sources.length;i++){
-    var m = sources[i];
-    if(!m.date) continue;
-    // Normalize date string to extract date part
-    var dStr = m.date.trim().replace(' ','T');
-    if(dStr.length===16) dStr += ':00Z';
-    else if(!dStr.endsWith('Z') && !dStr.includes('+')) dStr += 'Z';
-    try {
-      var d = new Date(dStr);
-      var mCt = new Date(d.getTime() - 5*60*60*1000);
-      var mDate = mCt.toISOString().slice(0,10);
-      if(mDate === todayStr){
-        var status = m.live ? 'LIVE' : (m.hg!==undefined && !m.live ? 'FT' : 'UPCOMING');
-        all.push({home:m.home, away:m.away, date:m.date, stage:m.stage||'', status:status, hg:m.hg, ag:m.ag});
-      }
-    } catch(e){}
-  }
-
-  // Deduplicate by home+away
-  var seen = {}, result = [];
-  for(var i=0;i<all.length;i++){
-    var key = all[i].home + '_' + all[i].away;
-    if(!seen[key]){ seen[key]=true; result.push(all[i]); }
-  }
-  return result;
-}
-
-function renderPredictions(){
-  var container = document.getElementById('pred-day-container');
-  if(!container) return;
-
-  if(!LIVE || !LIVE.live){
-    container.innerHTML = '<p style="text-align:center;padding:3rem;color:var(--muted);font-family:Arial,sans-serif">Loading tournament data...</p>';
-    return;
-  }
-
-  var todayMatches = getTodayMatches();
-
-  // Date header
-  var now = new Date();
-  var ct = new Date(now.getTime() - 5*60*60*1000);
-  var dateLabel = ct.toLocaleDateString('es-MX',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
-  dateLabel = dateLabel.charAt(0).toUpperCase() + dateLabel.slice(1);
-
-  var meta = LIVE.meta||{};
-  var phase = meta.phase||'GROUP_STAGE';
-  var phaseLabels = {
-    'PRE_TOURNAMENT':'Pre-Tournament','GROUP_STAGE':'Group Stage',
-    'ROUND_OF_32':'Round of 32','QUARTER_FINALS':'Quarter-Finals',
-    'SEMI_FINALS':'Semi-Finals','FINAL':'Final'
-  };
-  var phaseLabel = phaseLabels[phase]||phase;
-
-  if(!todayMatches.length){
-    container.innerHTML =
-      '<div class="pred-day-header"><div>' +
-      '<div class="pred-day-title">🏆 Today's Predictions</div>' +
-      '<div class="pred-day-sub">Olympus Model · 50,000 simulations</div></div>' +
-      '<div style="text-align:right"><div class="pred-day-date">' + dateLabel + '</div>' +
-      '<div class="pred-day-date" style="color:rgba(255,255,255,.45)">' + phaseLabel + '</div></div>' +
-      '</div>' +
-      '<div class="pred-empty">' +
-      '<span class="pred-empty-icon">📅</span>' +
-      '<strong>No hay partidos programados para today</strong><br>' +
-      '<span style="font-size:.78rem;margin-top:.5rem;display:block">Los pronósticos aparecen automáticamente los días con partidos.</span>' +
-      '</div>';
-    return;
-  }
-
-  var html = '<div class="pred-day-header">';
-  html += '<div><div class="pred-day-title">🏆 Today's Predictions</div>';
-  html += '<div class="pred-day-sub">Olympus Model · 50,000 simulations · ' + todayMatches.length + ' match' + (todayMatches.length>1?'es':'') + ' today</div></div>';
-  html += '<div style="text-align:right"><div class="pred-day-date">' + dateLabel + '</div>';
-  html += '<div class="pred-day-date" style="color:rgba(255,255,255,.45)">' + phaseLabel + '</div></div>';
-  html += '</div>';
-
-  html += '<div class="pred-grid">';
-
-  for(var i=0;i<todayMatches.length;i++){
-    var m = todayMatches[i];
-    var hCode = m.home, aCode = m.away;
-
-    var lteams = (LIVE && LIVE.teams) ? LIVE.teams : D.teams;
-    var ht = lteams[hCode] || D.teams[hCode];
-    var at = lteams[aCode] || D.teams[aCode];
-    if(!ht || !at) continue;
-
-    var pred = computePreMatchPred(hCode, aCode);
-    if(!pred) continue;
-
-    var hName = ht.name;
-    var aName = at.name;
-    var hFlag = flag(hCode);
-    var aFlag = flag(aCode);
-    var stageLabel = (m.stage||'').replace(/_/g,' ');
-    var timeLabel = toCT(m.date);
-
-    // Status badge
-    var statusBadge = '';
-    if(m.status==='LIVE'){
-      statusBadge = '<span style="background:#c0392b;color:#fff;padding:.1rem .4rem;border-radius:3px;font-size:.62rem;font-weight:700;letter-spacing:.06em">● LIVE</span>';
-    } else if(m.status==='FT'){
-      statusBadge = '<span style="background:var(--pitch);color:var(--gold-lt);padding:.1rem .4rem;border-radius:3px;font-size:.62rem;font-weight:700">FT ' + (m.hg!==undefined?m.hg+' – '+m.ag:'') + '</span>';
-    }
-
-    // Favorite
-    var favColor, favText;
-    if(pred.home_win >= pred.away_win && pred.home_win >= pred.draw){
-      favColor='var(--grass)'; favText='Favourite: ' + hName;
-    } else if(pred.away_win > pred.home_win && pred.away_win >= pred.draw){
-      favColor='var(--red)'; favText='Favourite: ' + aName;
-    } else {
-      favColor='var(--gold)'; favText='Very even match';
-    }
-
-    html += '<div class="pred-card">';
-
-    // Header
-    html += '<div class="pred-card-header">';
-    html += '<span class="pred-stage">' + stageLabel + '</span>';
-    html += '<div style="display:flex;align-items:center;gap:.5rem">' + statusBadge + '<span class="pred-time">' + timeLabel + '</span></div>';
-    html += '</div>';
-
-    // Matchup + predicted scoreline
-    html += '<div class="pred-matchup">';
-    html += '<div class="pred-team"><span class="pred-team-flag">' + hFlag + '</span><div class="pred-team-name">' + hName + '</div></div>';
-    html += '<div style="text-align:center">';
-    html += '<div class="pred-scoreline">' + pred.exp_home + ' – ' + pred.exp_away + '</div>';
-    html += '<div style="font-family:Arial,sans-serif;font-size:.62rem;color:var(--muted);margin-top:.15rem">predicted score</div>';
-    html += '</div>';
-    html += '<div class="pred-team"><span class="pred-team-flag">' + aFlag + '</span><div class="pred-team-name">' + aName + '</div></div>';
-    html += '</div>';
-
-    // Probability bar
-    html += '<div class="pred-prob-bar">';
-    html += '<div class="pred-prob-bar-h" style="flex:' + pred.home_win + '"></div>';
-    html += '<div class="pred-prob-bar-d" style="flex:' + pred.draw + '"></div>';
-    html += '<div class="pred-prob-bar-a" style="flex:' + pred.away_win + '"></div>';
-    html += '</div>';
-
-    // Probabilities
-    html += '<div class="pred-probs">';
-    html += '<div class="pred-prob home"><div class="pred-prob-val">' + pred.home_win + '%</div><div class="pred-prob-label">' + hName.split(' ')[0] + ' Win</div></div>';
-    html += '<div class="pred-prob"><div class="pred-prob-val">' + pred.draw + '%</div><div class="pred-prob-label">Empate</div></div>';
-    html += '<div class="pred-prob away"><div class="pred-prob-val">' + pred.away_win + '%</div><div class="pred-prob-label">' + aName.split(' ')[0] + ' Win</div></div>';
-    html += '</div>';
-
-    // xG row
-    html += '<div class="pred-xg">';
-    html += '<span>xG <strong>' + hName.split(' ')[0] + ':</strong> ' + pred.exp_home + '</span>';
-    html += '<span style="color:var(--muted)">Expected Goals</span>';
-    html += '<span>xG <strong>' + aName.split(' ')[0] + ':</strong> ' + pred.exp_away + '</span>';
-    html += '</div>';
-
-    // Pillar comparison mini row
-    html += '<div style="display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px dashed var(--border);font-family:'Courier New',monospace;font-size:.68rem">';
-    html += '<div style="padding:.4rem .8rem;border-right:1px solid var(--border)">';
-    html += '<span style="color:var(--muted)">Score </span><strong>' + (ht.score||0).toFixed(1) + '</strong> &nbsp;';
-    html += 'P2:<strong>' + (ht.P2||0).toFixed(0) + '</strong> P1:<strong>' + (ht.P1||0).toFixed(0) + '</strong>';
-    html += '</div>';
-    html += '<div style="padding:.4rem .8rem;text-align:right">';
-    html += 'P2:<strong>' + (at.P2||0).toFixed(0) + '</strong> P1:<strong>' + (at.P1||0).toFixed(0) + '</strong>';
-    html += ' &nbsp;<span style="color:var(--muted)">Score </span><strong>' + (at.score||0).toFixed(1) + '</strong>';
-    html += '</div></div>';
-
-    // Favorite tag
-    html += '<div class="pred-model-tag"><span style="color:' + favColor + ';font-weight:700">' + favText + '</span> · Modelo Olympus V2</div>';
-
-    html += '</div>'; // end pred-card
-  }
-
-  html += '</div>'; // end pred-grid
-
-  // Update timestamp
-  var upd = '';
-  try {
-    if(meta.last_updated){
-      upd = new Date(meta.last_updated.replace('Z','').replace('+00:00','')+'+00:00')
-            .toLocaleString('es-MX',{timeZone:'America/Chicago',hour:'numeric',minute:'2-digit',hour12:true}) + ' CT';
-    }
-  } catch(e){}
-  if(upd) html += '<p class="update-time" style="margin-top:1rem;text-align:right">Última actualización del modelo: ' + upd + '</p>';
-
-  container.innerHTML = html;
+  container.innerHTML=h;
 }
 
 // Initial load
