@@ -316,6 +316,45 @@ nav{background:var(--pitch);border-bottom:2px solid var(--gold);position:sticky;
 .acc-progress{width:100%;height:10px;background:var(--border);border-radius:5px;overflow:hidden;margin:.75rem 0}
 .acc-progress-fill{height:10px;background:linear-gradient(90deg,var(--grass),#5cb85c);border-radius:5px}
 @media(max-width:640px){.dash-grid,.dash-grid.wide{grid-template-columns:1fr}.kpi-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* TODAY'S PREDICTIONS */
+.pred-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1.2rem}
+.pred-card{background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden;border:1px solid var(--border)}
+.pred-card-hdr{background:var(--pitch);padding:.5rem 1rem;display:flex;justify-content:space-between;align-items:center}
+.pred-stage-lbl{font-family:Arial,sans-serif;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-lt)}
+.pred-time-lbl{font-family:monospace;font-size:.72rem;color:rgba(255,255,255,.7)}
+.pred-matchup{padding:1rem 1rem .6rem;display:flex;align-items:center;justify-content:space-between;gap:.5rem}
+.pred-team{flex:1;text-align:center}
+.pred-team-flag{font-size:2rem;line-height:1.2;display:block;margin-bottom:.3rem}
+.pred-team-name{font-weight:700;font-size:.88rem}
+.pred-scoreline{font-size:2rem;font-weight:700;font-family:monospace;color:var(--pitch);text-align:center;padding:0 .5rem}
+.pred-score-lbl{font-family:Arial,sans-serif;font-size:.6rem;color:var(--muted);margin-top:.15rem}
+.pred-prob-bar{height:5px;display:flex}
+.pred-prob-bar-h{background:var(--grass)}.pred-prob-bar-d{background:var(--gold)}.pred-prob-bar-a{background:var(--red)}
+.pred-probs{display:grid;grid-template-columns:1fr 1fr 1fr;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.pred-prob{text-align:center;padding:.6rem .3rem}
+.pred-prob-val{font-size:1.1rem;font-weight:700}
+.pred-prob-val.home{color:var(--grass)}.pred-prob-val.away{color:var(--red)}
+.pred-prob-lbl{font-family:Arial,sans-serif;font-size:.6rem;color:var(--muted);text-transform:uppercase;margin-top:.1rem}
+.pred-xg{display:flex;justify-content:space-between;padding:.45rem 1rem;background:var(--bg);font-size:.72rem;color:var(--muted);font-family:monospace}
+.pred-pillars{display:grid;grid-template-columns:1fr 1fr;font-size:.68rem;font-family:monospace;border-top:1px dashed var(--border)}
+.pred-pillars div{padding:.35rem .8rem}
+.pred-pillars div:first-child{border-right:1px solid var(--border)}
+.pred-fav{padding:.35rem 1rem;font-family:Arial,sans-serif;font-size:.65rem;text-align:center;border-top:1px solid var(--border);background:rgba(201,168,76,.06)}
+.pred-live-badge{background:#c0392b;color:#fff;padding:.1rem .4rem;border-radius:3px;font-size:.62rem;font-weight:700}
+.pred-ft-badge{background:var(--pitch);color:var(--gold-lt);padding:.1rem .4rem;border-radius:3px;font-size:.62rem;font-weight:700}
+.pred-day-hdr{background:var(--pitch);border-radius:var(--r);padding:1rem 1.5rem;margin-bottom:1.5rem;display:flex;justify-content:space-between;align-items:center;border-left:5px solid var(--gold)}
+.pred-day-hdr-left .title{font-size:1rem;font-weight:700;color:#fff}
+.pred-day-hdr-left .sub{font-family:Arial,sans-serif;font-size:.7rem;color:rgba(255,255,255,.5);margin-top:.2rem}
+.pred-day-hdr-right{text-align:right;font-family:monospace;font-size:.8rem;color:var(--gold-lt)}
+.pred-empty{text-align:center;padding:4rem 2rem;color:var(--muted);font-family:Arial,sans-serif}
+.pred-empty-icon{font-size:3rem;display:block;margin-bottom:1rem}
+@media(max-width:640px){.pred-grid{grid-template-columns:1fr}}
+
+
+.bm-confirmed{border:1px solid var(--grass) !important;background:rgba(40,167,69,.04)}
+.bm-result-tag{background:var(--grass);color:#fff;font-family:Arial,sans-serif;font-size:.6rem;font-weight:700;padding:.15rem .5rem;text-align:center;letter-spacing:.05em}
+
 </style>
 </head>
 <body>
@@ -336,6 +375,7 @@ nav{background:var(--pitch);border-bottom:2px solid var(--gold);position:sticky;
 </div></header>
 
 <nav><div class="container"><div class="nav-inner">
+  <button class="nb" onclick="show('today',this)">&#127942; Today's Predictions</button>
   <button class="nb" onclick="show('dashboard',this)">&#128202; Tournament Dashboard</button>
   <button class="nb active" onclick="show('rankings',this)">Pre-Tournament Rankings</button>
   <button class="nb" onclick="show('scores',this)">Model Scores</button>
@@ -371,6 +411,11 @@ nav{background:var(--pitch);border-bottom:2px solid var(--gold);position:sticky;
       Live predictions will appear here automatically once matches start.
     </p>
   </div>
+</div></div>
+
+<div id="sec-today" class="sec"><div class="container">
+  <div class="sec-title">Today's Predictions <span class="phase-badge" id="today-phase-badge">Live</span></div>
+  <div id="today-content"><p class="sans" style="color:var(--muted);text-align:center;padding:3rem">Loading...</p></div>
 </div></div>
 
 <div id="sec-dashboard" class="sec"><div class="container">
@@ -1164,6 +1209,7 @@ for(var i=0;i<lranked.length;i++){
   renderPlayerStats();
   renderLiveBracket();
   renderDashboard();
+  renderTodayPredictions();
 }
 
 
@@ -1488,17 +1534,20 @@ function renderLiveBracket(){
     if(!matchObj) return '<div class="bm"><div class="bmr"><span class="bmr-name">TBD</span></div><div class="bmr"><span class="bmr-name">TBD</span></div></div>';
     var h=matchObj.home, a=matchObj.away, w=matchObj.winner;
     var hCode=h?h.code:null, aCode=a?a.code:null, wCode=w?w.code:null;
-    var out='<div class="bm'+(isFinal?' isfin':'')+'">';
-    if(isFinal) out+='<div class="fin-banner">&#9733; Live Predicted Final</div>';
+    // If winner has 99%+ it means result is confirmed/played
+    var confirmed = w && w.pct >= 99;
+    var out='<div class="bm'+(isFinal?' isfin':'')+(confirmed?' bm-confirmed':'')+'">';
+    if(confirmed) out+='<div class="bm-result-tag">&#10003; Result</div>';
+    else if(isFinal) out+='<div class="fin-banner">&#9733; Live Predicted Final</div>';
     out+='<div class="bmr'+(wCode===hCode?' won':wCode&&wCode!==aCode?' lost':'')+'">';
     out+='<span class="bmr-flag">'+(hCode?flag(hCode):'?')+'</span>';
     out+='<span class="bmr-name">'+(hCode?(D.teams[hCode]?D.teams[hCode].name:hCode):'TBD')+'</span>';
-    out+='<span class="bmr-sc" style="color:var(--muted);font-size:.62rem">'+(h&&h.pct?h.pct+'%':'')+'</span>';
+    out+='<span class="bmr-sc" style="font-size:.62rem;color:'+(confirmed&&wCode===hCode?'var(--grass)':'var(--muted)')+'">'+(confirmed?(wCode===hCode?'&#10003; Advanced':'&#10007; Eliminated'):(h&&h.pct?h.pct+'%':''))+'</span>';
     out+='</div>';
     out+='<div class="bmr'+(wCode===aCode?' won':wCode&&wCode!==hCode?' lost':'')+'">';
     out+='<span class="bmr-flag">'+(aCode?flag(aCode):'?')+'</span>';
     out+='<span class="bmr-name">'+(aCode?(D.teams[aCode]?D.teams[aCode].name:aCode):'TBD')+'</span>';
-    out+='<span class="bmr-sc" style="color:var(--muted);font-size:.62rem">'+(a&&a.pct?a.pct+'%':'')+'</span>';
+    out+='<span class="bmr-sc" style="font-size:.62rem;color:'+(confirmed&&wCode===aCode?'var(--grass)':'var(--muted)')+'">'+(confirmed?(wCode===aCode?'&#10003; Advanced':'&#10007; Eliminated'):(a&&a.pct?a.pct+'%':''))+'</span>';
     out+='</div>';
     if(w){ var wName=D.teams[wCode]?D.teams[wCode].name:wCode; out+='<div class="bmf'+(isFinal?' iswinner':'')+'">'+flag(wCode)+' '+wName+' '+w.pct+'%</div>'; }
     out+='</div>';
@@ -1636,6 +1685,9 @@ function renderDashboard(){
   h+='<div class="kpi k-red"><div class="kpi-val">'+accPct+'%</div><div class="kpi-label">Model Accuracy</div></div>';
   h+='<div class="kpi k-gold"><div class="kpi-val">'+(scorers[0]?scorers[0].goals:'-')+'</div><div class="kpi-label">Top Scorer Goals</div></div>';
   h+='<div class="kpi k-green"><div class="kpi-val">'+upsets.length+'</div><div class="kpi-label">Upsets</div></div>';
+  var eliminated=(live.eliminated||[]).length;
+  var stillIn=48-eliminated;
+  h+='<div class="kpi k-blue" style="'+(phase!=="GROUP_STAGE"?'':'display:none')+'"><div class="kpi-val">'+stillIn+'</div><div class="kpi-label">Teams Left</div></div>';
   h+='</div>';
 
   h+='<div class="dash-grid wide">';
@@ -1791,6 +1843,111 @@ function renderDashboard(){
   try{var m=LIVE.meta||{};if(m.last_updated)upd=new Date(m.last_updated.replace('Z','').replace('+00:00','')+'+00:00').toLocaleString('en-US',{timeZone:'America/Chicago',month:'short',day:'numeric',hour:'numeric',minute:'2-digit',hour12:true})+' CT';}catch(e){}
   if(upd)h+='<p class="update-time" style="text-align:right;margin-top:.5rem">Last updated: '+upd+'</p>';
 
+  container.innerHTML=h;
+}
+
+
+// ── TODAY'S PREDICTIONS ──────────────────────────────────────────
+function getTodayMatches(){
+  if(!LIVE||!LIVE.live) return [];
+  var now=new Date(), ct=new Date(now.getTime()-5*60*60*1000);
+  var todayStr=ct.toISOString().slice(0,10);
+  var all=[];
+  var sources=(LIVE.live.results||[]).concat(LIVE.live.remaining||[]);
+  (LIVE.live.live_now||[]).forEach(function(ln){all.push({home:ln.home,away:ln.away,date:ln.date||'',stage:ln.stage||'',status:'LIVE',hg:ln.hg,ag:ln.ag});});
+  sources.forEach(function(m){
+    if(!m.date) return;
+    try{
+      var dStr=m.date.trim().replace(' ','T');
+      if(!dStr.endsWith('Z')&&!dStr.includes('+')) dStr+='Z';
+      var mCt=new Date(new Date(dStr).getTime()-5*60*60*1000);
+      if(mCt.toISOString().slice(0,10)===todayStr){
+        var status=m.live?'LIVE':(m.hg!==undefined&&!m.live?'FT':'UPCOMING');
+        all.push({home:m.home,away:m.away,date:m.date,stage:m.stage||'',status:status,hg:m.hg,ag:m.ag,prediction:m.prediction});
+      }
+    }catch(e){}
+  });
+  var seen={},result=[];
+  all.forEach(function(m){var k=m.home+'_'+m.away;if(!seen[k]){seen[k]=true;result.push(m);}});
+  return result;
+}
+
+function toCTStr(dateStr){
+  if(!dateStr) return '';
+  try{
+    var d=dateStr.trim().replace(' ','T');
+    if(!d.endsWith('Z')&&!d.includes('+')) d+='Z';
+    return new Date(d).toLocaleString('en-US',{timeZone:'America/Chicago',hour:'numeric',minute:'2-digit',hour12:true})+' CT';
+  }catch(e){return dateStr;}
+}
+
+function renderTodayPredictions(){
+  var container=document.getElementById('today-content');
+  if(!container) return;
+  var badge=document.getElementById('today-phase-badge');
+  var phase=(LIVE&&LIVE.live&&LIVE.live.phase)||'GROUP_STAGE';
+  var phaseLabels={'PRE_TOURNAMENT':'Pre-Tournament','GROUP_STAGE':'Group Stage','ROUND_OF_32':'Round of 32','QUARTER_FINALS':'Quarter-Finals','SEMI_FINALS':'Semi-Finals','FINAL':'Final'};
+  if(badge) badge.textContent=phaseLabels[phase]||phase;
+
+  if(!LIVE||!LIVE.live){container.innerHTML='<p class="pred-empty">Loading tournament data...</p>';return;}
+
+  var matches=getTodayMatches();
+  var teams=LIVE.teams||D.teams;
+  var now=new Date(), ct=new Date(now.getTime()-5*60*60*1000);
+  var dateLabel=ct.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'});
+
+  var h='<div class="pred-day-hdr">';
+  h+='<div class="pred-day-hdr-left"><div class="title">&#127942; Today&#39;s Predictions</div>';
+  h+='<div class="sub">Olympus Model &middot; 50,000 simulations &middot; '+matches.length+' match'+(matches.length!==1?'es':'')+' today</div></div>';
+  h+='<div class="pred-day-hdr-right">'+dateLabel+'<br><span style="font-size:.65rem;opacity:.5">'+phaseLabels[phase]+'</span></div>';
+  h+='</div>';
+
+  if(!matches.length){
+    h+='<div class="pred-empty"><span class="pred-empty-icon">&#128197;</span><strong>No matches today</strong><br><span style="font-size:.78rem;margin-top:.5rem;display:block">Predictions appear automatically on match days.</span></div>';
+    container.innerHTML=h; return;
+  }
+
+  h+='<div class="pred-grid">';
+  matches.forEach(function(m){
+    var ht=teams[m.home]||D.teams[m.home]||{name:m.home,P1:0,P2:0,score:0};
+    var at=teams[m.away]||D.teams[m.away]||{name:m.away,P1:0,P2:0,score:0};
+    var pred=computePreMatchPred(m.home,m.away);
+    if(!pred) return;
+    var hName=ht.name, aName=at.name;
+    var stageLabel=(m.stage||'').replace(/_/g,' ');
+    var timeLabel=toCTStr(m.date);
+    var statusBadge='';
+    if(m.status==='LIVE') statusBadge='<span class="pred-live-badge">&#9679; LIVE</span>';
+    else if(m.status==='FT') statusBadge='<span class="pred-ft-badge">FT '+m.hg+'-'+m.ag+'</span>';
+
+    var favColor,favText;
+    if(pred.home_win>=pred.away_win&&pred.home_win>=pred.draw){favColor='var(--grass)';favText='Favourite: '+hName;}
+    else if(pred.away_win>pred.home_win&&pred.away_win>pred.draw){favColor='var(--red)';favText='Favourite: '+aName;}
+    else{favColor='var(--gold)';favText='Very even match';}
+
+    h+='<div class="pred-card">';
+    h+='<div class="pred-card-hdr"><span class="pred-stage-lbl">'+stageLabel+'</span>';
+    h+='<div style="display:flex;align-items:center;gap:.5rem">'+statusBadge+'<span class="pred-time-lbl">'+timeLabel+'</span></div></div>';
+    h+='<div class="pred-matchup">';
+    h+='<div class="pred-team"><span class="pred-team-flag">'+flag(m.home)+'</span><div class="pred-team-name">'+hName+'</div></div>';
+    h+='<div style="text-align:center"><div class="pred-scoreline">'+pred.exp_home+' &ndash; '+pred.exp_away+'</div><div class="pred-score-lbl">predicted score</div></div>';
+    h+='<div class="pred-team"><span class="pred-team-flag">'+flag(m.away)+'</span><div class="pred-team-name">'+aName+'</div></div>';
+    h+='</div>';
+    h+='<div class="pred-prob-bar"><div class="pred-prob-bar-h" style="flex:'+pred.home_win+'"></div><div class="pred-prob-bar-d" style="flex:'+pred.draw+'"></div><div class="pred-prob-bar-a" style="flex:'+pred.away_win+'"></div></div>';
+    h+='<div class="pred-probs">';
+    h+='<div class="pred-prob"><div class="pred-prob-val home">'+pred.home_win+'%</div><div class="pred-prob-lbl">'+hName.split(' ')[0]+' Win</div></div>';
+    h+='<div class="pred-prob"><div class="pred-prob-val">'+pred.draw+'%</div><div class="pred-prob-lbl">Draw</div></div>';
+    h+='<div class="pred-prob"><div class="pred-prob-val away">'+pred.away_win+'%</div><div class="pred-prob-lbl">'+aName.split(' ')[0]+' Win</div></div>';
+    h+='</div>';
+    h+='<div class="pred-xg"><span>xG '+hName.split(' ')[0]+': <strong style="color:var(--ink)">'+pred.exp_home+'</strong></span><span>Expected Goals</span><span>xG '+aName.split(' ')[0]+': <strong style="color:var(--ink)">'+pred.exp_away+'</strong></span></div>';
+    h+='<div class="pred-pillars">';
+    h+='<div><span style="color:var(--muted)">Score </span><strong>'+((ht.score||0).toFixed(1))+'</strong> &nbsp;P2:<strong>'+((ht.P2||0).toFixed(0))+'</strong> P1:<strong>'+((ht.P1||0).toFixed(0))+'</strong></div>';
+    h+='<div style="text-align:right">P2:<strong>'+((at.P2||0).toFixed(0))+'</strong> P1:<strong>'+((at.P1||0).toFixed(0))+'</strong> <span style="color:var(--muted)">Score </span><strong>'+((at.score||0).toFixed(1))+'</strong></div>';
+    h+='</div>';
+    h+='<div class="pred-fav"><span style="color:'+favColor+';font-weight:700">'+favText+'</span> &middot; Olympus Model V2</div>';
+    h+='</div>';
+  });
+  h+='</div>';
   container.innerHTML=h;
 }
 
